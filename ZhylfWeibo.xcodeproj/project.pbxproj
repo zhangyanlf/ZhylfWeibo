@@ -1,0 +1,744 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A412E55C1FB4501400650D46 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412E55B1FB4501400650D46 /* Bundle+Extension.swift */; };
+		A428CDE11FAAED3E0059BF57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D3F1FAAC9F8006533AD /* AppDelegate.swift */; };
+		A4327D4F1FAACAFD006533AD /* ZlMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D4E1FAACAFD006533AD /* ZlMainViewController.swift */; };
+		A4327D511FAACB55006533AD /* ZlNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D501FAACB55006533AD /* ZlNavigationController.swift */; };
+		A4327D531FAACB8B006533AD /* ZlBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D521FAACB8B006533AD /* ZlBaseViewController.swift */; };
+		A4327D551FAACC63006533AD /* ZlHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D541FAACC63006533AD /* ZlHomeViewController.swift */; };
+		A4327D571FAACC81006533AD /* ZlDescoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D561FAACC81006533AD /* ZlDescoverViewController.swift */; };
+		A4327D591FAACC91006533AD /* ZlMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D581FAACC91006533AD /* ZlMessageViewController.swift */; };
+		A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D5A1FAACCA0006533AD /* ZlProfileViewController.swift */; };
+		A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A497681E1FA9C20C000003F2 /* Assets.xcassets */; };
+		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
+		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A49768291FA9C20C000003F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A497680C1FA9C20C000003F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A49768131FA9C20C000003F2;
+			remoteInfo = ZhylfWeibo;
+		};
+		A49768341FA9C20C000003F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A497680C1FA9C20C000003F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A49768131FA9C20C000003F2;
+			remoteInfo = ZhylfWeibo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A412E53F1FB447F600650D46 /* CZAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
+		A412E5401FB447F600650D46 /* NSArray+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		A412E5411FB447F600650D46 /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		A412E5421FB447F600650D46 /* NSAttributedString+CZAdditon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CZAdditon.h"; sourceTree = "<group>"; };
+		A412E5431FB447F600650D46 /* NSAttributedString+CZAdditon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CZAdditon.m"; sourceTree = "<group>"; };
+		A412E5441FB447F600650D46 /* NSObject+CZRuntime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CZRuntime.h"; sourceTree = "<group>"; };
+		A412E5451FB447F600650D46 /* NSObject+CZRuntime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CZRuntime.m"; sourceTree = "<group>"; };
+		A412E5461FB447F600650D46 /* NSString+CZBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CZBase64.h"; sourceTree = "<group>"; };
+		A412E5471FB447F600650D46 /* NSString+CZBase64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZBase64.m"; sourceTree = "<group>"; };
+		A412E5481FB447F600650D46 /* NSString+CZHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CZHash.h"; sourceTree = "<group>"; };
+		A412E5491FB447F600650D46 /* NSString+CZHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZHash.m"; sourceTree = "<group>"; };
+		A412E54A1FB447F600650D46 /* NSString+CZPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CZPath.h"; sourceTree = "<group>"; };
+		A412E54B1FB447F600650D46 /* NSString+CZPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZPath.m"; sourceTree = "<group>"; };
+		A412E54C1FB447F600650D46 /* UIButton+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZAddition.h"; sourceTree = "<group>"; };
+		A412E54D1FB447F600650D46 /* UIButton+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZAddition.m"; sourceTree = "<group>"; };
+		A412E54E1FB447F600650D46 /* UIColor+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
+		A412E54F1FB447F600650D46 /* UIColor+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
+		A412E5501FB447F600650D46 /* UILabel+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+CZAddition.h"; sourceTree = "<group>"; };
+		A412E5511FB447F600650D46 /* UILabel+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CZAddition.m"; sourceTree = "<group>"; };
+		A412E5521FB447F600650D46 /* UIScreen+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScreen+CZAddition.h"; sourceTree = "<group>"; };
+		A412E5531FB447F600650D46 /* UIScreen+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+CZAddition.m"; sourceTree = "<group>"; };
+		A412E5541FB447F600650D46 /* UIView+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CZAddition.h"; sourceTree = "<group>"; };
+		A412E5551FB447F600650D46 /* UIView+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZAddition.m"; sourceTree = "<group>"; };
+		A412E5561FB447F600650D46 /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
+		A412E5571FB447F600650D46 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
+		A412E5581FB4484C00650D46 /* ZhylfWeibo-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZhylfWeibo-Bridge.h"; sourceTree = "<group>"; };
+		A412E55B1FB4501400650D46 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		A4327D3F1FAAC9F8006533AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4327D411FAAC9F8006533AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4327D441FAAC9F8006533AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4327D4E1FAACAFD006533AD /* ZlMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlMainViewController.swift; sourceTree = "<group>"; };
+		A4327D501FAACB55006533AD /* ZlNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlNavigationController.swift; sourceTree = "<group>"; };
+		A4327D521FAACB8B006533AD /* ZlBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlBaseViewController.swift; sourceTree = "<group>"; };
+		A4327D541FAACC63006533AD /* ZlHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlHomeViewController.swift; sourceTree = "<group>"; };
+		A4327D561FAACC81006533AD /* ZlDescoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlDescoverViewController.swift; sourceTree = "<group>"; };
+		A4327D581FAACC91006533AD /* ZlMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlMessageViewController.swift; sourceTree = "<group>"; };
+		A4327D5A1FAACCA0006533AD /* ZlProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlProfileViewController.swift; sourceTree = "<group>"; };
+		A49768141FA9C20C000003F2 /* ZhylfWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhylfWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A497681E1FA9C20C000003F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A49768281FA9C20C000003F2 /* ZhylfWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhylfWeiboTests.swift; sourceTree = "<group>"; };
+		A497682E1FA9C20C000003F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A49768331FA9C20C000003F2 /* ZhylfWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhylfWeiboUITests.swift; sourceTree = "<group>"; };
+		A49768391FA9C20C000003F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A49768111FA9C20C000003F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A49768251FA9C20C000003F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A49768301FA9C20C000003F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A412E53B1FB4429F00650D46 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A412E53C1FB4429F00650D46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A412E53D1FB4429F00650D46 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A412E5591FB44CDC00650D46 /* Extension */,
+				A412E53E1FB447F600650D46 /* Additions */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		A412E53E1FB447F600650D46 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				A412E53F1FB447F600650D46 /* CZAdditions.h */,
+				A412E5401FB447F600650D46 /* NSArray+Log.h */,
+				A412E5411FB447F600650D46 /* NSArray+Log.m */,
+				A412E5421FB447F600650D46 /* NSAttributedString+CZAdditon.h */,
+				A412E5431FB447F600650D46 /* NSAttributedString+CZAdditon.m */,
+				A412E5441FB447F600650D46 /* NSObject+CZRuntime.h */,
+				A412E5451FB447F600650D46 /* NSObject+CZRuntime.m */,
+				A412E5461FB447F600650D46 /* NSString+CZBase64.h */,
+				A412E5471FB447F600650D46 /* NSString+CZBase64.m */,
+				A412E5481FB447F600650D46 /* NSString+CZHash.h */,
+				A412E5491FB447F600650D46 /* NSString+CZHash.m */,
+				A412E54A1FB447F600650D46 /* NSString+CZPath.h */,
+				A412E54B1FB447F600650D46 /* NSString+CZPath.m */,
+				A412E54C1FB447F600650D46 /* UIButton+CZAddition.h */,
+				A412E54D1FB447F600650D46 /* UIButton+CZAddition.m */,
+				A412E54E1FB447F600650D46 /* UIColor+CZAddition.h */,
+				A412E54F1FB447F600650D46 /* UIColor+CZAddition.m */,
+				A412E5501FB447F600650D46 /* UILabel+CZAddition.h */,
+				A412E5511FB447F600650D46 /* UILabel+CZAddition.m */,
+				A412E5521FB447F600650D46 /* UIScreen+CZAddition.h */,
+				A412E5531FB447F600650D46 /* UIScreen+CZAddition.m */,
+				A412E5541FB447F600650D46 /* UIView+CZAddition.h */,
+				A412E5551FB447F600650D46 /* UIView+CZAddition.m */,
+				A412E5561FB447F600650D46 /* UIViewController+CZAddition.h */,
+				A412E5571FB447F600650D46 /* UIViewController+CZAddition.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		A412E5591FB44CDC00650D46 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A412E55B1FB4501400650D46 /* Bundle+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A4327D3C1FAAC9F8006533AD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D471FAAC9F8006533AD /* View */,
+				A412E53C1FB4429F00650D46 /* Model */,
+				A412E53D1FB4429F00650D46 /* Tools */,
+				A412E53B1FB4429F00650D46 /* ViewModel */,
+				A4327D3E1FAAC9F8006533AD /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A4327D3E1FAAC9F8006533AD /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D401FAAC9F8006533AD /* LaunchScreen.storyboard */,
+				A4327D441FAAC9F8006533AD /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A4327D471FAAC9F8006533AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D4A1FAAC9F8006533AD /* Main */,
+				A4327D491FAAC9F8006533AD /* Home */,
+				A4327D481FAAC9F8006533AD /* Descover */,
+				A4327D4B1FAAC9F8006533AD /* Message */,
+				A4327D4C1FAAC9F8006533AD /* Profile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4327D481FAAC9F8006533AD /* Descover */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D561FAACC81006533AD /* ZlDescoverViewController.swift */,
+			);
+			path = Descover;
+			sourceTree = "<group>";
+		};
+		A4327D491FAAC9F8006533AD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D541FAACC63006533AD /* ZlHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A4327D4A1FAAC9F8006533AD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D4E1FAACAFD006533AD /* ZlMainViewController.swift */,
+				A4327D521FAACB8B006533AD /* ZlBaseViewController.swift */,
+				A4327D501FAACB55006533AD /* ZlNavigationController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A4327D4B1FAAC9F8006533AD /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D581FAACC91006533AD /* ZlMessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		A4327D4C1FAAC9F8006533AD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D5A1FAACCA0006533AD /* ZlProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A497680B1FA9C20C000003F2 = {
+			isa = PBXGroup;
+			children = (
+				A49768161FA9C20C000003F2 /* ZhylfWeibo */,
+				A497682B1FA9C20C000003F2 /* ZhylfWeiboTests */,
+				A49768361FA9C20C000003F2 /* ZhylfWeiboUITests */,
+				A49768151FA9C20C000003F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A49768151FA9C20C000003F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A49768141FA9C20C000003F2 /* ZhylfWeibo.app */,
+				A49768281FA9C20C000003F2 /* ZhylfWeiboTests.xctest */,
+				A49768331FA9C20C000003F2 /* ZhylfWeiboUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A49768161FA9C20C000003F2 /* ZhylfWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D3C1FAAC9F8006533AD /* Classes */,
+				A497681E1FA9C20C000003F2 /* Assets.xcassets */,
+				A4327D3F1FAAC9F8006533AD /* AppDelegate.swift */,
+				A412E5581FB4484C00650D46 /* ZhylfWeibo-Bridge.h */,
+			);
+			path = ZhylfWeibo;
+			sourceTree = "<group>";
+		};
+		A497682B1FA9C20C000003F2 /* ZhylfWeiboTests */ = {
+			isa = PBXGroup;
+			children = (
+				A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */,
+				A497682E1FA9C20C000003F2 /* Info.plist */,
+			);
+			path = ZhylfWeiboTests;
+			sourceTree = "<group>";
+		};
+		A49768361FA9C20C000003F2 /* ZhylfWeiboUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */,
+				A49768391FA9C20C000003F2 /* Info.plist */,
+			);
+			path = ZhylfWeiboUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A49768131FA9C20C000003F2 /* ZhylfWeibo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A497683C1FA9C20C000003F2 /* Build configuration list for PBXNativeTarget "ZhylfWeibo" */;
+			buildPhases = (
+				A49768101FA9C20C000003F2 /* Sources */,
+				A49768111FA9C20C000003F2 /* Frameworks */,
+				A49768121FA9C20C000003F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZhylfWeibo;
+			productName = ZhylfWeibo;
+			productReference = A49768141FA9C20C000003F2 /* ZhylfWeibo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A49768271FA9C20C000003F2 /* ZhylfWeiboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A497683F1FA9C20C000003F2 /* Build configuration list for PBXNativeTarget "ZhylfWeiboTests" */;
+			buildPhases = (
+				A49768241FA9C20C000003F2 /* Sources */,
+				A49768251FA9C20C000003F2 /* Frameworks */,
+				A49768261FA9C20C000003F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A497682A1FA9C20C000003F2 /* PBXTargetDependency */,
+			);
+			name = ZhylfWeiboTests;
+			productName = ZhylfWeiboTests;
+			productReference = A49768281FA9C20C000003F2 /* ZhylfWeiboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A49768321FA9C20C000003F2 /* ZhylfWeiboUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A49768421FA9C20C000003F2 /* Build configuration list for PBXNativeTarget "ZhylfWeiboUITests" */;
+			buildPhases = (
+				A497682F1FA9C20C000003F2 /* Sources */,
+				A49768301FA9C20C000003F2 /* Frameworks */,
+				A49768311FA9C20C000003F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A49768351FA9C20C000003F2 /* PBXTargetDependency */,
+			);
+			name = ZhylfWeiboUITests;
+			productName = ZhylfWeiboUITests;
+			productReference = A49768331FA9C20C000003F2 /* ZhylfWeiboUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A497680C1FA9C20C000003F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Zl;
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = zhangyanlf;
+				TargetAttributes = {
+					A49768131FA9C20C000003F2 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					A49768271FA9C20C000003F2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A49768131FA9C20C000003F2;
+					};
+					A49768321FA9C20C000003F2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A49768131FA9C20C000003F2;
+					};
+				};
+			};
+			buildConfigurationList = A497680F1FA9C20C000003F2 /* Build configuration list for PBXProject "ZhylfWeibo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A497680B1FA9C20C000003F2;
+			productRefGroup = A49768151FA9C20C000003F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A49768131FA9C20C000003F2 /* ZhylfWeibo */,
+				A49768271FA9C20C000003F2 /* ZhylfWeiboTests */,
+				A49768321FA9C20C000003F2 /* ZhylfWeiboUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A49768121FA9C20C000003F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A49768261FA9C20C000003F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A49768311FA9C20C000003F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A49768101FA9C20C000003F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A428CDE11FAAED3E0059BF57 /* AppDelegate.swift in Sources */,
+				A412E55C1FB4501400650D46 /* Bundle+Extension.swift in Sources */,
+				A4327D591FAACC91006533AD /* ZlMessageViewController.swift in Sources */,
+				A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */,
+				A4327D4F1FAACAFD006533AD /* ZlMainViewController.swift in Sources */,
+				A4327D511FAACB55006533AD /* ZlNavigationController.swift in Sources */,
+				A4327D571FAACC81006533AD /* ZlDescoverViewController.swift in Sources */,
+				A4327D531FAACB8B006533AD /* ZlBaseViewController.swift in Sources */,
+				A4327D551FAACC63006533AD /* ZlHomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A49768241FA9C20C000003F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A497682F1FA9C20C000003F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A497682A1FA9C20C000003F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A49768131FA9C20C000003F2 /* ZhylfWeibo */;
+			targetProxy = A49768291FA9C20C000003F2 /* PBXContainerItemProxy */;
+		};
+		A49768351FA9C20C000003F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A49768131FA9C20C000003F2 /* ZhylfWeibo */;
+			targetProxy = A49768341FA9C20C000003F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4327D401FAAC9F8006533AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4327D411FAAC9F8006533AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A497683A1FA9C20C000003F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A497683B1FA9C20C000003F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A497683D1FA9C20C000003F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GR4Z3QJ2L;
+				INFOPLIST_FILE = ZhylfWeibo/Classes/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zhangyanlf.ZhylfWeibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME)/ZhylfWeibo-Bridge.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A497683E1FA9C20C000003F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GR4Z3QJ2L;
+				INFOPLIST_FILE = ZhylfWeibo/Classes/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zhangyanlf.ZhylfWeibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME)/ZhylfWeibo-Bridge.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A49768401FA9C20C000003F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GR4Z3QJ2L;
+				INFOPLIST_FILE = ZhylfWeiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zhangyanlf.ZhylfWeiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZhylfWeibo.app/ZhylfWeibo";
+			};
+			name = Debug;
+		};
+		A49768411FA9C20C000003F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GR4Z3QJ2L;
+				INFOPLIST_FILE = ZhylfWeiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zhangyanlf.ZhylfWeiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZhylfWeibo.app/ZhylfWeibo";
+			};
+			name = Release;
+		};
+		A49768431FA9C20C000003F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GR4Z3QJ2L;
+				INFOPLIST_FILE = ZhylfWeiboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zhangyanlf.ZhylfWeiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZhylfWeibo;
+			};
+			name = Debug;
+		};
+		A49768441FA9C20C000003F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GR4Z3QJ2L;
+				INFOPLIST_FILE = ZhylfWeiboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zhangyanlf.ZhylfWeiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZhylfWeibo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A497680F1FA9C20C000003F2 /* Build configuration list for PBXProject "ZhylfWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A497683A1FA9C20C000003F2 /* Debug */,
+				A497683B1FA9C20C000003F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A497683C1FA9C20C000003F2 /* Build configuration list for PBXNativeTarget "ZhylfWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A497683D1FA9C20C000003F2 /* Debug */,
+				A497683E1FA9C20C000003F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A497683F1FA9C20C000003F2 /* Build configuration list for PBXNativeTarget "ZhylfWeiboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A49768401FA9C20C000003F2 /* Debug */,
+				A49768411FA9C20C000003F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A49768421FA9C20C000003F2 /* Build configuration list for PBXNativeTarget "ZhylfWeiboUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A49768431FA9C20C000003F2 /* Debug */,
+				A49768441FA9C20C000003F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A497680C1FA9C20C000003F2 /* Project object */;
+}

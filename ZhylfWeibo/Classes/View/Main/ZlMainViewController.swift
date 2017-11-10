@@ -33,7 +33,10 @@ extension ZlMainViewController {
     //设置所有子控制器
    private func setupChildController() {
         let array = [
-            ["clsName": "ZlHomeViewController", "title": "首页", "imageName": ""],
+            ["clsName": "ZlHomeViewController", "title": "首页", "imageName": "home"],
+            ["clsName": "ZlMessageViewController", "title": "消息", "imageName": "message_center"],
+            ["clsName": "ZlDescoverViewController", "title": "发现", "imageName": "discover"],
+            ["clsName": "ZlProfileViewController", "title": "我", "imageName": "profile"],
             ]
         var arrayM = [UIViewController]()
     
@@ -56,6 +59,10 @@ extension ZlMainViewController {
 //        1>将 clsName 转换成cls
         let vc = cls.init()
         vc.title = title
+        
+        //3.设置图像
+        vc.tabBarItem.image = UIImage(named: "tabbar_" + imageName)
+        vc.tabBarItem.selectedImage = UIImage(named: "tabbar_" + imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
         
         let nav = ZlNavigationController(rootViewController: vc)
         

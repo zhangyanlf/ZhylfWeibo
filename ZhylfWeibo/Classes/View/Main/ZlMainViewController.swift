@@ -13,7 +13,7 @@ class ZlMainViewController: UITabBarController {
 
     //MARK: - 私有控件
     // 中间按钮
-   private lazy var composeButton:UIButton = UIButton.cz_imageButton("tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
+    private lazy var composeButton:UIButton = UIButton.cz_imageButton("tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
 //    lazy var composeButton:UIButton = UIButton()
     
     override func viewDidLoad() {

@@ -28,6 +28,7 @@
 		A44117F91FB54E1E0023B26F /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117EB1FB549150023B26F /* UIScreen+CZAddition.m */; };
 		A44117FA1FB54E210023B26F /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117ED1FB549150023B26F /* UIView+CZAddition.m */; };
 		A44117FB1FB54E240023B26F /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117EF1FB549150023B26F /* UIViewController+CZAddition.m */; };
+		A44117FE1FB555180023B26F /* ZlTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44117FD1FB555180023B26F /* ZlTestViewController.swift */; };
 		A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A497681E1FA9C20C000003F2 /* Assets.xcassets */; };
 		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
@@ -88,6 +89,7 @@
 		A44117ED1FB549150023B26F /* UIView+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZAddition.m"; sourceTree = "<group>"; };
 		A44117EE1FB549150023B26F /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
 		A44117EF1FB549150023B26F /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
+		A44117FD1FB555180023B26F /* ZlTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlTestViewController.swift; sourceTree = "<group>"; };
 		A49768141FA9C20C000003F2 /* ZhylfWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhylfWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A497681E1FA9C20C000003F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A49768281FA9C20C000003F2 /* ZhylfWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +208,7 @@
 		A4327D4A1FAAC9F8006533AD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A44117FC1FB554B10023B26F /* Test */,
 				A4327D4E1FAACAFD006533AD /* ZlMainViewController.swift */,
 				A4327D521FAACB8B006533AD /* ZlBaseViewController.swift */,
 				A4327D501FAACB55006533AD /* ZlNavigationController.swift */,
@@ -259,6 +262,14 @@
 				A44117EF1FB549150023B26F /* UIViewController+CZAddition.m */,
 			);
 			path = Additions;
+			sourceTree = "<group>";
+		};
+		A44117FC1FB554B10023B26F /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				A44117FD1FB555180023B26F /* ZlTestViewController.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		A497680B1FA9C20C000003F2 = {
@@ -458,6 +469,7 @@
 				A4327D571FAACC81006533AD /* ZlDescoverViewController.swift in Sources */,
 				A44117F51FB54E110023B26F /* NSString+CZBase64.m in Sources */,
 				A44117F41FB54E0E0023B26F /* NSObject+CZRuntime.m in Sources */,
+				A44117FE1FB555180023B26F /* ZlTestViewController.swift in Sources */,
 				A44117F21FB54E080023B26F /* NSArray+Log.m in Sources */,
 				A44117F91FB54E1E0023B26F /* UIScreen+CZAddition.m in Sources */,
 				A44117F31FB54E0A0023B26F /* NSAttributedString+CZAdditon.m in Sources */,

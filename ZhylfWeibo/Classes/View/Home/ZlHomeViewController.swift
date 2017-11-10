@@ -15,21 +15,25 @@ class ZlHomeViewController: ZlBaseViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    //显示好友
+    @objc private func showFrinds() {
+        print(#function)
+        let vc = ZlTestViewController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ZlHomeViewController {
+    override func setupUI() {
+        super.setupUI()
+        
+        //这只导航栏按钮
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", style: .plain, target: self, action: #selector(showFrinds))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+    

@@ -104,6 +104,7 @@ extension ZlMainViewController {
         //这只tabbar 标题字体
         vc.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.orange], for: .highlighted)
 
+        //初始化导航控制器的时候 会调用push方法 将rootVC压栈
         let nav = ZlNavigationController(rootViewController: vc)
         
         return nav

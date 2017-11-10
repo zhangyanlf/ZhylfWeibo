@@ -20,7 +20,9 @@ class ZlHomeViewController: ZlBaseViewController {
     @objc private func showFrinds() {
         print(#function)
         let vc = ZlTestViewController()
-        vc.hidesBottomBarWhenPushed = true
+//        vc.hidesBottomBarWhenPushed = true
+        
+        //push 的动作是 nav
         navigationController?.pushViewController(vc, animated: true)
         
     }

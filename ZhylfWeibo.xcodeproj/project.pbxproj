@@ -29,6 +29,7 @@
 		A44117FA1FB54E210023B26F /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117ED1FB549150023B26F /* UIView+CZAddition.m */; };
 		A44117FB1FB54E240023B26F /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117EF1FB549150023B26F /* UIViewController+CZAddition.m */; };
 		A44117FE1FB555180023B26F /* ZlTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44117FD1FB555180023B26F /* ZlTestViewController.swift */; };
+		A44118001FB57F810023B26F /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44117FF1FB57F810023B26F /* UIBarButtonItem+Extension.swift */; };
 		A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A497681E1FA9C20C000003F2 /* Assets.xcassets */; };
 		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
@@ -90,6 +91,7 @@
 		A44117EE1FB549150023B26F /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
 		A44117EF1FB549150023B26F /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		A44117FD1FB555180023B26F /* ZlTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlTestViewController.swift; sourceTree = "<group>"; };
+		A44117FF1FB57F810023B26F /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		A49768141FA9C20C000003F2 /* ZhylfWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhylfWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A497681E1FA9C20C000003F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A49768281FA9C20C000003F2 /* ZhylfWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				A412E55B1FB4501400650D46 /* Bundle+Extension.swift */,
+				A44117FF1FB57F810023B26F /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				A4327D4F1FAACAFD006533AD /* ZlMainViewController.swift in Sources */,
 				A4327D511FAACB55006533AD /* ZlNavigationController.swift in Sources */,
 				A44117F11FB54E010023B26F /* UIColor+CZAddition.m in Sources */,
+				A44118001FB57F810023B26F /* UIBarButtonItem+Extension.swift in Sources */,
 				A44117F81FB54E1C0023B26F /* UILabel+CZAddition.m in Sources */,
 				A44117F71FB54E160023B26F /* NSString+CZPath.m in Sources */,
 				A4327D571FAACC81006533AD /* ZlDescoverViewController.swift in Sources */,

@@ -8,8 +8,13 @@
 
 import UIKit
 
-class ZlBaseViewController: UIViewController {
+//***OC 中不支持多继承 如何替代？ 使用协议替代
+//class ZlBaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+// Swift中 可以利用 extension 可以把‘函数’按照功能分类管理 便于阅读和维护
+//1. extension 中不能有属性
+//2. extension 中不能重写父类方法 重写父类的方法 是子类的职责 扩展是对类的扩展
 
+class ZlBaseViewController: UIViewController {
     /// 表格试图 - 如果用户没有登录 就不创建
     var tableView: UITableView?
     
@@ -22,6 +27,7 @@ class ZlBaseViewController: UIViewController {
         super.viewDidLoad()
 
        setupUI()
+       loadData()
     }
     
     // 重写 title 的 didSet 
@@ -29,6 +35,10 @@ class ZlBaseViewController: UIViewController {
         didSet {
             navItem.title = title
         }
+    }
+    ///加载数据 - 具体的实现由子类负责
+    func loadData() {
+        
     }
 }
 
@@ -46,6 +56,10 @@ extension ZlBaseViewController {
         tableView = UITableView(frame: view.bounds, style: .plain)
         
         view.insertSubview(tableView!, belowSubview: navigationBar)
+        
+        //设置数据源&代理 -> 目的： 子类直接实现数据源方法
+        tableView?.delegate = self
+        tableView?.dataSource = self
     }
     
     ///设置导航栏
@@ -62,4 +76,18 @@ extension ZlBaseViewController {
         navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray]
     }
     
+}
+//MARK: - UITableViewDataSource,UITableViewDelegate
+
+extension ZlBaseViewController: UITableViewDataSource,UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    //基类只是准备方法  子类负责具体的实现
+    //子类的数据源方法不需要 super
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //只是保证没有语法错误
+        return UITableViewCell()
+    }
 }

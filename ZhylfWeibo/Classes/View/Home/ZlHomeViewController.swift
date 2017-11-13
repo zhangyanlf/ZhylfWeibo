@@ -26,9 +26,11 @@ class ZlHomeViewController: ZlBaseViewController {
         navigationController?.pushViewController(vc, animated: true)
         
     }
+    
 }
 
 extension ZlHomeViewController {
+    //重写父类的方法
     override func setupUI() {
         super.setupUI()
         

@@ -10,6 +10,14 @@ import UIKit
 
 class ZlNavigationController: UINavigationController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //隐藏navigationBar
+        navigationBar.isHidden = true
+        
+    }
+    
+    
     //重写 push 方法 所有的 push 动作 都会调用此方法
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         print(viewController)
@@ -20,5 +28,7 @@ class ZlNavigationController: UINavigationController {
         }
         super.pushViewController(viewController, animated: true)
     }
+    
+    
 
 }

@@ -37,6 +37,6 @@ extension ZlTestViewController {
 //        btn.addTarget(self, action: #selector(showNext), for: .touchUpInside)
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(customView:btn)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "下一个", target: self, action: #selector(showNext))
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "下一个", target: self, action: #selector(showNext))
     }
 }

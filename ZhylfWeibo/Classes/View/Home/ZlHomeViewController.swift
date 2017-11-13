@@ -44,7 +44,7 @@ extension ZlHomeViewController {
 //
 //        btn.addTarget(self, action: #selector(showFrinds), for: .touchUpInside)
 //        navigationItem.leftBarButtonItem = UIBarButtonItem(customView:btn)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", fontSize: 16, target: self, action: #selector(showFrinds))
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "好友", fontSize: 16, target: self, action: #selector(showFrinds))
         
     }
     

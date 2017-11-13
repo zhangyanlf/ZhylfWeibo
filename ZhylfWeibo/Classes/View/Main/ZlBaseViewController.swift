@@ -12,7 +12,7 @@ class ZlBaseViewController: UIViewController {
 
     /// 自定义导航
     lazy var navigationBar = ZLNavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.cz_screenWidth(), height: 64))
-    ///自定义导航条目
+    ///自定义导航条目  - 设置导航栏内容，同意使用navItem
     lazy var navItem = UINavigationItem()
     
     override func viewDidLoad() {
@@ -38,5 +38,11 @@ extension ZlBaseViewController {
         view.addSubview(navigationBar)
         //将item 这只给 bar
         navigationBar.items = [navItem]
+    
+        //设置navItem的渲染颜色
+        navigationBar.barTintColor = UIColor.cz_color(withHex: 0xF6F6F6)
+    
+        //设置navigationBar 的字体颜色
+    navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray]
     }
 }

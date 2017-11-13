@@ -21,7 +21,7 @@ class ZlHomeViewController: ZlBaseViewController {
     ///加载数据
     override func loadData() {
         
-        for i in 0..<10 {
+        for i in 0..<15 {
             //将数据插入到数组的顶部
             statusList.insert(i.description, at: 0)
         }

@@ -46,8 +46,13 @@ class ZlBaseViewController: UIViewController {
 extension ZlBaseViewController {
    @objc public func setupUI() {
          view.backgroundColor = UIColor.cz_random()
-    
-    
+        // 取消自动缩进 - 如果隐藏了导航栏  会缩进 20 个点
+    if #available(iOS 11.0, *) {
+        tableView?.contentInsetAdjustmentBehavior = .never
+        
+    } else {
+        automaticallyAdjustsScrollViewInsets = false;
+    };
         setupNavigationBar()
         setupTableView()
     }
@@ -60,6 +65,13 @@ extension ZlBaseViewController {
         //设置数据源&代理 -> 目的： 子类直接实现数据源方法
         tableView?.delegate = self
         tableView?.dataSource = self
+        
+        //这是内容缩进
+        //TODO:bottom 在iOS11 以下的兼容
+        tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height - 20,
+                                               left: 0,
+                                               bottom: /*tabBarController?.tabBar.bounds.height ??*/ 0,
+                                               right: 0)
     }
     
     ///设置导航栏

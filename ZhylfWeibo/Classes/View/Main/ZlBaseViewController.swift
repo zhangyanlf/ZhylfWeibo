@@ -43,6 +43,6 @@ extension ZlBaseViewController {
         navigationBar.barTintColor = UIColor.cz_color(withHex: 0xF6F6F6)
     
         //设置navigationBar 的字体颜色
-    navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray]
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray]
     }
 }

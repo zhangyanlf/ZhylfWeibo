@@ -33,6 +33,17 @@ class ZlMainViewController: UITabBarController {
    @objc private func composeButtonClick() {
         print("我是中间按钮")
     }
+    /**
+     portrait: 竖屏  肖像
+     landscape: 横屏 风景画
+     
+     - 使用代码控制设备的方向，好处  可以在需要的横屏的时候 单独处理
+     - 设置支持的方向之后  当前的控制器及子控制器 都会遵守这个方向
+     - 如果播放视频  通常是通过 modal 展现
+     */
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return .portrait
+    }
     
    
 

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//find . -name "*.swift" | xargs wc -l
+//查看代码行数
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

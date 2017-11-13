@@ -13,7 +13,7 @@ class ZLNavigationBar: UINavigationBar {
         super.layoutSubviews()
         for subview in self.subviews {
             let stringFromClass = NSStringFromClass(subview.classForCoder)
-            print("--------- \(stringFromClass)")
+//            print("--------- \(stringFromClass)")
             if stringFromClass.contains("BarBackground") {
                 subview.frame = self.bounds
             } else if stringFromClass.contains("UINavigationBarContentView") {

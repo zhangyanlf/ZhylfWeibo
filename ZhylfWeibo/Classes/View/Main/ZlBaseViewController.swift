@@ -17,6 +17,9 @@ import UIKit
 class ZlBaseViewController: UIViewController {
     /// 表格试图 - 如果用户没有登录 就不创建
     var tableView: UITableView?
+    /// 刷新控件
+    var refreshControl: UIRefreshControl?
+    
     
     /// 自定义导航
     lazy var navigationBar = ZLNavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.cz_screenWidth(), height: 64))
@@ -37,7 +40,7 @@ class ZlBaseViewController: UIViewController {
         }
     }
     ///加载数据 - 具体的实现由子类负责
-    func loadData() {
+    @objc func loadData() {
         
     }
 }
@@ -72,6 +75,16 @@ extension ZlBaseViewController {
                                                left: 0,
                                                bottom: /*tabBarController?.tabBar.bounds.height ??*/ 0,
                                                right: 0)
+        
+        //设置刷新控件
+        //1> 实例化控件
+        refreshControl = UIRefreshControl()
+        
+        //2.添加到表格试图
+        tableView?.addSubview(refreshControl!)
+        
+        //3> 添加监听方法
+        refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
     
     ///设置导航栏

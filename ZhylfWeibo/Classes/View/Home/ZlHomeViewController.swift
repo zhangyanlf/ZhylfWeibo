@@ -20,11 +20,22 @@ class ZlHomeViewController: ZlBaseViewController {
     }
     ///加载数据
     override func loadData() {
+         print("开始加载数据")
         
-        for i in 0..<15 {
-            //将数据插入到数组的顶部
-            statusList.insert(i.description, at: 0)
+        //模拟延迟加载数据
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            for i in 0..<15 {
+                //将数据插入到数组的顶部
+                self.statusList.insert(i.description, at: 0)
+            }
+            print("刷新表格")
+            
+            //结束刷新
+            self.refreshControl?.endRefreshing()
+            //刷新表格
+            self.tableView?.reloadData()
         }
+        
         
     }
     

@@ -215,9 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				A44117FC1FB554B10023B26F /* Test */,
-				A4327D4E1FAACAFD006533AD /* ZlMainViewController.swift */,
+				A450677A1FB97869009C1D72 /* Main */,
 				A4327D521FAACB8B006533AD /* ZlBaseViewController.swift */,
-				A4327D501FAACB55006533AD /* ZlNavigationController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -276,6 +275,15 @@
 				A44117FD1FB555180023B26F /* ZlTestViewController.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		A450677A1FB97869009C1D72 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A4327D4E1FAACAFD006533AD /* ZlMainViewController.swift */,
+				A4327D501FAACB55006533AD /* ZlNavigationController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		A497680B1FA9C20C000003F2 = {

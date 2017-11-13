@@ -10,6 +10,9 @@ import UIKit
 
 class ZlBaseViewController: UIViewController {
 
+    /// 表格试图 - 如果用户没有登录 就不创建
+    var tableView: UITableView?
+    
     /// 自定义导航
     lazy var navigationBar = ZLNavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.cz_screenWidth(), height: 64))
     ///自定义导航条目  - 设置导航栏内容，同意使用navItem
@@ -34,15 +37,29 @@ extension ZlBaseViewController {
    @objc public func setupUI() {
          view.backgroundColor = UIColor.cz_random()
     
+    
+        setupNavigationBar()
+        setupTableView()
+    }
+    /// 设置表格试图
+    func setupTableView() {
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        
+        view.insertSubview(tableView!, belowSubview: navigationBar)
+    }
+    
+    ///设置导航栏
+    func setupNavigationBar() {
         //添加导航条
         view.addSubview(navigationBar)
         //将item 这只给 bar
         navigationBar.items = [navItem]
-    
+        
         //设置navItem的渲染颜色
         navigationBar.barTintColor = UIColor.cz_color(withHex: 0xF6F6F6)
-    
+        
         //设置navigationBar 的字体颜色
         navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray]
     }
+    
 }

@@ -23,7 +23,8 @@ class ZlBaseViewController: UIViewController {
     var isPullup = false
     /// 用户登录标记
     var userLogon = false
-    
+    /// 访客试图信息字典
+    var visitorInfoDictionary: [String: String]?
     
     
     /// 自定义导航
@@ -102,6 +103,8 @@ extension ZlBaseViewController {
     view.insertSubview(visitorView, belowSubview: navigationBar)
     
     print("访客试图\(visitorView)")
+    ///设置访客试图信息
+    visitorView.vistorInfo = visitorInfoDictionary
     
     }
     

@@ -34,6 +34,7 @@
 		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
 		A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */; };
+		A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhylfWeiboUITests.swift; sourceTree = "<group>"; };
 		A49768391FA9C20C000003F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
+		A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlVisitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			children = (
 				A44117FC1FB554B10023B26F /* Test */,
 				A450677A1FB97869009C1D72 /* Main */,
+				A4ECE59D1FBAC22F00AE087B /* VisitorView */,
 				A4327D521FAACB8B006533AD /* ZlBaseViewController.swift */,
 			);
 			path = Main;
@@ -333,6 +336,14 @@
 				A49768391FA9C20C000003F2 /* Info.plist */,
 			);
 			path = ZhylfWeiboUITests;
+			sourceTree = "<group>";
+		};
+		A4ECE59D1FBAC22F00AE087B /* VisitorView */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */,
+			);
+			path = VisitorView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +487,7 @@
 				A4327D591FAACC91006533AD /* ZlMessageViewController.swift in Sources */,
 				A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */,
 				A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */,
+				A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */,
 				A4327D4F1FAACAFD006533AD /* ZlMainViewController.swift in Sources */,
 				A4327D511FAACB55006533AD /* ZlNavigationController.swift in Sources */,
 				A44117F11FB54E010023B26F /* UIColor+CZAddition.m in Sources */,

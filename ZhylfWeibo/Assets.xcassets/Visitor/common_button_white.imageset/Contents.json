@@ -6,15 +6,12 @@
     },
     {
       "resizing" : {
-        "mode" : "9-part",
+        "mode" : "3-part-horizontal",
         "center" : {
           "mode" : "tile",
-          "width" : 1,
-          "height" : 1
+          "width" : 1
         },
         "cap-insets" : {
-          "bottom" : 9,
-          "top" : 9,
           "right" : 11,
           "left" : 10
         }

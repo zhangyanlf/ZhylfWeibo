@@ -12,7 +12,7 @@ import UIKit
 //class ZlBaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 // Swift中 可以利用 extension 可以把‘函数’按照功能分类管理 便于阅读和维护
 //1. extension 中不能有属性
-//2. extension 中不能重写父类方法 重写父类的方法 是子类的职责 扩展是对类的扩展
+//2. extension 中不能‘重写’ 本类父类方法 重写父类的方法 是子类的职责 扩展是对类的扩展
 
 class ZlBaseViewController: UIViewController {
     /// 表格试图 - 如果用户没有登录 就不创建
@@ -21,6 +21,9 @@ class ZlBaseViewController: UIViewController {
     var refreshControl: UIRefreshControl?
     /// 上拉刷新标记
     var isPullup = false
+    /// 用户登录标记
+    var userLogon = false
+    
     
     
     /// 自定义导航
@@ -43,6 +46,8 @@ class ZlBaseViewController: UIViewController {
     }
     ///加载数据 - 具体的实现由子类负责
     @objc func loadData() {
+        //如果子类不实现任何方法 默认关闭刷新
+        refreshControl?.endRefreshing()
         
     }
 }
@@ -59,10 +64,10 @@ extension ZlBaseViewController {
         automaticallyAdjustsScrollViewInsets = false;
     };
         setupNavigationBar()
-        setupTableView()
+        userLogon ? setupTableView() : setupVisitorView()
     }
     /// 设置表格试图
-    func setupTableView() {
+   private func setupTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         
         view.insertSubview(tableView!, belowSubview: navigationBar)
@@ -87,6 +92,15 @@ extension ZlBaseViewController {
         
         //3> 添加监听方法
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+    }
+    
+    /// 设置访客试图
+   private func setupVisitorView() {
+    let visitorView = ZlVisitorView(frame: view.bounds)
+//    visitorView.backgroundColor = UIColor.cz_random()
+    
+    view.insertSubview(visitorView, belowSubview: navigationBar)
+    
     }
     
     ///设置导航栏

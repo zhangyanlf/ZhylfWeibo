@@ -25,13 +25,21 @@ class ZlHomeViewController: ZlBaseViewController {
         //模拟延迟加载数据
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             for i in 0..<15 {
-                //将数据插入到数组的顶部
-                self.statusList.insert(i.description, at: 0)
+                if self.isPullup {
+                    //将数据追加到底部
+                    self.statusList.append("上拉\(i)")
+                } else {
+                    //将数据插入到数组的顶部
+                    self.statusList.insert(i.description, at: 0)
+                }
+                
             }
             print("刷新表格")
             
             //结束刷新
             self.refreshControl?.endRefreshing()
+            //恢复上拉刷新标记
+            self.isPullup = false
             //刷新表格
             self.tableView?.reloadData()
         }

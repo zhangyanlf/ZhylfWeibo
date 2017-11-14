@@ -19,6 +19,8 @@ class ZlBaseViewController: UIViewController {
     var tableView: UITableView?
     /// 刷新控件
     var refreshControl: UIRefreshControl?
+    /// 上拉刷新标记
+    var isPullup = false
     
     
     /// 自定义导航
@@ -115,4 +117,25 @@ extension ZlBaseViewController: UITableViewDataSource,UITableViewDelegate {
         //只是保证没有语法错误
         return UITableViewCell()
     }
+    ///在显示最后一行的时候做上拉刷新
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        //1.判断IndexPath是否为最后一行(indexPath.section(最大)的indexPath.row(最后一行))
+        let row = indexPath.row
+        //2>section
+        let section = tableView.numberOfSections - 1
+        //3> 行数
+        let count = tableView.numberOfRows(inSection: section)
+        
+        /// 如果是最后 同时没有上拉刷新
+        if row == (count - 1) && !isPullup {
+            print("上拉刷新")
+            isPullup = true
+            
+            //开始刷新
+            loadData()
+        }
+        
+        
+    }
+    
 }

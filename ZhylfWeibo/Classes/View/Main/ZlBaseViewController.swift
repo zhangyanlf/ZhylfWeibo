@@ -101,6 +101,8 @@ extension ZlBaseViewController {
     
     view.insertSubview(visitorView, belowSubview: navigationBar)
     
+    print("访客试图\(visitorView)")
+    
     }
     
     ///设置导航栏

@@ -20,6 +20,29 @@ class ZlVisitorView: UIView {
         fatalError("init(coder:) has not been implemented")
         
     }
+    ///MARK: - 设置访客试图的信息
+    ///使用字典设置访客试图的信息
+    ///
+    /// - Parameter dict: [imageName/message]
+    /// 提示：如果是首页 imageName = ""
+    func setupInfo(dict: [String: String]) {
+        //1> 取字典信息
+        guard let imageName = dict["imageName"],
+                  let message = dict["message"] else {
+            return
+        }
+        //2> 设置消息
+        tipLabel?.text = message
+        
+        //3>设置图像  首页不需要设置
+        if imageName == "" {
+            return
+        }
+        
+        iconView.image = UIImage(named: imageName)
+        
+    }
+    
     
     //MARK: - 私有控件
     ///图像试图
@@ -40,7 +63,7 @@ class ZlVisitorView: UIView {
 
 extension ZlVisitorView {
     func setupUI() {
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.cz_color(withHex: 0xEDEDED)
         //1.添加控件
         addSubview(iconView)
         addSubview(maskIconView)

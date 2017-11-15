@@ -89,11 +89,11 @@ extension ZlMainViewController {
     //设置所有子控制器
    private func setupChildController() {
         let array = [
-            ["clsName": "ZlHomeViewController", "title": "首页", "imageName": "home","visitoeInfo": ["imageName":"","message":"关注一些人,回这里看看有什么惊喜"]],
-            ["clsName": "ZlMessageViewController", "title": "消息", "imageName": "message_center","visitoeInfo": ["imageName":"visitordiscover_image_message","message":"登录后,别人发给你的微博,发给你的消息,都会在这里收到通知"]],
+            ["clsName": "ZlHomeViewController", "title": "首页", "imageName": "home","visitorInfo": ["imageName":"","message":"关注一些人,回这里看看有什么惊喜"]],
+            ["clsName": "ZlMessageViewController", "title": "消息", "imageName": "message_center","visitorInfo": ["imageName":"visitordiscover_image_message","message":"登录后,别人发给你的微博,发给你的消息,都会在这里收到通知"]],
             ["clsName": "UIViewViewController"],
-            ["clsName": "ZlDescoverViewController", "title": "发现", "imageName": "discover","visitoeInfo": ["imageName":"visitordiscover_image_message","message":"登录后,最新、最热微博尽在掌握,不会与实时潮流擦肩而过"]],
-            ["clsName": "ZlProfileViewController", "title": "我", "imageName": "profile","visitoeInfo": ["imageName":"visitordiscover_image_profile","message":"登录后,你的微博、相册、个人资料会显示在这里展示给别人"]],
+            ["clsName": "ZlDescoverViewController", "title": "发现", "imageName": "discover","visitorInfo": ["imageName":"visitordiscover_image_message","message":"登录后,最新、最热微博尽在掌握,不会与实时潮流擦肩而过"]],
+            ["clsName": "ZlProfileViewController", "title": "我", "imageName": "profile","visitorInfo": ["imageName":"visitordiscover_image_profile","message":"登录后,你的微博、相册、个人资料会显示在这里展示给别人"]],
             ]
         //测试JSON格式  转换成Plist
         (array as NSArray).write(toFile: "/Users/zhaofei/Desktop/demo.plist", atomically: true)
@@ -110,7 +110,8 @@ extension ZlMainViewController {
         guard let clsName = dict["clsName"] as? String,
             let title = dict["title"] as? String,
             let imageName = dict["imageName"],
-            let cls = NSClassFromString(Bundle.main.namespace + "." + clsName) as? UIViewController.Type else {
+            let cls = NSClassFromString(Bundle.main.namespace + "." + clsName) as? ZlBaseViewController.Type,
+        let visitorDict = dict["visitorInfo"] as? [String: String]   else {
             return UIViewController()
         }
         
@@ -118,6 +119,9 @@ extension ZlMainViewController {
 //        1>将 clsName 转换成cls
         let vc = cls.init()
         vc.title = title
+        
+        //设置访客信息字典
+        vc.visitorInfoDictionary = visitorDict
         
         //3.设置图像
         vc.tabBarItem.image = UIImage(named: "tabbar_" + (imageName as! String))

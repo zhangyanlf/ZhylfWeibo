@@ -26,11 +26,33 @@ class ZlVisitorView: UIView {
             
             //3>设置图像  首页不需要设置
             if imageName == "" {
+                startAnimation()
                 return
+                
             }
             
             iconView.image = UIImage(named: imageName)
+            //其他控制器的访客试图不显示小房子
+            houseView.isHidden = true
+            //遮罩试图隐藏
+            maskIconView.isHidden = true
+            
         }
+    }
+    
+    //旋转图标动画
+    private func startAnimation() {
+        let anim = CABasicAnimation(keyPath: "transform.rotation")
+        
+        anim.toValue = 2 * Double.pi
+        anim.repeatCount = MAXFLOAT
+        anim.duration = 15
+        //完成之后不删除
+        anim.isRemovedOnCompletion = false
+        
+        //将动画添加到图层
+        iconView.layer.add(anim, forKey: nil)
+        
     }
     
 
@@ -73,6 +95,10 @@ extension ZlVisitorView {
         addSubview(tipLabel!)
         addSubview(registerBtn!)
         addSubview(logonBtn!)
+        
+        //文本集中
+        tipLabel?.textAlignment = .center
+        
         //2. 取消 autoresizing
         for v in subviews {
             v.translatesAutoresizingMaskIntoConstraints = false
@@ -117,7 +143,15 @@ extension ZlVisitorView {
                                          relatedBy: .equal,
                                          toItem: iconView,
                                          attribute: .bottom,
-                                         multiplier: 1.0, constant: 20))
+                                         multiplier: 1.0,
+                                         constant: 20))
+        addConstraint(NSLayoutConstraint(item: tipLabel!,
+                                         attribute: .width,
+                                         relatedBy: .equal,
+                                         toItem: nil,
+                                         attribute: .notAnAttribute,
+                                         multiplier: 1.0,
+                                         constant: 236))
         //4注册按钮
         addConstraint(NSLayoutConstraint(item: registerBtn!,
                                          attribute: .left,

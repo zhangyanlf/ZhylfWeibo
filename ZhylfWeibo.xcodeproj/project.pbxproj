@@ -102,6 +102,7 @@
 		A49768331FA9C20C000003F2 /* ZhylfWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhylfWeiboUITests.swift; sourceTree = "<group>"; };
 		A49768391FA9C20C000003F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D7A3111FBBE4B300166CAB /* zhangyanlf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zhangyanlf.json; sourceTree = "<group>"; };
 		A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlVisitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,6 +284,7 @@
 		A450677A1FB97869009C1D72 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A4D7A3111FBBE4B300166CAB /* zhangyanlf.json */,
 				A4327D4E1FAACAFD006533AD /* ZlMainViewController.swift */,
 				A4327D501FAACB55006533AD /* ZlNavigationController.swift */,
 			);

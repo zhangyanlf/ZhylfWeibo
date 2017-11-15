@@ -96,7 +96,15 @@ extension ZlMainViewController {
             ["clsName": "ZlProfileViewController", "title": "我", "imageName": "profile","visitorInfo": ["imageName":"visitordiscover_image_profile","message":"登录后,你的微博、相册、个人资料会显示在这里展示给别人"]],
             ]
         //测试JSON格式  转换成Plist
-        (array as NSArray).write(toFile: "/Users/zhaofei/Desktop/demo.plist", atomically: true)
+//        (array as NSArray).write(toFile: "/Users/zhaofei/Desktop/demo.plist", atomically: true)
+        //数组 -> JSON
+       let data = try! JSONSerialization.data(withJSONObject: array, options: [.prettyPrinted])
+//       let fileURL = NSURL.fileURL(withPath: "/Users/zhaofei/Desktop/demo.plist")
+    
+       (data as NSData).write(toFile: "/Users/zhaofei/Desktop/zhangyanlf.json", atomically: true)
+    
+    
+    
         var arrayM = [UIViewController]()
     
         for dict in array {

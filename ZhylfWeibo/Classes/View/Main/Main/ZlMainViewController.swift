@@ -92,10 +92,21 @@ extension ZlMainViewController {
    private func setupChildController() {
     
         //从 bundle 加载配置的 Json
+        //获取沙盒的文件路径
+        let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let jsonPath = (docDir as NSString).appendingPathComponent("zhangyanlf.json")
+        //加载data
+    var data = NSData(contentsOfFile: jsonPath)
+    
+        //判断data 是否有内容 如果没有 说明本地沙盒没有文件
+    if data == nil {
+        //从Bundle 加载 data
+       let path = Bundle.main.path(forResource: "zhangyanlf", ofType: "json")
+       data = NSData(contentsOfFile: path!)
+    }
+    
         //1. 路径  2.记载NSData 3.反序列化转出数组
-        guard let path = Bundle.main.path(forResource: "zhangyanlf", ofType: "json"),
-            let data = NSData(contentsOfFile: path),
-            let array = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [[String: AnyObject]]
+    guard let array = try? JSONSerialization.jsonObject(with: data! as Data, options: []) as? [[String: AnyObject]]
             else {
             return
         }

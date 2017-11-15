@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B3FBDBFED01CB06EDAEA7FD1759AE5266D94E8B8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "03454949E7F705CF1F373A64B485A6D245EE2390" : 9223372036854775807,
+    "B3FBDBFED01CB06EDAEA7FD1759AE5266D94E8B8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FCFA42DA-ECB0-43D0-956D-A585EBF773C3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "03454949E7F705CF1F373A64B485A6D245EE2390" : "",
+    "B3FBDBFED01CB06EDAEA7FD1759AE5266D94E8B8" : "ZhylfWeibo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZhylfWeibo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZhylfWeibo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/gitee.com\/ZhylAinyL\/ZhylfWeibo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "03454949E7F705CF1F373A64B485A6D245EE2390"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhangyanlf\/ZhylfWeibo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B3FBDBFED01CB06EDAEA7FD1759AE5266D94E8B8"
+    }
+  ]
+}

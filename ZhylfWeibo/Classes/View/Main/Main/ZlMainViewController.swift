@@ -86,28 +86,42 @@ extension ZlMainViewController {
     
     }
     
+    
+    
     //设置所有子控制器
    private func setupChildController() {
-        let array = [
-            ["clsName": "ZlHomeViewController", "title": "首页", "imageName": "home","visitorInfo": ["imageName":"","message":"关注一些人,回这里看看有什么惊喜"]],
-            ["clsName": "ZlMessageViewController", "title": "消息", "imageName": "message_center","visitorInfo": ["imageName":"visitordiscover_image_message","message":"登录后,别人发给你的微博,发给你的消息,都会在这里收到通知"]],
-            ["clsName": "UIViewViewController"],
-            ["clsName": "ZlDescoverViewController", "title": "发现", "imageName": "discover","visitorInfo": ["imageName":"visitordiscover_image_message","message":"登录后,最新、最热微博尽在掌握,不会与实时潮流擦肩而过"]],
-            ["clsName": "ZlProfileViewController", "title": "我", "imageName": "profile","visitorInfo": ["imageName":"visitordiscover_image_profile","message":"登录后,你的微博、相册、个人资料会显示在这里展示给别人"]],
-            ]
-        //测试JSON格式  转换成Plist
-//        (array as NSArray).write(toFile: "/Users/zhaofei/Desktop/demo.plist", atomically: true)
-        //数组 -> JSON
-       let data = try! JSONSerialization.data(withJSONObject: array, options: [.prettyPrinted])
-//       let fileURL = NSURL.fileURL(withPath: "/Users/zhaofei/Desktop/demo.plist")
     
-       (data as NSData).write(toFile: "/Users/zhaofei/Desktop/zhangyanlf.json", atomically: true)
+        //从 bundle 加载配置的 Json
+        //1. 路径  2.记载NSData 3.反序列化转出数组
+        guard let path = Bundle.main.path(forResource: "zhangyanlf", ofType: "json"),
+            let data = NSData(contentsOfFile: path),
+            let array = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [[String: AnyObject]]
+            else {
+            return
+        }
+    
+    
+    
+//        let array = [
+//            ["clsName": "ZlHomeViewController", "title": "首页", "imageName": "home","visitorInfo": ["imageName":"","message":"关注一些人,回这里看看有什么惊喜"]],
+//            ["clsName": "ZlMessageViewController", "title": "消息", "imageName": "message_center","visitorInfo": ["imageName":"visitordiscover_image_message","message":"登录后,别人发给你的微博,发给你的消息,都会在这里收到通知"]],
+//            ["clsName": "UIViewViewController"],
+//            ["clsName": "ZlDescoverViewController", "title": "发现", "imageName": "discover","visitorInfo": ["imageName":"visitordiscover_image_message","message":"登录后,最新、最热微博尽在掌握,不会与实时潮流擦肩而过"]],
+//            ["clsName": "ZlProfileViewController", "title": "我", "imageName": "profile","visitorInfo": ["imageName":"visitordiscover_image_profile","message":"登录后,你的微博、相册、个人资料会显示在这里展示给别人"]],
+//            ]
+//        //测试JSON格式  转换成Plist
+////        (array as NSArray).write(toFile: "/Users/zhaofei/Desktop/demo.plist", atomically: true)
+//        //数组 -> JSON
+//       let data = try! JSONSerialization.data(withJSONObject: array, options: [.prettyPrinted])
+////       let fileURL = NSURL.fileURL(withPath: "/Users/zhaofei/Desktop/demo.plist")
+//
+//       (data as NSData).write(toFile: "/Users/zhaofei/Desktop/zhangyanlf.json", atomically: true)
     
     
     
         var arrayM = [UIViewController]()
     
-        for dict in array {
+        for dict in array! {
             arrayM.append(controller(dict: dict as [String : AnyObject]))
         }
         viewControllers = arrayM

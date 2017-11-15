@@ -15,14 +15,15 @@ import UIKit
 //2. extension 中不能‘重写’ 本类父类方法 重写父类的方法 是子类的职责 扩展是对类的扩展
 
 class ZlBaseViewController: UIViewController {
+    
+    /// 用户登录标记
+    var userLogon = false
+    /// 上拉刷新标记
+    var isPullup = false
     /// 表格试图 - 如果用户没有登录 就不创建
     var tableView: UITableView?
     /// 刷新控件
     var refreshControl: UIRefreshControl?
-    /// 上拉刷新标记
-    var isPullup = false
-    /// 用户登录标记
-    var userLogon = false
     /// 访客试图信息字典
     var visitorInfoDictionary: [String: String]?
     

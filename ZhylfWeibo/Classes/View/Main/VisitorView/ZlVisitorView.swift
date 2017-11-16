@@ -11,6 +11,12 @@ import UIKit
 //访客试图
 class ZlVisitorView: UIView {
     
+    ///注册按钮
+     lazy var registerBtn = UIButton.cz_textButton("注册", fontSize: 16, normalColor: UIColor.orange, highlightedColor: UIColor.black, backgroundImageName: "common_button_white")
+    
+    ///登录按钮
+     lazy var logonBtn = UIButton.cz_textButton("登录", fontSize: 16, normalColor: UIColor.darkGray, highlightedColor: UIColor.black, backgroundImageName: "common_button_white")
+    
     ///访客试图的信息字典 [imageName/message]
     /// 如果是首页 imageName = ""
     var vistorInfo: [String: String]? {
@@ -77,11 +83,7 @@ class ZlVisitorView: UIView {
     private lazy var houseView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_house"))
     ///提示标签
     private lazy var tipLabel = UILabel.cz_label(withText: "关注一些人,回这里看看有什么惊喜", fontSize: 14, color: UIColor.darkGray)
-    ///注册按钮
-    private lazy var registerBtn = UIButton.cz_textButton("注册", fontSize: 16, normalColor: UIColor.orange, highlightedColor: UIColor.black, backgroundImageName: "common_button_white")
     
-    ///登录按钮
-   private lazy var logonBtn = UIButton.cz_textButton("登录", fontSize: 16, normalColor: UIColor.darkGray, highlightedColor: UIColor.black, backgroundImageName: "common_button_white")
     
 }
 

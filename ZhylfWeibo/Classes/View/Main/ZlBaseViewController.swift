@@ -17,7 +17,7 @@ import UIKit
 class ZlBaseViewController: UIViewController {
     
     /// 用户登录标记
-    var userLogon = true
+    var userLogon = false
     /// 上拉刷新标记
     var isPullup = false
     /// 表格试图 - 如果用户没有登录 就不创建
@@ -54,9 +54,21 @@ class ZlBaseViewController: UIViewController {
     }
 }
 
+//MARK: - 访客试图监听方法
+extension ZlBaseViewController {
+    @objc private func login() {
+        print("用户登录")
+    }
+    
+    @objc private func register() {
+        print("用户注册")
+    }
+}
+
+
 //MARK: - 设置界面
 extension ZlBaseViewController {
-   @objc public func setupUI() {
+    private func setupUI() {
          view.backgroundColor = UIColor.cz_random()
         // 取消自动缩进 - 如果隐藏了导航栏  会缩进 20 个点
     if #available(iOS 11.0, *) {
@@ -68,8 +80,9 @@ extension ZlBaseViewController {
         setupNavigationBar()
         userLogon ? setupTableView() : setupVisitorView()
     }
-    /// 设置表格试图
-   private func setupTableView() {
+    /// 设置表格试图  -- 用户登陆之后执行
+    /// 子类重写此方法  子类不关心登录之前的逻辑
+   @objc public func setupTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         
         view.insertSubview(tableView!, belowSubview: navigationBar)
@@ -104,8 +117,15 @@ extension ZlBaseViewController {
     view.insertSubview(visitorView, belowSubview: navigationBar)
     
     print("访客试图\(visitorView)")
-    ///设置访客试图信息
+    ///1.设置访客试图信息
     visitorView.vistorInfo = visitorInfoDictionary
+    
+    //2.添加访客试图按钮的监听方法
+    visitorView.logonBtn?.addTarget(self, action: #selector(login), for: .touchUpInside)
+    visitorView.registerBtn?.addTarget(self, action: #selector(register), for: .touchUpInside)
+    //3.设置导航栏按钮
+    navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
+    navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
     
     }
     
@@ -116,11 +136,13 @@ extension ZlBaseViewController {
         //将item 这只给 bar
         navigationBar.items = [navItem]
         
-        //设置navItem的渲染颜色
+        //1设置navItem的渲染颜色 整个背景的颜色
         navigationBar.barTintColor = UIColor.cz_color(withHex: 0xF6F6F6)
         
-        //设置navigationBar 的字体颜色
+        //2设置navigationBar 的字体颜色
         navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray]
+        //3.设置系统按钮的文字渲染颜色
+        navigationBar.tintColor = UIColor.orange
     }
     
 }

@@ -106,6 +106,10 @@ extension ZlMainViewController {
     }
     
         //1. 路径  2.记载NSData 3.反序列化转出数组
+        // 反序列化 throw 抛出异常
+        // 方法一：推荐 try？ 如果解析成功 就有值  否则 为 nil
+        // 方法一：强烈不推荐 try！ 如果解析成功 就有值  否则崩溃
+        //  try catch 一旦不平衡 就会出现内存泄露
     guard let array = try? JSONSerialization.jsonObject(with: data! as Data, options: []) as? [[String: AnyObject]]
             else {
             return

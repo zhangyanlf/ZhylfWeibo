@@ -1,0 +1,6 @@
+framework module Pods_ZhylfWeiboUITests {
+  umbrella header "Pods-ZhylfWeiboUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

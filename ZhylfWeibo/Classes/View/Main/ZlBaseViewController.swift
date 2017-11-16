@@ -17,7 +17,7 @@ import UIKit
 class ZlBaseViewController: UIViewController {
     
     /// 用户登录标记
-    var userLogon = false
+    var userLogon = true
     /// 上拉刷新标记
     var isPullup = false
     /// 表格试图 - 如果用户没有登录 就不创建

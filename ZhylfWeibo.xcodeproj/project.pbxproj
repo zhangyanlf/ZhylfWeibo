@@ -10,6 +10,7 @@
 		0F3E84C5606870FA7C33F5B2 /* Pods_ZhylfWeiboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C45CF6CFBD5A37C0C485C22 /* Pods_ZhylfWeiboUITests.framework */; };
 		12D9417EF1EA2931A0E1CC54 /* Pods_ZhylfWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38C6E9877568763B02E1CF3 /* Pods_ZhylfWeibo.framework */; };
 		A412E55C1FB4501400650D46 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412E55B1FB4501400650D46 /* Bundle+Extension.swift */; };
+		A421CA451FBD65A6006F1F64 /* ZlNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A421CA441FBD65A6006F1F64 /* ZlNetworkManager.swift */; };
 		A428CDE11FAAED3E0059BF57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D3F1FAAC9F8006533AD /* AppDelegate.swift */; };
 		A4327D4F1FAACAFD006533AD /* ZlMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D4E1FAACAFD006533AD /* ZlMainViewController.swift */; };
 		A4327D511FAACB55006533AD /* ZlNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D501FAACB55006533AD /* ZlNavigationController.swift */; };
@@ -67,6 +68,7 @@
 		A38C6E9877568763B02E1CF3 /* Pods_ZhylfWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhylfWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A412E5581FB4484C00650D46 /* ZhylfWeibo-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZhylfWeibo-Bridge.h"; sourceTree = "<group>"; };
 		A412E55B1FB4501400650D46 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		A421CA441FBD65A6006F1F64 /* ZlNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlNetworkManager.swift; sourceTree = "<group>"; };
 		A4327D3F1FAAC9F8006533AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4327D411FAAC9F8006533AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4327D441FAAC9F8006533AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		A412E53D1FB4429F00650D46 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A421CA431FBD6562006F1F64 /* Network */,
 				A44117D61FB549150023B26F /* Additions */,
 				A412E5591FB44CDC00650D46 /* Extension */,
 			);
@@ -194,13 +197,21 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		A421CA431FBD6562006F1F64 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A421CA441FBD65A6006F1F64 /* ZlNetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		A4327D3C1FAAC9F8006533AD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				A4327D471FAAC9F8006533AD /* View */,
 				A412E53C1FB4429F00650D46 /* Model */,
-				A412E53D1FB4429F00650D46 /* Tools */,
 				A412E53B1FB4429F00650D46 /* ViewModel */,
+				A412E53D1FB4429F00650D46 /* Tools */,
 				A4327D3E1FAAC9F8006533AD /* Other */,
 			);
 			path = Classes;
@@ -673,6 +684,7 @@
 			files = (
 				A44117F61FB54E130023B26F /* NSString+CZHash.m in Sources */,
 				A428CDE11FAAED3E0059BF57 /* AppDelegate.swift in Sources */,
+				A421CA451FBD65A6006F1F64 /* ZlNetworkManager.swift in Sources */,
 				A412E55C1FB4501400650D46 /* Bundle+Extension.swift in Sources */,
 				A44117F01FB54DE40023B26F /* UIButton+CZAddition.m in Sources */,
 				A4327D591FAACC91006533AD /* ZlMessageViewController.swift in Sources */,

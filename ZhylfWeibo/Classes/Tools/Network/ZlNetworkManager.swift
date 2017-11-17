@@ -23,9 +23,40 @@ class ZlNetworkManager: AFHTTPSessionManager {
     ///静态区 / 常量 /闭包
     ///在第一次访问的时候  执行闭包 并且将接货保存在 shared
     static let shared = ZlNetworkManager()
-
+    
+    //访问令牌 所有网络请求 都基于令牌(登录除外)
+    var accessToken: String? = "2.009Tv21E6wpHnD83a4f871d1R_9fnB"
+    
+    //专门负责拼接 token 的网络请求
+    func tosenResquest(method: ZlHTTPMethod = .GET, URLString: String,parameters:[String:AnyObject]?,completion:@escaping (_ json:AnyObject?,_ isSuccess:Bool)->()) {
+        //处理 token 字典
+        guard let token = accessToken else {
+            completion(nil, false)
+            return
+        }
+        //1>判断参数字典是否存在
+        var parameters = parameters
+        
+        if parameters == nil {
+            //实例化字典
+            parameters = [String: AnyObject]()
+        }
+        //2> 设置参数字典
+        parameters!["access_token"] = token as AnyObject
+        //调用 request 发起真正的网络请求方法
+        request(URLString: URLString, parameters: parameters, completion: completion)
+        
+        
+        
+    }
 
     ///封装AF 的 Get /Post
+    ///
+    /// - Parameters:
+    ///   - method: GET/POST
+    ///   - URLString: URLString
+    ///   - parameters: 参数字典
+    ///   - completion: 完成回调 json(字典/数组，是否成功)
     func request(method: ZlHTTPMethod = .GET, URLString: String,parameters:[String:AnyObject]?,completion:@escaping (_ json:AnyObject?,_ isSuccess:Bool)->()) {
 
 

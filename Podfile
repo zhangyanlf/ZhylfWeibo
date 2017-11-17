@@ -11,6 +11,8 @@ pod "YYModel"
 pod "FMDB"
 pod "SVProgressHUD"
 pod "pop"
+pod “Alamofire"
+
 
   target 'ZhylfWeiboTests' do
     inherit! :search_paths
@@ -21,6 +23,7 @@ pod "YYModel"
 pod "FMDB"
 pod "SVProgressHUD"
 pod "pop"
+pod “Alamofire"
   end
 
   target 'ZhylfWeiboUITests' do
@@ -32,6 +35,7 @@ pod "YYModel"
 pod "FMDB"
 pod "SVProgressHUD"
 pod "pop"
+pod “Alamofire"
   end
 
 end

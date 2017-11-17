@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 //定义全局常量  尽量使用 private 修饰，否则到处都能使用
 private let cellId = "cellId"
 class ZlHomeViewController: ZlBaseViewController {
@@ -20,7 +21,16 @@ class ZlHomeViewController: ZlBaseViewController {
     }
     ///加载数据
     override func loadData() {
-         print("开始加载数据 \(ZlNetworkManager.shared)")
+        
+        //用网络工具记载数据
+       
+        ZlNetworkManager.shared.statusList { (list, isSuccess) in
+            //字典转模型
+            print(list)
+        }
+        
+        
+//         print("开始加载数据")
         
         //模拟延迟加载数据
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {

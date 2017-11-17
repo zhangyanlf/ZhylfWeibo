@@ -22,3 +22,9 @@
     }
 ```
 ####  anim.isRemovedOnCompletion = false  动画执行完后不删除  不写时会引起动画执行一个周期/界面切换后停止动画效果
+
+
+# 网络小结：
+ ![image](https://github.com/zhangyanlf/ZhylfWeibo/blob/master/ZhylfWeibo/Classes/zhangyanlf/网络框架.png)
+ 
+ 

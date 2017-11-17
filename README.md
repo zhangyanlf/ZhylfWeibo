@@ -58,7 +58,7 @@
     }
  ```
  
-  ##  Alamofire 封装网络请求
+ ##  Alamofire 封装网络请求
  ```
  func getRequest(method: ZlHTTPMethod = .GET,urlString: String, params : [String : Any], success : @escaping (_ response : [String : AnyObject])->(), failture : @escaping (_ error : Error)->()) {
         

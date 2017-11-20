@@ -34,6 +34,8 @@
 		A44117FE1FB555180023B26F /* ZlTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44117FD1FB555180023B26F /* ZlTestViewController.swift */; };
 		A44118001FB57F810023B26F /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44117FF1FB57F810023B26F /* UIBarButtonItem+Extension.swift */; };
 		A46782591FBE795A0014B877 /* ZlNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46782581FBE795A0014B877 /* ZlNetworkManager+Extension.swift */; };
+		A467825B1FBEAC750014B877 /* ZlStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467825A1FBEAC750014B877 /* ZlStatus.swift */; };
+		A467825F1FBEAF350014B877 /* ZlStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */; };
 		A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A497681E1FA9C20C000003F2 /* Assets.xcassets */; };
 		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
@@ -108,6 +110,8 @@
 		A44117FD1FB555180023B26F /* ZlTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlTestViewController.swift; sourceTree = "<group>"; };
 		A44117FF1FB57F810023B26F /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		A46782581FBE795A0014B877 /* ZlNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZlNetworkManager+Extension.swift"; sourceTree = "<group>"; };
+		A467825A1FBEAC750014B877 /* ZlStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatus.swift; sourceTree = "<group>"; };
+		A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusListViewModel.swift; sourceTree = "<group>"; };
 		A49768141FA9C20C000003F2 /* ZhylfWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhylfWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A497681E1FA9C20C000003F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A49768281FA9C20C000003F2 /* ZhylfWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +172,7 @@
 		A412E53B1FB4429F00650D46 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 		A412E53C1FB4429F00650D46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A467825A1FBEAC750014B877 /* ZlStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -688,10 +694,12 @@
 				A44117F61FB54E130023B26F /* NSString+CZHash.m in Sources */,
 				A428CDE11FAAED3E0059BF57 /* AppDelegate.swift in Sources */,
 				A421CA451FBD65A6006F1F64 /* ZlNetworkManager.swift in Sources */,
+				A467825F1FBEAF350014B877 /* ZlStatusListViewModel.swift in Sources */,
 				A412E55C1FB4501400650D46 /* Bundle+Extension.swift in Sources */,
 				A44117F01FB54DE40023B26F /* UIButton+CZAddition.m in Sources */,
 				A4327D591FAACC91006533AD /* ZlMessageViewController.swift in Sources */,
 				A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */,
+				A467825B1FBEAC750014B877 /* ZlStatus.swift in Sources */,
 				A46782591FBE795A0014B877 /* ZlNetworkManager+Extension.swift in Sources */,
 				A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */,
 				A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */,
@@ -882,7 +890,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME)/ZhylfWeibo-Bridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -902,7 +910,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PRODUCT_NAME)/ZhylfWeibo-Bridge.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

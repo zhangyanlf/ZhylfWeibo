@@ -11,7 +11,8 @@ pod "YYModel"
 pod "FMDB"
 pod "SVProgressHUD"
 pod "pop"
-pod “Alamofire"
+pod "Alamofire"
+pod "HandyJSON", '~> 4.0.0-beta.1'
 
 
   target 'ZhylfWeiboTests' do
@@ -23,7 +24,8 @@ pod "YYModel"
 pod "FMDB"
 pod "SVProgressHUD"
 pod "pop"
-pod “Alamofire"
+pod "Alamofire"
+pod "HandyJSON", '~> 4.0.0-beta.1'
   end
 
   target 'ZhylfWeiboUITests' do
@@ -35,7 +37,8 @@ pod "YYModel"
 pod "FMDB"
 pod "SVProgressHUD"
 pod "pop"
-pod “Alamofire"
+pod "Alamofire"
+pod "HandyJSON", '~> 4.0.0-beta.1'
   end
 
 end

@@ -11,8 +11,8 @@ import Alamofire
 //定义全局常量  尽量使用 private 修饰，否则到处都能使用
 private let cellId = "cellId"
 class ZlHomeViewController: ZlBaseViewController {
-
-    private lazy var statusList = [String]()
+    //列表试图模型
+    private lazy var listViewModel = ZlStatusListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,29 +22,8 @@ class ZlHomeViewController: ZlBaseViewController {
     ///加载数据
     override func loadData() {
         
-        //用网络工具记载数据
-       
-        ZlNetworkManager.shared.statusList { (list, isSuccess) in
-            //字典转模型
-            print(list)
-        }
-        
-        
-//         print("开始加载数据")
-        
-        //模拟延迟加载数据
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            for i in 0..<15 {
-                if self.isPullup {
-                    //将数据追加到底部
-                    self.statusList.append("上拉\(i)")
-                } else {
-                    //将数据插入到数组的顶部
-                    self.statusList.insert(i.description, at: 0)
-                }
-                
-            }
-            print("刷新表格")
+        listViewModel.loadStatus { (isSucess) in
+            print("加载表格结束")
             
             //结束刷新
             self.refreshControl?.endRefreshing()
@@ -53,7 +32,6 @@ class ZlHomeViewController: ZlBaseViewController {
             //刷新表格
             self.tableView?.reloadData()
         }
-        
         
     }
     
@@ -73,7 +51,7 @@ class ZlHomeViewController: ZlBaseViewController {
 extension ZlHomeViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statusList.count
+        return listViewModel.statusList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,7 +59,7 @@ extension ZlHomeViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         
         //2.设置cell
-        cell.textLabel?.text = statusList[indexPath.row]
+        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
         
         //3.返回cell
         return cell

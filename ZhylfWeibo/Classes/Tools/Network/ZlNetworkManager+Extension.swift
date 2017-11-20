@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import HandyJSON
 
 //封装新浪微博的请求
 extension ZlNetworkManager {
@@ -22,7 +23,7 @@ extension ZlNetworkManager {
             //从 json 中 获取 statuses 字典数组
             //如果 as？ 失败 result = nil
             let result = json?["statuses"] as? [[String: AnyObject]]
-            
+
             completion(result!, isSuccess)
             
         }

@@ -18,6 +18,7 @@ PODS:
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
+  - HandyJSON (4.0.0-beta.1)
   - pop (1.0.10)
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - AFNetworking
   - Alamofire
   - FMDB
+  - HandyJSON (~> 4.0.0-beta.1)
   - pop
   - SDWebImage
   - SVProgressHUD
@@ -38,11 +40,12 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  HandyJSON: 428bb18e2c34c2a77361accebf90cf64e4f74118
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 90556ba72484fb2efaecdc320f1596e81dcc021d
+PODFILE CHECKSUM: aac84ad861fe8002008112520c2558603887f0c9
 
 COCOAPODS: 1.2.1

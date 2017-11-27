@@ -22,7 +22,7 @@ class ZlHomeViewController: ZlBaseViewController {
     ///加载数据
     override func loadData() {
         
-        listViewModel.loadStatus { (isSucess) in
+        listViewModel.loadStatus(pullup: self.isPullup) { (isSucess) in
             print("加载表格结束")
             
             //结束刷新

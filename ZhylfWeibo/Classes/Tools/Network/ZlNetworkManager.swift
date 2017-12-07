@@ -25,7 +25,9 @@ class ZlNetworkManager: AFHTTPSessionManager {
     static let shared = ZlNetworkManager()
     
     //访问令牌 所有网络请求 都基于令牌(登录除外)
-    var accessToken: String? = "2.009Tv21E6wpHnD83a4f871d1R_9fnB"
+    var accessToken: String? = "2.009Tv21E12Z7dD87e2770dafZ_QvJE"
+    //用户微博id
+    var uid: String? = "3965283870"
     
     //专门负责拼接 token 的网络请求
     func tosenResquest(method: ZlHTTPMethod = .GET, URLString: String,parameters:[String:AnyObject]?,completion:@escaping (_ json:AnyObject?,_ isSuccess:Bool)->()) {

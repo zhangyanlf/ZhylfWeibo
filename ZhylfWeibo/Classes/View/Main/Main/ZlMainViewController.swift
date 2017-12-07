@@ -10,6 +10,9 @@ import UIKit
 
 //主控制器
 class ZlMainViewController: UITabBarController {
+    
+    //定时器
+    private var timer: Timer?
 
     //MARK: - 私有控件
     // 中间按钮
@@ -22,7 +25,17 @@ class ZlMainViewController: UITabBarController {
         // Do any additional setup after loading the view.
         setupChildController()
         setupComposeButton()
+        setupTimer()
+//        //测试未读数量
+//        ZlNetworkManager.shared.unreadCount { (count) in
+//            print("有\(count)条未读消息")
+//        }
         
+    }
+    
+    deinit {
+        //销毁时钟
+        timer?.invalidate()
     }
     
     //MARK: - 监听方法
@@ -57,6 +70,29 @@ class ZlMainViewController: UITabBarController {
    
 
 }
+
+
+//MARK: - 时钟相关方法
+extension ZlMainViewController {
+    
+    private func setupTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 50.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc private func updateTimer (){
+//        print(#function)
+        ZlNetworkManager.shared.unreadCount { (count) in
+            print("检测到\(count)条微博")
+            //设置 首页 tabBatItem 的badgeNumber
+            self.tabBar.items?[0].badgeValue = count > 0 ? "\(count)" : nil
+            
+            //设置app 的 badgeNumber 8.0 以后需要用户授权
+            UIApplication.shared.applicationIconBadgeNumber = count
+        }
+    }
+}
+
+
 
 // extension 类似于 OC 中的 分类 在swift 中还可以用来切分代码块
 //可以把相近的功能的函数 放在一个 extension 中

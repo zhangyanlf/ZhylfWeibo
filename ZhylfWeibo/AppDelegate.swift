@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 //find . -name "*.swift" | xargs wc -l
 //查看代码行数
 
@@ -17,6 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //10以上版本 的取得用户的授权显示通知
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.carPlay,.badge]) { (success, error) in
+                print("授权\(success ? "成功":"失败")")
+            }
+        } else { //10以下
+            let notifySettings = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
+            
+            application.registerUserNotificationSettings(notifySettings)
+        }
+        
+        
+        //10以前的取得用户的授权显示通知（上方的提示条/通知/badgeNumber）
+        
         // Override point for customization after application launch.
         window = UIWindow()
         

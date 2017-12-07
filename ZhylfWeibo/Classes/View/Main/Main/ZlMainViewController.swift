@@ -30,6 +30,9 @@ class ZlMainViewController: UITabBarController {
 //        ZlNetworkManager.shared.unreadCount { (count) in
 //            print("有\(count)条未读消息")
 //        }
+        //设置代理
+        delegate = self
+
         
     }
     
@@ -69,6 +72,42 @@ class ZlMainViewController: UITabBarController {
     
    
 
+}
+//MARK: - UITabBarControllerDelegate
+extension ZlMainViewController: UITabBarControllerDelegate {
+    /// 将要选择 tabBarItem
+    ///
+    /// - Parameters:
+    ///   - tabBarController: tabBarController
+    ///   - viewController: 目标控制器
+    /// - Returns: 是否切换到目标控制器
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        print("将要切换到\(viewController)")
+        
+        //判断目标控制器是否是 UIViewController
+        
+        //1> 获取控制器在数组中的索引
+        let idx = (childViewControllers as NSArray).index(of: viewController)
+        //2> 获取当前索引 同时 idx 也是首页 重复点击首页按钮
+        if selectedIndex == 0 && idx == selectedIndex {
+            print("点击首页")
+            //3> 将表格切换到最顶部
+            //a) 获取到控制器
+            let nav = childViewControllers[0] as! UINavigationController
+            let vc = nav.childViewControllers[0] as! ZlHomeViewController
+            
+            vc.tableView?.setContentOffset(CGPoint(x: 0, y: -64), animated: true)
+            //4>刷新数据 - 增加延迟  让表格滚动到顶部再刷新
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+                vc.loadData()
+                //点击后将首页的badgeNumber 设置 nil
+                self.tabBar.items?[0].badgeValue = nil
+            })
+        }
+        
+        
+        return !viewController.isMember(of: UIViewController.self)
+    }
 }
 
 
@@ -111,8 +150,8 @@ extension ZlMainViewController {
     
         //计算按钮的宽度
     let count = CGFloat(childViewControllers.count)
-    //将向内的宽度减小 能够让按钮的宽度变大 盖住容错点 防止穿帮
-    let w = tabBar.bounds.width / count - 1
+    //将向内的宽度减
+    let w = tabBar.bounds.width / count
 //    CGRectInset 正数向内推进 负数 向外扩展
     composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
     

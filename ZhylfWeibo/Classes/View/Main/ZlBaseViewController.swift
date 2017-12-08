@@ -16,8 +16,8 @@ import UIKit
 
 class ZlBaseViewController: UIViewController {
     
-    /// 用户登录标记
-    var userLogon = true
+//    /// 用户登录标记
+//    var userLogon = true
     /// 上拉刷新标记
     var isPullup = false
     /// 表格试图 - 如果用户没有登录 就不创建
@@ -37,7 +37,8 @@ class ZlBaseViewController: UIViewController {
         super.viewDidLoad()
 
        setupUI()
-       loadData()
+        ZlNetworkManager.shared.userLogon ? loadData():()
+       
     }
     
     // 重写 title 的 didSet 
@@ -78,11 +79,12 @@ extension ZlBaseViewController {
         automaticallyAdjustsScrollViewInsets = false;
     };
         setupNavigationBar()
-        userLogon ? setupTableView() : setupVisitorView()
+        ZlNetworkManager.shared.userLogon ? setupTableView() : setupVisitorView()
     }
     /// 设置表格试图  -- 用户登陆之后执行
     /// 子类重写此方法  子类不关心登录之前的逻辑
    @objc public func setupTableView() {
+    
         tableView = UITableView(frame: view.bounds, style: .plain)
         
         view.insertSubview(tableView!, belowSubview: navigationBar)

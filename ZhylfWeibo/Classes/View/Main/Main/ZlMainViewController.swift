@@ -115,11 +115,15 @@ extension ZlMainViewController: UITabBarControllerDelegate {
 extension ZlMainViewController {
     
     private func setupTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 50.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        
+        timer = Timer.scheduledTimer(timeInterval: 120.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     @objc private func updateTimer (){
 //        print(#function)
+        if !ZlNetworkManager.shared.userLogon {
+            return
+        }
         ZlNetworkManager.shared.unreadCount { (count) in
             print("检测到\(count)条微博")
             //设置 首页 tabBatItem 的badgeNumber

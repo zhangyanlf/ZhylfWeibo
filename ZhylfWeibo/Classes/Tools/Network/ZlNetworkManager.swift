@@ -24,10 +24,15 @@ class ZlNetworkManager: AFHTTPSessionManager {
     ///在第一次访问的时候  执行闭包 并且将接货保存在 shared
     static let shared = ZlNetworkManager()
     
-    //访问令牌 所有网络请求 都基于令牌(登录除外)
-    var accessToken: String? = "2.009Tv21E12Z7dD87e2770dafZ_QvJE"
+    //访问令牌 所有网络请求 都基于令牌(登录除外)2.009Tv21E12Z7dDcebfe60ae116ofoC 2.009Tv21E6wpHnD3701b0fbf20SAd_h
+    var accessToken: String?// = "2.009Tv21E12Z7dDcebfe60ae116ofoC"
     //用户微博id
     var uid: String? = "3965283870"
+    
+    ///用户登录标记  计算性属性
+    var userLogon: Bool {
+        return accessToken != nil
+    }
     
     //专门负责拼接 token 的网络请求
     func tosenResquest(method: ZlHTTPMethod = .GET, URLString: String,parameters:[String:AnyObject]?,completion:@escaping (_ json:AnyObject?,_ isSuccess:Bool)->()) {

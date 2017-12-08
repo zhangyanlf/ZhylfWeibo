@@ -39,6 +39,8 @@
 		A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A497681E1FA9C20C000003F2 /* Assets.xcassets */; };
 		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
+		A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */; };
+		A4BFF3B71FDA7FDD0028C10E /* ZlOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */; };
 		A4D7A3161FBBF10100166CAB /* zhangyanlf.json in Resources */ = {isa = PBXBuildFile; fileRef = A4D7A3151FBBF0E800166CAB /* zhangyanlf.json */; };
 		A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */; };
 		A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */; };
@@ -120,6 +122,8 @@
 		A49768331FA9C20C000003F2 /* ZhylfWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhylfWeiboUITests.swift; sourceTree = "<group>"; };
 		A49768391FA9C20C000003F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlCommon.swift; sourceTree = "<group>"; };
+		A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlOAuthViewController.swift; sourceTree = "<group>"; };
 		A4D7A3151FBBF0E800166CAB /* zhangyanlf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zhangyanlf.json; sourceTree = "<group>"; };
 		A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlVisitorView.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 				A421CA431FBD6562006F1F64 /* Network */,
 				A44117D61FB549150023B26F /* Additions */,
 				A412E5591FB44CDC00650D46 /* Extension */,
+				A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 		A4327D4A1FAAC9F8006533AD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A4BFF3B51FDA7FC00028C10E /* OAuth */,
 				A44117FC1FB554B10023B26F /* Test */,
 				A450677A1FB97869009C1D72 /* Main */,
 				A4ECE59D1FBAC22F00AE087B /* VisitorView */,
@@ -389,6 +395,14 @@
 				A49768391FA9C20C000003F2 /* Info.plist */,
 			);
 			path = ZhylfWeiboUITests;
+			sourceTree = "<group>";
+		};
+		A4BFF3B51FDA7FC00028C10E /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		A4ECE59D1FBAC22F00AE087B /* VisitorView */ = {
@@ -701,6 +715,7 @@
 				A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */,
 				A467825B1FBEAC750014B877 /* ZlStatus.swift in Sources */,
 				A46782591FBE795A0014B877 /* ZlNetworkManager+Extension.swift in Sources */,
+				A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */,
 				A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */,
 				A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */,
 				A4327D4F1FAACAFD006533AD /* ZlMainViewController.swift in Sources */,
@@ -714,6 +729,7 @@
 				A44117F41FB54E0E0023B26F /* NSObject+CZRuntime.m in Sources */,
 				A44117FE1FB555180023B26F /* ZlTestViewController.swift in Sources */,
 				A44117F21FB54E080023B26F /* NSArray+Log.m in Sources */,
+				A4BFF3B71FDA7FDD0028C10E /* ZlOAuthViewController.swift in Sources */,
 				A44117F91FB54E1E0023B26F /* UIScreen+CZAddition.m in Sources */,
 				A44117F31FB54E0A0023B26F /* NSAttributedString+CZAdditon.m in Sources */,
 				A4327D531FAACB8B006533AD /* ZlBaseViewController.swift in Sources */,

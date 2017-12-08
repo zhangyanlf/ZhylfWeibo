@@ -21,6 +21,9 @@ class ZlMainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //注册通知
+        NotificationCenter.default.addObserver(self, selector: #selector(userLogin), name: NSNotification.Name(rawValue: UserShouldLoginNotification), object: nil)
 
         // Do any additional setup after loading the view.
         setupChildController()
@@ -39,9 +42,23 @@ class ZlMainViewController: UITabBarController {
     deinit {
         //销毁时钟
         timer?.invalidate()
+        
+        //注销通知
+        NotificationCenter.default.removeObserver(self)
     }
     
     //MARK: - 监听方法
+    
+    @objc private func userLogin(n: Notification) {
+        print("用户登录通知")
+        //展现登录控制器
+        let nav = UINavigationController(rootViewController: ZlOAuthViewController())
+        
+        present(nav, animated: true, completion: nil)
+        
+    }
+    
+    
     /// 中间按钮
     //FIXME: 没有实现
     //private 保证方法私有 仅在当前对象被访问

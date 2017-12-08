@@ -58,7 +58,8 @@ class ZlBaseViewController: UIViewController {
 //MARK: - 访客试图监听方法
 extension ZlBaseViewController {
     @objc private func login() {
-        print("用户登录")
+        //发送通知
+        NotificationCenter.default.post(name: NSNotification.Name.init(UserShouldLoginNotification), object: nil)
     }
     
     @objc private func register() {

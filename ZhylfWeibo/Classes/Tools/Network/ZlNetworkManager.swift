@@ -38,7 +38,7 @@ class ZlNetworkManager: AFHTTPSessionManager {
     //var uid: String? = "3965283870"
     
     /// 用户账号的懒加载属性
-    lazy var userAccount = ZlUserAccount()
+   @objc lazy var userAccount = ZlUserAccount()
     
     ///用户登录标记  计算性属性
     var userLogon: Bool {

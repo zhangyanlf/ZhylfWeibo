@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F3E84C5606870FA7C33F5B2 /* Pods_ZhylfWeiboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C45CF6CFBD5A37C0C485C22 /* Pods_ZhylfWeiboUITests.framework */; };
 		12D9417EF1EA2931A0E1CC54 /* Pods_ZhylfWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38C6E9877568763B02E1CF3 /* Pods_ZhylfWeibo.framework */; };
+		A407840D1FDE67AA006EEA79 /* ZlUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A407840C1FDE67AA006EEA79 /* ZlUserAccount.swift */; };
 		A412E55C1FB4501400650D46 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412E55B1FB4501400650D46 /* Bundle+Extension.swift */; };
 		A421CA451FBD65A6006F1F64 /* ZlNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A421CA441FBD65A6006F1F64 /* ZlNetworkManager.swift */; };
 		A428CDE11FAAED3E0059BF57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D3F1FAAC9F8006533AD /* AppDelegate.swift */; };
@@ -71,6 +72,7 @@
 		31C60F36E01D56ADE09D855C /* Pods-ZhylfWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhylfWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhylfWeibo/Pods-ZhylfWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 		850C239F57635FF2013D8C18 /* Pods-ZhylfWeiboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhylfWeiboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhylfWeiboUITests/Pods-ZhylfWeiboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A38C6E9877568763B02E1CF3 /* Pods_ZhylfWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhylfWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A407840C1FDE67AA006EEA79 /* ZlUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlUserAccount.swift; sourceTree = "<group>"; };
 		A412E5581FB4484C00650D46 /* ZhylfWeibo-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZhylfWeibo-Bridge.h"; sourceTree = "<group>"; };
 		A412E55B1FB4501400650D46 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		A421CA441FBD65A6006F1F64 /* ZlNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlNetworkManager.swift; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A407840B1FDE678C006EEA79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A407840C1FDE67AA006EEA79 /* ZlUserAccount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A412E53B1FB4429F00650D46 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +223,7 @@
 		A421CA431FBD6562006F1F64 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A407840B1FDE678C006EEA79 /* Model */,
 				A421CA441FBD65A6006F1F64 /* ZlNetworkManager.swift */,
 				A46782581FBE795A0014B877 /* ZlNetworkManager+Extension.swift */,
 			);
@@ -705,6 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A407840D1FDE67AA006EEA79 /* ZlUserAccount.swift in Sources */,
 				A44117F61FB54E130023B26F /* NSString+CZHash.m in Sources */,
 				A428CDE11FAAED3E0059BF57 /* AppDelegate.swift in Sources */,
 				A421CA451FBD65A6006F1F64 /* ZlNetworkManager.swift in Sources */,

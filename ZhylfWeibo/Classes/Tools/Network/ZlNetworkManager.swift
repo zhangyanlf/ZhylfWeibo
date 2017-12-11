@@ -22,7 +22,15 @@ class ZlNetworkManager: AFHTTPSessionManager {
 
     ///静态区 / 常量 /闭包
     ///在第一次访问的时候  执行闭包 并且将接货保存在 shared
-    static let shared = ZlNetworkManager()
+    static let shared:ZlNetworkManager = {
+        //实例化对象
+        let instance = ZlNetworkManager()
+        
+        //设置响应反序列化支持的数据类型
+        instance.responseSerializer.acceptableContentTypes?.insert("text/plain")
+        
+        return instance
+    }()
     
     //访问令牌 所有网络请求 都基于令牌(登录除外)2.009Tv21E12Z7dDcebfe60ae116ofoC 2.009Tv21E6wpHnD3701b0fbf20SAd_h
     var accessToken: String?// = "2.009Tv21E12Z7dDcebfe60ae116ofoC"

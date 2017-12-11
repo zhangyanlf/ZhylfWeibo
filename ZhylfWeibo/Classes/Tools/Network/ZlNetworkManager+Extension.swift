@@ -56,3 +56,25 @@ extension ZlNetworkManager {
     }
     
 }
+
+//MARK: - Oauth2相关发放
+extension ZlNetworkManager {
+    //加载 AccessToken
+    func loadAccessToken(code: String)  {
+        let urlString = "https://api.weibo.com/oauth2/access_token"
+        
+        let params = ["client_id":ZlAppKey,
+                      "client_secret":ZlAppSecret,
+                      "grant_type":"authorization_code",
+                      "code":code,
+                      "redirect_uri":ZlRedirectURI]
+        
+        //发送网络请求
+        request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject]) { (json, isSuccess) in
+            print(json as Any)
+        }
+        
+        
+    }
+}
+

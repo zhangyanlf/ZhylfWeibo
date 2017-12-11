@@ -33,19 +33,22 @@ class ZlNetworkManager: AFHTTPSessionManager {
     }()
     
     //访问令牌 所有网络请求 都基于令牌(登录除外)2.009Tv21E12Z7dDcebfe60ae116ofoC 2.009Tv21E6wpHnD3701b0fbf20SAd_h
-    var accessToken: String?// = "2.009Tv21E12Z7dDcebfe60ae116ofoC"
+    //var accessToken: String?// = "2.009Tv21E12Z7dDcebfe60ae116ofoC"
     //用户微博id
-    var uid: String? = "3965283870"
+    //var uid: String? = "3965283870"
+    
+    /// 用户账号的懒加载属性
+    lazy var userAccount = ZlUserAccount()
     
     ///用户登录标记  计算性属性
     var userLogon: Bool {
-        return accessToken != nil
+        return userAccount.access_token != nil
     }
     
     //专门负责拼接 token 的网络请求
     func tosenResquest(method: ZlHTTPMethod = .GET, URLString: String,parameters:[String:AnyObject]?,completion:@escaping (_ json:AnyObject?,_ isSuccess:Bool)->()) {
         //处理 token 字典
-        guard let token = accessToken else {
+        guard let token = userAccount.access_token else {
             completion(nil, false)
             return
         }

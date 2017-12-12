@@ -104,7 +104,13 @@ extension ZlOAuthViewController: UIWebViewDelegate {
         
         print("获取授权码...\(String(describing: code))")
         //4.使用授权码获取 accessToken
-        ZlNetworkManager.shared.loadAccessToken(code: code!)
+        ZlNetworkManager.shared.loadAccessToken(code: code!) { (isSuccess) in
+            if !isSuccess {
+                SVProgressHUD.showInfo(withStatus: "网络请求失败")
+            } else {
+                SVProgressHUD.showInfo(withStatus: "登录成功")
+            }
+        }
         return false
     }
     

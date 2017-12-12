@@ -55,6 +55,25 @@ extension ZlNetworkManager {
     }
     
 }
+//MARK: - 用户信息
+extension ZlNetworkManager {
+    
+    /// 加载用户信息 - 用户登录后立即执行
+    func loadUserInfo(completion:@escaping (_ dict:[String: AnyObject])->()) {
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        guard let uid = userAccount.uid else {
+            return
+        }
+        let params = ["uid": uid]
+        //发起网络请求
+        tosenResquest(URLString: urlString, parameters: params as [String : AnyObject]) { (json, isSuccess) in
+//            print(json!)
+            //完成回调
+            completion(json as?[String: AnyObject] ?? [:])
+        }
+        
+    }
+}
 
 //MARK: - Oauth2相关发放
 extension ZlNetworkManager {
@@ -85,8 +104,15 @@ extension ZlNetworkManager {
             //保存模型
             self.userAccount.saveAccount()
             
-            //完成回调
-            completion(true)
+            //加载当前用户信息
+            self.loadUserInfo(completion: { (dict) in
+                print(dict)
+                
+                //用户信息加载完成再 完成回调
+                completion(true)
+            })
+            
+           
             
         }
         

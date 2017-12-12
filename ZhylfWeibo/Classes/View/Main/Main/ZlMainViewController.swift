@@ -30,10 +30,10 @@ class ZlMainViewController: UITabBarController {
         setupChildController()
         setupComposeButton()
         setupTimer()
-//        //测试未读数量
-//        ZlNetworkManager.shared.unreadCount { (count) in
-//            print("有\(count)条未读消息")
-//        }
+        //测试未读数量
+        //ZlNetworkManager.shared.unreadCount { (count) in
+       //    print("有\(count)条未读消息")
+        //}
         //设置代理
         delegate = self
 

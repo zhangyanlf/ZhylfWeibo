@@ -33,18 +33,29 @@ class ZlUserAccount: NSObject {
     override init() {
         super.init()
         
-        //从磁盘加载保存的文件 -> 字典
+        //1从磁盘加载保存的文件 -> 字典
        guard let path = accountFile.cz_appendDocumentDir(),
             let data = NSData(contentsOfFile: path),
         let dict = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [String: AnyObject] else {
             
                 return
         }
-        //使用字典设置属性值
+        //2使用字典设置属性值
         yy_modelSet(with: dict ?? [:])
         
         print("从沙盒加载用户信息\(self)")
-        
+        //判断token是否过期
+        if expiresDate?.compare(Date()) != .orderedDescending {
+            //print("账户过期")
+            //清空用户信息
+            access_token = nil
+            uid = nil
+            
+            //长处用户文件
+           _ = try? FileManager.default.removeItem(atPath: path)
+            
+        }
+        print("账户正常")
     }
     
     /**

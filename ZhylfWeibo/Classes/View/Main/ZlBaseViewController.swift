@@ -72,6 +72,10 @@ extension ZlBaseViewController {
    /// 登录成功处理
     @objc private func loginSucccess(n: Notification) {
         print("登录成功，更新界面\(n)")
+        
+        //登录前左边注册 右边登录
+        navItem.leftBarButtonItem = nil
+        navItem.rightBarButtonItem = nil
         //将访客试图替换为表格试图
         //需要重新设置View
         //在访问View的 getter方法是 若果View = nil 会执行 loadView => viewDidLoad
@@ -124,7 +128,9 @@ extension ZlBaseViewController {
                                                left: 0,
                                                bottom: /*tabBarController?.tabBar.bounds.height ??*/ 0,
                                                right: 0)
-        
+    
+        //设置指示器  强行解包 -> 拿到必有的contentInset
+        tableView?.scrollIndicatorInsets = tableView!.contentInset
         //设置刷新控件
         //1> 实例化控件
         refreshControl = UIRefreshControl()

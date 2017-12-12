@@ -17,5 +17,9 @@ let ZlAppSecret = "0e9afa05ea3a56ace3085495e6480018"
 let ZlRedirectURI = "http://zhangyanlf.cn"
 
 //MARK: - 全局通知定义
+
+/// 用户需要登录通知
 let UserShouldLoginNotification = "UserShouldLoginNotification"
+let UserLogoinSuccessedNotification = "UserLogoinSuccessedNotification"
+
 

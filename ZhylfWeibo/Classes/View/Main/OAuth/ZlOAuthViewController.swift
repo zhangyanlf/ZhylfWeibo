@@ -109,6 +109,12 @@ extension ZlOAuthViewController: UIWebViewDelegate {
                 SVProgressHUD.showInfo(withStatus: "网络请求失败")
             } else {
                 SVProgressHUD.showInfo(withStatus: "登录成功")
+                //登录成功后，通过跳转页面
+                //1> 登录成功发送消息
+                NotificationCenter.default.post(name: NSNotification.Name(UserLogoinSuccessedNotification),
+                                                object: nil)
+                //2> 关闭窗口
+                self.close()
             }
         }
         return false

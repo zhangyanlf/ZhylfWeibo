@@ -38,7 +38,18 @@ class ZlBaseViewController: UIViewController {
 
        setupUI()
         ZlNetworkManager.shared.userLogon ? loadData():()
+        
+        //注册通知
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(loginSucccess),
+                                               name: NSNotification.Name(rawValue: UserLogoinSuccessedNotification),
+                                               object: nil)
        
+    }
+    
+    deinit {
+        //注销通知
+        NotificationCenter.default.removeObserver(self)
     }
     
     // 重写 title 的 didSet 
@@ -57,6 +68,19 @@ class ZlBaseViewController: UIViewController {
 
 //MARK: - 访客试图监听方法
 extension ZlBaseViewController {
+    
+   /// 登录成功处理
+    @objc private func loginSucccess(n: Notification) {
+        print("登录成功，更新界面\(n)")
+        //将访客试图替换为表格试图
+        //需要重新设置View
+        //在访问View的 getter方法是 若果View = nil 会执行 loadView => viewDidLoad
+        view = nil
+        
+        //注销通知 -> 重新执行viewDidLoad 会再次注册
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     @objc private func login() {
         //发送通知
         NotificationCenter.default.post(name: NSNotification.Name.init(UserShouldLoginNotification), object: nil)

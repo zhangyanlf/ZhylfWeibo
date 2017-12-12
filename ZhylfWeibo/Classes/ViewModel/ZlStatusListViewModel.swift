@@ -53,15 +53,15 @@ class ZlStatusListViewModel {
             
             
             //1.字典转模型
-//            var array = [ZlStatus]()
-//            for dict in list {
-//                guard let model = ZlStatus.yy_model(with: dict) else{
-//                    continue
-//                }
-//                //model 添加数组
-//                array.append(model)
-//
-//            }
+            // var array = [ZlStatus]()
+            // for dict in list {
+            //      guard let model = ZlStatus.yy_model(with: dict) else{
+            //          continue
+            //      }
+            //  model 添加数组
+            //      array.append(model)
+            //
+            //   }
             guard let array = NSArray.yy_modelArray(with: ZlStatus.self, json: list) as? [ZlStatus] else{
                 //字典转模型失败
                 completion(isSuccess, false)

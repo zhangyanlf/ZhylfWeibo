@@ -29,9 +29,8 @@ extension ZlNetworkManager {
             print(json as Any)
             //从 json 中 获取 statuses 字典数组
             //如果 as？ 失败 result = nil
-            let result = json?["statuses"] as? [[String: AnyObject]]
-
-            completion(result!, isSuccess)
+            let result = json?["statuses"] as? [[String:AnyObject]]
+            completion(result ?? [[:]], isSuccess)
             
         }
     }

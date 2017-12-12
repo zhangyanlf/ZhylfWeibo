@@ -48,7 +48,11 @@ class ZlNetworkManager: AFHTTPSessionManager {
     //专门负责拼接 token 的网络请求
     func tosenResquest(method: ZlHTTPMethod = .GET, URLString: String,parameters:[String:AnyObject]?,completion:@escaping (_ json:AnyObject?,_ isSuccess:Bool)->()) {
         //处理 token 字典
+        //0> 判断token是否为 nil  为nil直接返回  程序执行过程不会为nil
         guard let token = userAccount.access_token else {
+            // 发送通知 提示用户登录
+            NotificationCenter.default.post(name: NSNotification.Name(UserShouldLoginNotification), object: nil)
+            
             completion(nil, false)
             return
         }
@@ -82,7 +86,13 @@ class ZlNetworkManager: AFHTTPSessionManager {
             get(URLString, parameters: parameters, progress: nil, success: { (task, json) in
                 completion(json as AnyObject, true)
             }, failure: { (task, error) in
-
+                //针对 403 处理用户 token 过期
+                // 对于测试用户
+                if (task?.response as? HTTPURLResponse)?.statusCode == 403 {
+                    print("token 过期了")
+                    //发送通知 需要登录
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: UserShouldLoginNotification), object: "bad token")
+                }
                 print("网络请求错误\(error)")
                 completion(nil, false)
             })

@@ -8,6 +8,8 @@
 
 import UIKit
 import UserNotifications
+import SVProgressHUD
+import AFNetworking
 //find . -name "*.swift" | xargs wc -l
 //查看代码行数
 
@@ -18,16 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        //10以上版本 的取得用户的授权显示通知
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.carPlay,.badge]) { (success, error) in
-                print("授权\(success ? "成功":"失败")")
-            }
-        } else { //10以下
-            let notifySettings = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
-            
-            application.registerUserNotificationSettings(notifySettings)
-        }
+       
         
         
         //10以前的取得用户的授权显示通知（上方的提示条/通知/badgeNumber）
@@ -40,11 +33,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = ZlMainViewController()
         
         window?.makeKeyAndVisible()
+        //从服务器加载应用程序信息
         loadAppInfo()
+        //应用程序额外设置
+        setupAdditions()
         return true
     }
 
 
+}
+//MARK: - 设置应用程序额外信息
+extension AppDelegate {
+    
+    private func setupAdditions() {
+        //1.设置SVProgressHUD 最小时间
+        SVProgressHUD.setMinimumDismissTimeInterval(1)
+        
+        //2.设置网络指示加载器
+        AFNetworkActivityIndicatorManager.shared().isEnabled = true
+        
+        //3.设置用户授权显示通知
+        //10以上版本 的取得用户的授权显示通知
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.carPlay,.badge]) { (success, error) in
+                print("授权\(success ? "成功":"失败")")
+            }
+        } else { //10以下
+            let notifySettings = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
+            
+            UIApplication.shared.registerUserNotificationSettings(notifySettings)
+        }
+    }
+    
+    
 }
 
 ///MARK: - 从服务器加载应用程序信息
@@ -65,11 +86,12 @@ extension AppDelegate {
             data?.write(toFile: jsonPath, atomically: true)
             
             print("应用程序加载完毕\(jsonPath)")
-            
-            
+        
         }
-        
-        
     }
     
 }
+
+
+
+

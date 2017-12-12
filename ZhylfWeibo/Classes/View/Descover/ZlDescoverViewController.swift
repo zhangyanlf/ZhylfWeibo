@@ -13,7 +13,8 @@ class ZlDescoverViewController: ZlBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       // ZlNetworkManager.shared.userAccount.access_token = "nil"
+       // print("修改了 token")
     }
 
     override func didReceiveMemoryWarning() {

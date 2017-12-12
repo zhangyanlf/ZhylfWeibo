@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 //主控制器
 class ZlMainViewController: UITabBarController {
@@ -50,12 +51,21 @@ class ZlMainViewController: UITabBarController {
     //MARK: - 监听方法
     
     @objc private func userLogin(n: Notification) {
-        print("用户登录通知")
-        //展现登录控制器
-        let nav = UINavigationController(rootViewController: ZlOAuthViewController())
-        
-        present(nav, animated: true, completion: nil)
-        
+        print("用户登录通知\(n)")
+        var when = DispatchTime.now()
+        //判断n.object 是否有值  如果有值提示用户重新登录
+        if n.object != nil {
+            //设置指示器渐变样式
+            SVProgressHUD.setDefaultMaskType(.gradient)
+            SVProgressHUD.showInfo(withStatus: "用户登录已过期,请重新登录")
+            when = DispatchTime.now() + 2
+        }
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            //展现登录控制器
+            SVProgressHUD.setDefaultMaskType(.clear)
+            let nav = UINavigationController(rootViewController: ZlOAuthViewController())
+            self.present(nav, animated: true, completion: nil)
+        }
     }
     
     

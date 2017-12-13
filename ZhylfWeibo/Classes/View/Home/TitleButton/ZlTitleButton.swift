@@ -43,6 +43,8 @@ class ZlTitleButton: UIButton {
         titleLabel.frame = titleLabel.frame.offsetBy(dx: -imageView.bounds.width, dy: 0)
         imageView.frame = imageView.frame.offsetBy(dx: titleLabel.bounds.width, dy: 0)
     }
-    
+    override var intrinsicContentSize: CGSize {
+        return UILayoutFittingExpandedSize
+    }
     
 }

@@ -96,10 +96,10 @@ extension ZlHomeViewController {
     /// 设置导航栏标题
     private func setupNavtitle() {
         
-        let titleName = ZlNetworkManager.shared.userAccount.screen_name
+        //let titleName = ZlNetworkManager.shared.userAccount.screen_name
         print(ZlNetworkManager.shared.userAccount)
-        let button = ZlTitleButton(title: titleName)
-
+        let button = ZlTitleButton(title: "测试按钮")
+       
         print("第一次加载\(button.frame)")
         navItem.titleView = button
         button.sizeToFit()
@@ -112,8 +112,6 @@ extension ZlHomeViewController {
         btn.isSelected = !btn.isSelected
         print("点击后\(btn.frame)")
     }
-    
-    
     
     
 }

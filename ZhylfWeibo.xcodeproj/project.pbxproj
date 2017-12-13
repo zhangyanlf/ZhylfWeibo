@@ -38,6 +38,8 @@
 		A46782591FBE795A0014B877 /* ZlNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46782581FBE795A0014B877 /* ZlNetworkManager+Extension.swift */; };
 		A467825B1FBEAC750014B877 /* ZlStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467825A1FBEAC750014B877 /* ZlStatus.swift */; };
 		A467825F1FBEAF350014B877 /* ZlStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */; };
+		A472106E1FE1139E0095092F /* ZlWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472106D1FE1139E0095092F /* ZlWelcomeView.swift */; };
+		A47210701FE114180095092F /* ZlNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472106F1FE114180095092F /* ZlNewFeatureView.swift */; };
 		A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A497681E1FA9C20C000003F2 /* Assets.xcassets */; };
 		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
@@ -118,6 +120,8 @@
 		A46782581FBE795A0014B877 /* ZlNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZlNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		A467825A1FBEAC750014B877 /* ZlStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatus.swift; sourceTree = "<group>"; };
 		A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusListViewModel.swift; sourceTree = "<group>"; };
+		A472106D1FE1139E0095092F /* ZlWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlWelcomeView.swift; sourceTree = "<group>"; };
+		A472106F1FE114180095092F /* ZlNewFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlNewFeatureView.swift; sourceTree = "<group>"; };
 		A49768141FA9C20C000003F2 /* ZhylfWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhylfWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A497681E1FA9C20C000003F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A49768281FA9C20C000003F2 /* ZhylfWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,6 +376,8 @@
 		A472106C1FE10E0B0095092F /* NewFeature */ = {
 			isa = PBXGroup;
 			children = (
+				A472106D1FE1139E0095092F /* ZlWelcomeView.swift */,
+				A472106F1FE114180095092F /* ZlNewFeatureView.swift */,
 			);
 			path = NewFeature;
 			sourceTree = "<group>";
@@ -744,6 +750,7 @@
 				A44117F01FB54DE40023B26F /* UIButton+CZAddition.m in Sources */,
 				A4327D591FAACC91006533AD /* ZlMessageViewController.swift in Sources */,
 				A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */,
+				A472106E1FE1139E0095092F /* ZlWelcomeView.swift in Sources */,
 				A467825B1FBEAC750014B877 /* ZlStatus.swift in Sources */,
 				A46782591FBE795A0014B877 /* ZlNetworkManager+Extension.swift in Sources */,
 				A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */,
@@ -756,6 +763,7 @@
 				A44117F81FB54E1C0023B26F /* UILabel+CZAddition.m in Sources */,
 				A44117F71FB54E160023B26F /* NSString+CZPath.m in Sources */,
 				A415463A1FE0C7DC003B211E /* ZlTitleButton.swift in Sources */,
+				A47210701FE114180095092F /* ZlNewFeatureView.swift in Sources */,
 				A4327D571FAACC81006533AD /* ZlDescoverViewController.swift in Sources */,
 				A44117F51FB54E110023B26F /* NSString+CZBase64.m in Sources */,
 				A44117F41FB54E0E0023B26F /* NSObject+CZRuntime.m in Sources */,

@@ -30,6 +30,8 @@ class ZlMainViewController: UITabBarController {
         setupChildController()
         setupComposeButton()
         setupTimer()
+        //设置新特性试图
+        setupNewFeatureViews()
         //测试未读数量
         //ZlNetworkManager.shared.unreadCount { (count) in
        //    print("有\(count)条未读消息")
@@ -100,6 +102,26 @@ class ZlMainViewController: UITabBarController {
    
 
 }
+
+// MARK: - 设置新特性试图
+extension ZlMainViewController {
+    private func setupNewFeatureViews () {
+        //1.检查是否为新版本
+        
+        //2.如果更新 显示新特性试图 否则显示欢迎
+        let v = isNewVersion ? ZlNewFeatureView () : ZlWelcomeView()
+        
+        //3.显示试图
+        v.frame = view.bounds
+        view.addSubview(v)
+    }
+    ///extension 中可以有计算行属性 不会占用存储空间
+    private var isNewVersion: Bool {
+        return true
+    }
+        
+}
+
 //MARK: - UITabBarControllerDelegate
 extension ZlMainViewController: UITabBarControllerDelegate {
     /// 将要选择 tabBarItem

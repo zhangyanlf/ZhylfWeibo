@@ -14,6 +14,9 @@ class ZlUserAccount: NSObject {
     /// 用户uid
     @objc var uid: String?
     
+    /// 用户名
+    @objc var screen_name: String?
+    
     /// 过期日期 单位秒
     ///开发者 5年
     ///使用者 3天
@@ -41,9 +44,12 @@ class ZlUserAccount: NSObject {
                 return
         }
         //2使用字典设置属性值
+        /***用户登录关键代码***/
         //yy_modelSet(with: dict ?? [:])
         
         print("从沙盒加载用户信息\(self)")
+        //测试过期
+        // expitesDate = Date(timeIntervalSinceNow: -3600 * 24)
         //判断token是否过期
         if expiresDate?.compare(Date()) != .orderedDescending {
             //print("账户过期")
@@ -52,7 +58,7 @@ class ZlUserAccount: NSObject {
             uid = nil
             
             //长处用户文件
-           _ = try? FileManager.default.removeItem(atPath: path)
+           try? FileManager.default.removeItem(atPath: path)
             
         }
         print("账户正常")

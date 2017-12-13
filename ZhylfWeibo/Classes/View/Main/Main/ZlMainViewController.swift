@@ -105,7 +105,17 @@ class ZlMainViewController: UITabBarController {
 
 // MARK: - 设置新特性试图
 extension ZlMainViewController {
+    /**
+     *版本号的组成 主版本号 次级版本，修改版本号
+     *主版本号：意味着打的修改 使用者需要做大的适应
+     *次级版本：意味着小的修改  某些函数和方法或者参数有变动
+     *修改版本号：框架/程序内部 bug的修改 不会对用户使用造成任何影响
+     */
     private func setupNewFeatureViews () {
+        //判断是否登录
+        if !ZlNetworkManager.shared.userLogon {
+            return
+        }
         //1.检查是否为新版本
         
         //2.如果更新 显示新特性试图 否则显示欢迎
@@ -117,7 +127,19 @@ extension ZlMainViewController {
     }
     ///extension 中可以有计算行属性 不会占用存储空间
     private var isNewVersion: Bool {
-        return true
+        //1.取当前的版本号
+//        print(Bundle.main.infoDictionary!)
+        let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+        print(currentVersion)
+        //2.取之前的版本号（沙盒中存储的版本号）
+        let path: String = ("version" as NSString).cz_appendDocumentDir()
+        let sandboxVersion = (try? String(contentsOfFile: path)) ?? ""
+        
+        //3.将当前版本号保存在沙盒
+       _ = try? currentVersion.write(toFile: path, atomically: true, encoding: .utf8)
+        //4.返回两个版本是否一致
+        
+        return currentVersion != sandboxVersion 
     }
         
 }

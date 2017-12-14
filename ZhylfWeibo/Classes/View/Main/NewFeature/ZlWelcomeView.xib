@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZlWelcomeView" customModule="ZhylfWeibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="Bcr-UV-U5t">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="Dk8-kI-Chw">
+                    <rect key="frame" x="145" y="292" width="85" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="0OZ-9z-1ae"/>
+                        <constraint firstAttribute="height" constant="85" id="7kU-2x-QMM"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA5-k7-XcE">
+                    <rect key="frame" x="152" y="382" width="70" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="wzj-dE-zWv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uA5-k7-XcE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="637-ko-rKS"/>
+                <constraint firstItem="Bcr-UV-U5t" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="7kH-fH-M1p"/>
+                <constraint firstItem="Bcr-UV-U5t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CYT-3A-WH3"/>
+                <constraint firstItem="uA5-k7-XcE" firstAttribute="top" secondItem="Dk8-kI-Chw" secondAttribute="bottom" constant="5" id="Cdo-Bs-3qo"/>
+                <constraint firstItem="Dk8-kI-Chw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SzQ-JZ-G2u"/>
+                <constraint firstItem="Bcr-UV-U5t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fsD-4n-GhM"/>
+                <constraint firstItem="Bcr-UV-U5t" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="m32-e9-TX1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Dk8-kI-Chw" secondAttribute="bottom" constant="290" id="yUm-eC-gmP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bottomtConstraint" destination="yUm-eC-gmP" id="268-8d-R4Z"/>
+                <outlet property="iconView" destination="Dk8-kI-Chw" id="Wza-wd-voB"/>
+                <outlet property="tipLabel" destination="uA5-k7-XcE" id="d6z-Rw-tSe"/>
+            </connections>
+            <point key="canvasLocation" x="519.5" y="63.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ad_background" width="375" height="667"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>

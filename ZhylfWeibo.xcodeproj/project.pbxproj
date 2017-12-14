@@ -40,6 +40,7 @@
 		A467825F1FBEAF350014B877 /* ZlStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */; };
 		A472106E1FE1139E0095092F /* ZlWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472106D1FE1139E0095092F /* ZlWelcomeView.swift */; };
 		A47210701FE114180095092F /* ZlNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A472106F1FE114180095092F /* ZlNewFeatureView.swift */; };
+		A47210721FE1201E0095092F /* ZlWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A47210711FE1201E0095092F /* ZlWelcomeView.xib */; };
 		A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A497681E1FA9C20C000003F2 /* Assets.xcassets */; };
 		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
@@ -122,6 +123,7 @@
 		A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusListViewModel.swift; sourceTree = "<group>"; };
 		A472106D1FE1139E0095092F /* ZlWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlWelcomeView.swift; sourceTree = "<group>"; };
 		A472106F1FE114180095092F /* ZlNewFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlNewFeatureView.swift; sourceTree = "<group>"; };
+		A47210711FE1201E0095092F /* ZlWelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlWelcomeView.xib; sourceTree = "<group>"; };
 		A49768141FA9C20C000003F2 /* ZhylfWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhylfWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A497681E1FA9C20C000003F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A49768281FA9C20C000003F2 /* ZhylfWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -377,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				A472106D1FE1139E0095092F /* ZlWelcomeView.swift */,
+				A47210711FE1201E0095092F /* ZlWelcomeView.xib */,
 				A472106F1FE114180095092F /* ZlNewFeatureView.swift */,
 			);
 			path = NewFeature;
@@ -578,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4D7A3161FBBF10100166CAB /* zhangyanlf.json in Resources */,
+				A47210721FE1201E0095092F /* ZlWelcomeView.xib in Resources */,
 				A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

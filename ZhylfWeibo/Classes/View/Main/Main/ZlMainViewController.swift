@@ -119,10 +119,10 @@ extension ZlMainViewController {
         //1.检查是否为新版本
         
         //2.如果更新 显示新特性试图 否则显示欢迎
-        let v = isNewVersion ? ZlNewFeatureView () : ZlWelcomeView()
+        let v = isNewVersion ? ZlNewFeatureView () : ZlWelcomeView.welcomeView()
         
         //3.显示试图
-        v.frame = view.bounds
+//        v.frame = view.bounds
         view.addSubview(v)
     }
     ///extension 中可以有计算行属性 不会占用存储空间
@@ -187,7 +187,7 @@ extension ZlMainViewController {
     
     private func setupTimer(){
         
-        timer = Timer.scheduledTimer(timeInterval: 120.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 120000.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     @objc private func updateTimer (){

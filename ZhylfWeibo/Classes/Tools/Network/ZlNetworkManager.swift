@@ -8,7 +8,6 @@
 
 import UIKit
 import AFNetworking
-import Alamofire
 
 //swift 的枚举支持任意的数据类型
 // switch / enum 在 OC 中只支持整数类型

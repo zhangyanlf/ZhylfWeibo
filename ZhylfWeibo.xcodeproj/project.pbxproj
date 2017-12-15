@@ -35,6 +35,9 @@
 		A44117FB1FB54E240023B26F /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117EF1FB549150023B26F /* UIViewController+CZAddition.m */; };
 		A44117FE1FB555180023B26F /* ZlTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44117FD1FB555180023B26F /* ZlTestViewController.swift */; };
 		A44118001FB57F810023B26F /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44117FF1FB57F810023B26F /* UIBarButtonItem+Extension.swift */; };
+		A450641E1FE3B52700C3470D /* ZlStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450641D1FE3B52700C3470D /* ZlStatusCell.swift */; };
+		A45064201FE3B56000C3470D /* ZlStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450641F1FE3B56000C3470D /* ZlStatusNormalCell.xib */; };
+		A45064221FE3C3AE00C3470D /* ZlUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45064211FE3C3AE00C3470D /* ZlUser.swift */; };
 		A46782591FBE795A0014B877 /* ZlNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46782581FBE795A0014B877 /* ZlNetworkManager+Extension.swift */; };
 		A467825B1FBEAC750014B877 /* ZlStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467825A1FBEAC750014B877 /* ZlStatus.swift */; };
 		A467825F1FBEAF350014B877 /* ZlStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */; };
@@ -119,6 +122,9 @@
 		A44117EF1FB549150023B26F /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		A44117FD1FB555180023B26F /* ZlTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlTestViewController.swift; sourceTree = "<group>"; };
 		A44117FF1FB57F810023B26F /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		A450641D1FE3B52700C3470D /* ZlStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusCell.swift; sourceTree = "<group>"; };
+		A450641F1FE3B56000C3470D /* ZlStatusNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlStatusNormalCell.xib; sourceTree = "<group>"; };
+		A45064211FE3C3AE00C3470D /* ZlUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlUser.swift; sourceTree = "<group>"; };
 		A46782581FBE795A0014B877 /* ZlNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZlNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		A467825A1FBEAC750014B877 /* ZlStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatus.swift; sourceTree = "<group>"; };
 		A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusListViewModel.swift; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				A467825A1FBEAC750014B877 /* ZlStatus.swift */,
+				A45064211FE3C3AE00C3470D /* ZlUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +299,7 @@
 		A4327D491FAAC9F8006533AD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A450641C1FE3B4EB00C3470D /* StatusCell */,
 				A41546381FE0C7C1003B211E /* TitleButton */,
 				A4327D541FAACC63006533AD /* ZlHomeViewController.swift */,
 			);
@@ -365,6 +373,15 @@
 				A44117FD1FB555180023B26F /* ZlTestViewController.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		A450641C1FE3B4EB00C3470D /* StatusCell */ = {
+			isa = PBXGroup;
+			children = (
+				A450641D1FE3B52700C3470D /* ZlStatusCell.swift */,
+				A450641F1FE3B56000C3470D /* ZlStatusNormalCell.xib */,
+			);
+			path = StatusCell;
 			sourceTree = "<group>";
 		};
 		A450677A1FB97869009C1D72 /* Main */ = {
@@ -583,6 +600,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45064201FE3B56000C3470D /* ZlStatusNormalCell.xib in Resources */,
 				A4EE1A291FE2789900CC0B00 /* ZlNewFeatureView.xib in Resources */,
 				A4D7A3161FBBF10100166CAB /* zhangyanlf.json in Resources */,
 				A47210721FE1201E0095092F /* ZlWelcomeView.xib in Resources */,
@@ -756,6 +774,7 @@
 				A467825F1FBEAF350014B877 /* ZlStatusListViewModel.swift in Sources */,
 				A412E55C1FB4501400650D46 /* Bundle+Extension.swift in Sources */,
 				A44117F01FB54DE40023B26F /* UIButton+CZAddition.m in Sources */,
+				A450641E1FE3B52700C3470D /* ZlStatusCell.swift in Sources */,
 				A4327D591FAACC91006533AD /* ZlMessageViewController.swift in Sources */,
 				A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */,
 				A472106E1FE1139E0095092F /* ZlWelcomeView.swift in Sources */,
@@ -764,6 +783,7 @@
 				A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */,
 				A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */,
 				A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */,
+				A45064221FE3C3AE00C3470D /* ZlUser.swift in Sources */,
 				A4327D4F1FAACAFD006533AD /* ZlMainViewController.swift in Sources */,
 				A4327D511FAACB55006533AD /* ZlNavigationController.swift in Sources */,
 				A44117F11FB54E010023B26F /* UIColor+CZAddition.m in Sources */,

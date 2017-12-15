@@ -138,8 +138,7 @@ extension ZlMainViewController {
         //3.将当前版本号保存在沙盒
        _ = try? currentVersion.write(toFile: path, atomically: true, encoding: .utf8)
         //4.返回两个版本是否一致
-        
-        return currentVersion == sandboxVersion
+        return currentVersion != sandboxVersion
     }
         
 }
@@ -173,6 +172,7 @@ extension ZlMainViewController: UITabBarControllerDelegate {
                 vc.loadData()
                 //点击后将首页的badgeNumber 设置 nil
                 self.tabBar.items?[0].badgeValue = nil
+                UIApplication.shared.applicationIconBadgeNumber = 0
             })
         }
         
@@ -182,12 +182,12 @@ extension ZlMainViewController: UITabBarControllerDelegate {
 }
 
 
-//MARK: - 时钟相关方法
+//MARK: - 时钟相关方法+
 extension ZlMainViewController {
     
     private func setupTimer(){
         
-        timer = Timer.scheduledTimer(timeInterval: 120000.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1200.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     @objc private func updateTimer (){

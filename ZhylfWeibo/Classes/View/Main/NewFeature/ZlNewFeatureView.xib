@@ -28,7 +28,7 @@
                         <action selector="startButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="FWW-Nf-5BQ"/>
                     </connections>
                 </button>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="aoo-B8-gGL">
+                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="aoo-B8-gGL">
                     <rect key="frame" x="160" y="531" width="55" height="37"/>
                     <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="currentPageIndicatorTintColor" red="0.78892369920000005" green="0.54362643820000001" blue="0.27157564439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

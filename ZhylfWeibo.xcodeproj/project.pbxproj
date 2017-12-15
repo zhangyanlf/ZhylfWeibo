@@ -38,6 +38,7 @@
 		A450641E1FE3B52700C3470D /* ZlStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450641D1FE3B52700C3470D /* ZlStatusCell.swift */; };
 		A45064201FE3B56000C3470D /* ZlStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450641F1FE3B56000C3470D /* ZlStatusNormalCell.xib */; };
 		A45064221FE3C3AE00C3470D /* ZlUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45064211FE3C3AE00C3470D /* ZlUser.swift */; };
+		A45064241FE3CAD500C3470D /* ZlStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45064231FE3CAD500C3470D /* ZlStatusViewModel.swift */; };
 		A46782591FBE795A0014B877 /* ZlNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46782581FBE795A0014B877 /* ZlNetworkManager+Extension.swift */; };
 		A467825B1FBEAC750014B877 /* ZlStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467825A1FBEAC750014B877 /* ZlStatus.swift */; };
 		A467825F1FBEAF350014B877 /* ZlStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */; };
@@ -125,6 +126,7 @@
 		A450641D1FE3B52700C3470D /* ZlStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusCell.swift; sourceTree = "<group>"; };
 		A450641F1FE3B56000C3470D /* ZlStatusNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlStatusNormalCell.xib; sourceTree = "<group>"; };
 		A45064211FE3C3AE00C3470D /* ZlUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlUser.swift; sourceTree = "<group>"; };
+		A45064231FE3CAD500C3470D /* ZlStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusViewModel.swift; sourceTree = "<group>"; };
 		A46782581FBE795A0014B877 /* ZlNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZlNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		A467825A1FBEAC750014B877 /* ZlStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatus.swift; sourceTree = "<group>"; };
 		A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusListViewModel.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				A467825E1FBEAF350014B877 /* ZlStatusListViewModel.swift */,
+				A45064231FE3CAD500C3470D /* ZlStatusViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				A44117F11FB54E010023B26F /* UIColor+CZAddition.m in Sources */,
 				A44118001FB57F810023B26F /* UIBarButtonItem+Extension.swift in Sources */,
 				A44117F81FB54E1C0023B26F /* UILabel+CZAddition.m in Sources */,
+				A45064241FE3CAD500C3470D /* ZlStatusViewModel.swift in Sources */,
 				A44117F71FB54E160023B26F /* NSString+CZPath.m in Sources */,
 				A415463A1FE0C7DC003B211E /* ZlTitleButton.swift in Sources */,
 				A47210701FE114180095092F /* ZlNewFeatureView.swift in Sources */,

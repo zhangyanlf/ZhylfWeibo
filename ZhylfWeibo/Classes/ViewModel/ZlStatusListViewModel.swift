@@ -69,7 +69,7 @@ class ZlStatusListViewModel {
             }
         
             
-            print("array\(array)")
+            print("刷新到\(array.count)条数据 \(array)")
             //2.FIXME:拼接数据
             if pullup {
                 //上拉刷新 应该将结果拼接在数组末尾

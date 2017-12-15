@@ -16,8 +16,11 @@ class ZlStatus: NSObject {
    @objc var id: Int64 = 0
     //微博信息内容
    @objc var text: String?
-    //重写 description 计算行属性
+    ///用户
+   @objc var user :ZlUser?
     
+    
+    //重写 description 计算行属性
     override var description: String {
         return yy_modelDescription()
     }

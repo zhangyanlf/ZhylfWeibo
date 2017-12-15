@@ -119,7 +119,7 @@ extension ZlMainViewController {
         //1.检查是否为新版本
         
         //2.如果更新 显示新特性试图 否则显示欢迎
-        let v = isNewVersion ? ZlNewFeatureView () : ZlWelcomeView.welcomeView()
+        let v = isNewVersion ? ZlNewFeatureView.newFeatureView() : ZlWelcomeView.welcomeView()
         
         //3.显示试图
 //        v.frame = view.bounds
@@ -139,7 +139,7 @@ extension ZlMainViewController {
        _ = try? currentVersion.write(toFile: path, atomically: true, encoding: .utf8)
         //4.返回两个版本是否一致
         
-        return currentVersion != sandboxVersion 
+        return currentVersion == sandboxVersion
     }
         
 }

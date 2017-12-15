@@ -17,6 +17,9 @@ class ZlUserAccount: NSObject {
     /// 用户名
     @objc var screen_name: String?
     
+    ///用户头像 大 180*180像素
+    @objc var avatar_large:String?
+    
     /// 过期日期 单位秒
     ///开发者 5年
     ///使用者 3天

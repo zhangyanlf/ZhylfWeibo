@@ -101,14 +101,17 @@ extension ZlNetworkManager {
             self.userAccount.yy_modelSet(with: json as? [String: AnyObject] ?? [:])
             print(self.userAccount)
             
-            //保存模型
-            self.userAccount.saveAccount()
             
             //加载当前用户信息
             self.loadUserInfo(completion: { (dict) in
                 print(dict)
                 self.userAccount.yy_modelSet(with: dict)
                 //用户信息加载完成再 完成回调
+                 print(self.userAccount)
+                
+                //保存模型
+                self.userAccount.saveAccount()
+                
                 completion(true)
             })
             

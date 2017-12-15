@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZlNewFeatureView" customModule="ZhylfWeibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0S-rx-2CV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cN-6H-7fc">
+                    <rect key="frame" x="150.5" y="461" width="74" height="34"/>
+                    <color key="backgroundColor" red="0.78892369923857864" green="0.54362643822459489" blue="0.27157564436493703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="进入微博"/>
+                    <connections>
+                        <action selector="startButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="FWW-Nf-5BQ"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="aoo-B8-gGL">
+                    <rect key="frame" x="160" y="531" width="55" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="0.78892369920000005" green="0.54362643820000001" blue="0.27157564439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="O0S-rx-2CV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6lW-IM-n4k"/>
+                <constraint firstItem="6cN-6H-7fc" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="8UI-kB-hms"/>
+                <constraint firstItem="aoo-B8-gGL" firstAttribute="top" secondItem="6cN-6H-7fc" secondAttribute="bottom" constant="36" id="8WK-Pi-OqH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="O0S-rx-2CV" secondAttribute="bottom" id="aiZ-yM-wtx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6cN-6H-7fc" secondAttribute="bottom" constant="172" id="arI-GR-E50"/>
+                <constraint firstItem="O0S-rx-2CV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nKi-rj-UUl"/>
+                <constraint firstItem="aoo-B8-gGL" firstAttribute="centerX" secondItem="6cN-6H-7fc" secondAttribute="centerX" id="rFJ-IM-sRS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="O0S-rx-2CV" secondAttribute="trailing" id="zjA-Pr-IeI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="pageControl" destination="aoo-B8-gGL" id="Vrp-MK-N2c"/>
+                <outlet property="scrollView" destination="O0S-rx-2CV" id="nC9-bw-kAM"/>
+                <outlet property="startButton" destination="6cN-6H-7fc" id="y9p-gZ-HKT"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="63.5"/>
+        </view>
+    </objects>
+</document>

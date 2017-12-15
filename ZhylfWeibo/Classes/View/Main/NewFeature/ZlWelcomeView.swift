@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 //欢迎界面
 class ZlWelcomeView: UIView {
 
@@ -24,6 +25,26 @@ class ZlWelcomeView: UIView {
         return v
         
     }
+    //initcoder 只是刚刚从Xib的二进制文件将数据加载完成
+    //还没有和代码建立关系 所以开发时 不能处理UI
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        print("nitcoder\(iconView)")
+//    }
+    
+    override func awakeFromNib() {
+        print("awakeFromNib\(iconView)")
+        //1.url
+        guard let urlString = ZlNetworkManager.shared.userAccount.avatar_large,
+            let url = URL(string: urlString) else {
+            return
+        }
+        //2. 设置头像
+        iconView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "avatar_default_big"))
+    
+    }
+    
+    
     //试图添加到window上  表示试图已经显示
     override func didMoveToWindow() {
         super.didMoveToWindow()
@@ -33,7 +54,7 @@ class ZlWelcomeView: UIView {
         //执行之后 控件所在位置就是 XIB 中布局的位置
         self.layoutIfNeeded()
         
-        bottomtConstraint.constant = bounds.size.width - 200
+        bottomtConstraint.constant = bounds.size.width + 50
         
         //如果控件的 frame 还没有计算好 所有的约束都会一起动画
         UIView.animate(withDuration:3.0,
@@ -45,7 +66,11 @@ class ZlWelcomeView: UIView {
                         //更新约束
                         self.layoutIfNeeded()
         }) { (_) in
-            
+            UIView.animate(withDuration: 1.0, animations: {
+                self.tipLabel.alpha = 1
+            }, completion: { (_) in
+                self.removeFromSuperview()
+            })
         }
     }
     

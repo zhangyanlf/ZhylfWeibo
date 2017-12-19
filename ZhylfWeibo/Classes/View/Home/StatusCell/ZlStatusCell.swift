@@ -27,6 +27,8 @@ class ZlStatusCell: UITableViewCell {
             toolBar.viewModel = viewModel
             ///测试修改配置试图的高度
             pictureView.pictureViewHeight.constant = viewModel?.pictureViewSize.height ?? 0
+            ///设置配图是的 URL 数据
+            pictureView.urls = viewModel?.status.pic_urls
         }
     }
     

@@ -9,7 +9,29 @@
 import UIKit
 
 class ZlStutasPictureView: UIView {
-
+    /// 配图试图的数组
+    var urls: [ZlStatusPicture]? {
+        didSet {
+           //1.隐藏所有的imageView
+            for v in subviews {
+                v.isHidden = true
+            }
+            
+            //设置图像   遍历urls数组 顺序设置图像
+            var index = 0
+            
+            for url in urls ?? []{
+                //获得索引的imageView
+                let iv = subviews[index] as! UIImageView
+                //设置头像
+                iv.zl_setupImage(urlString: url.thumbnail_pic! as String, placeholderImage: nil)
+                //显示图像
+                iv.isHidden = false
+                index += 1
+            }
+        }
+    }
+    
     /// 照片试图高度
     @IBOutlet weak var pictureViewHeight: NSLayoutConstraint!
     
@@ -37,8 +59,11 @@ extension ZlStutasPictureView {
         for i in 0..<9 {
             
             let iv = UIImageView()
+            //设置 contentMode
+            iv.contentMode = .scaleAspectFill
+            iv.clipsToBounds = true
             
-            iv.backgroundColor = UIColor.red
+            //iv.backgroundColor = UIColor.red
             //行 -> y
             let row = CGFloat(i / count)
             //列 -> x

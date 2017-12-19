@@ -23,6 +23,9 @@ class ZlStatusCell: UITableViewCell {
             memberIconView.image = viewModel?.memberIcon
             //用户图像
             iconView.zl_setupImage(urlString: viewModel?.status.user?.profile_image_url as! String, placeholderImage: UIImage(named: "avatar_default_big"),isAvatar: true)
+            
+            ///底部工具栏
+            toolBar.viewModel = viewModel
         }
     }
     
@@ -47,6 +50,7 @@ class ZlStatusCell: UITableViewCell {
     /// 正文
     @IBOutlet weak var statusLabel: UILabel!
     
+    @IBOutlet weak var toolBar: ZlStatusToolBar!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

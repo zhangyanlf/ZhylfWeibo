@@ -49,6 +49,7 @@
 		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
 		A4AA26051FE8A9420005EC2B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA26041FE8A9420005EC2B /* UIImage+Extensions.swift */; };
+		A4AA26071FE8BB6D0005EC2B /* ZlStatusToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA26061FE8BB6D0005EC2B /* ZlStatusToolBar.swift */; };
 		A4B2997E1FE7C064001A79DF /* UIImageView+WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */; };
 		A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */; };
 		A4BFF3B71FDA7FDD0028C10E /* ZlOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */; };
@@ -144,6 +145,7 @@
 		A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhylfWeiboUITests.swift; sourceTree = "<group>"; };
 		A49768391FA9C20C000003F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4AA26041FE8A9420005EC2B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		A4AA26061FE8BB6D0005EC2B /* ZlStatusToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusToolBar.swift; sourceTree = "<group>"; };
 		A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+WebImage.swift"; sourceTree = "<group>"; };
 		A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlCommon.swift; sourceTree = "<group>"; };
 		A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlOAuthViewController.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				A450641D1FE3B52700C3470D /* ZlStatusCell.swift */,
+				A4AA26061FE8BB6D0005EC2B /* ZlStatusToolBar.swift */,
 				A450641F1FE3B56000C3470D /* ZlStatusNormalCell.xib */,
 			);
 			path = StatusCell;
@@ -777,6 +780,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A407840D1FDE67AA006EEA79 /* ZlUserAccount.swift in Sources */,
+				A4AA26071FE8BB6D0005EC2B /* ZlStatusToolBar.swift in Sources */,
 				A44117F61FB54E130023B26F /* NSString+CZHash.m in Sources */,
 				A428CDE11FAAED3E0059BF57 /* AppDelegate.swift in Sources */,
 				A421CA451FBD65A6006F1F64 /* ZlNetworkManager.swift in Sources */,

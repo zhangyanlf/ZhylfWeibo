@@ -16,6 +16,14 @@ class ZlStatus: NSObject {
    @objc var id: Int64 = 0
     //微博信息内容
    @objc var text: String?
+    
+    /// 转发数
+    @objc var reposts_count: Int64 = 0
+    /// 评论数
+    @objc var comments_count: Int64 = 0
+    /// 表态数
+    @objc var attitudes_count: Int64 = 0
+    
     ///用户
    @objc var user :ZlUser?
     

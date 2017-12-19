@@ -10,6 +10,22 @@ import UIKit
 
 class ZlStatusCell: UITableViewCell {
 
+    ///微博试图模型
+    var viewModel: ZlStatusViewModel? {
+        didSet {
+            //微博文本
+            statusLabel?.text = viewModel?.status.text
+            //用户名称
+            nameLabel.text = viewModel?.status.user?.screen_name as! String
+            //设置会员图标
+            vipIconView.image = viewModel?.vipmberIcon
+            //认证图标
+            memberIconView.image = viewModel?.memberIcon
+            //用户图像
+            iconView.zl_setupImage(urlString: viewModel?.status.user?.profile_image_url as! String, placeholderImage: UIImage(named: "avatar_default_big"),isAvatar: true)
+        }
+    }
+    
     /// 用户头像
     @IBOutlet weak var iconView: UIImageView!
     

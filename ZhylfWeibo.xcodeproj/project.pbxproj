@@ -48,6 +48,8 @@
 		A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A497681E1FA9C20C000003F2 /* Assets.xcassets */; };
 		A497682D1FA9C20C000003F2 /* ZhylfWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497682C1FA9C20C000003F2 /* ZhylfWeiboTests.swift */; };
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
+		A4AA26051FE8A9420005EC2B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA26041FE8A9420005EC2B /* UIImage+Extensions.swift */; };
+		A4B2997E1FE7C064001A79DF /* UIImageView+WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */; };
 		A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */; };
 		A4BFF3B71FDA7FDD0028C10E /* ZlOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */; };
 		A4D7A3161FBBF10100166CAB /* zhangyanlf.json in Resources */ = {isa = PBXBuildFile; fileRef = A4D7A3151FBBF0E800166CAB /* zhangyanlf.json */; };
@@ -141,6 +143,8 @@
 		A49768331FA9C20C000003F2 /* ZhylfWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhylfWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhylfWeiboUITests.swift; sourceTree = "<group>"; };
 		A49768391FA9C20C000003F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4AA26041FE8A9420005EC2B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+WebImage.swift"; sourceTree = "<group>"; };
 		A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlCommon.swift; sourceTree = "<group>"; };
 		A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlOAuthViewController.swift; sourceTree = "<group>"; };
 		A4D7A3151FBBF0E800166CAB /* zhangyanlf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zhangyanlf.json; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 				A412E55B1FB4501400650D46 /* Bundle+Extension.swift */,
 				A44117FF1FB57F810023B26F /* UIBarButtonItem+Extension.swift */,
 				A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */,
+				A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */,
+				A4AA26041FE8A9420005EC2B /* UIImage+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -777,6 +783,7 @@
 				A467825F1FBEAF350014B877 /* ZlStatusListViewModel.swift in Sources */,
 				A412E55C1FB4501400650D46 /* Bundle+Extension.swift in Sources */,
 				A44117F01FB54DE40023B26F /* UIButton+CZAddition.m in Sources */,
+				A4AA26051FE8A9420005EC2B /* UIImage+Extensions.swift in Sources */,
 				A450641E1FE3B52700C3470D /* ZlStatusCell.swift in Sources */,
 				A4327D591FAACC91006533AD /* ZlMessageViewController.swift in Sources */,
 				A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */,
@@ -792,6 +799,7 @@
 				A44117F11FB54E010023B26F /* UIColor+CZAddition.m in Sources */,
 				A44118001FB57F810023B26F /* UIBarButtonItem+Extension.swift in Sources */,
 				A44117F81FB54E1C0023B26F /* UILabel+CZAddition.m in Sources */,
+				A4B2997E1FE7C064001A79DF /* UIImageView+WebImage.swift in Sources */,
 				A45064241FE3CAD500C3470D /* ZlStatusViewModel.swift in Sources */,
 				A44117F71FB54E160023B26F /* NSString+CZPath.m in Sources */,
 				A415463A1FE0C7DC003B211E /* ZlTitleButton.swift in Sources */,

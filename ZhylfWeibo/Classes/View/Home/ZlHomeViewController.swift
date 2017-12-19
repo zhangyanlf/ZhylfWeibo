@@ -21,7 +21,7 @@ class ZlHomeViewController: ZlBaseViewController {
     }
     ///加载数据
     override func loadData() {
-        print("准备刷新，最后一条\(String(describing: self.listViewModel.statusList.last?.text))")
+        //print("准备刷新，最后一条\(String(describing: self.listViewModel.statusList.last?.text))")
         
         listViewModel.loadStatus(pullup: self.isPullup) { (isSucess,shouldRefresh) in
             print("加载表格结束")
@@ -63,7 +63,9 @@ extension ZlHomeViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ZlStatusCell
         
         //2.设置cell
-        cell.statusLabel?.text = listViewModel.statusList[indexPath.row].text
+        let viewModel = listViewModel.statusList[indexPath.row]
+        
+        cell.viewModel = viewModel
         
         //3.返回cell
         return cell

@@ -95,23 +95,12 @@ class ZlStatusViewModel: CustomStringConvertible {
     /// - Parameter count: 配图数量
     /// - Returns: 配图试图的大小
     private func calaPictureViewSize(count: Int?) -> CGSize {
-       if count == 0 {
+       if count == 0 || count == nil {
             return CGSize()
         }
         
         //1.计算配图试图的宽度
-        //常数准备
-        ///配图试图外侧的间距
-        let ZlStatusPictureViewOutterMargin = CGFloat(12)
-        ///配图试图内部图像的间距
-        let ZlStatusPictureViewInnerMargin = CGFloat(3)
-        
-        ///试图的宽度
-        let ZlStatusPictureViewWidth = UIScreen.cz_screenWidth() - 2 * ZlStatusPictureViewOutterMargin
-        ///每个item默认的高度
-         let ZlStatusPictureItemWidth = (ZlStatusPictureViewWidth - 2 * ZlStatusPictureViewInnerMargin) / 3
-        
-        
+
         //计算高度
         //1>根据 count 计算 知道行数（1-9）
         /**
@@ -148,10 +137,7 @@ class ZlStatusViewModel: CustomStringConvertible {
         if count < 10000 {
             return count.description
         }
-        
         return String(format: "%.02f 万", Double(count) / 10000)
     }
-    
-    
     
 }

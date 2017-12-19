@@ -22,4 +22,14 @@ let ZlRedirectURI = "http://zhangyanlf.cn"
 let UserShouldLoginNotification = "UserShouldLoginNotification"
 let UserLogoinSuccessedNotification = "UserLogoinSuccessedNotification"
 
+///MARK: - 试图配图常量
+//常数准备
+///配图试图外侧的间距
+let ZlStatusPictureViewOutterMargin = CGFloat(12)
+///配图试图内部图像的间距
+let ZlStatusPictureViewInnerMargin = CGFloat(3)
 
+///试图的宽度
+let ZlStatusPictureViewWidth = UIScreen.cz_screenWidth() - 2 * ZlStatusPictureViewOutterMargin
+///每个item默认的高度
+let ZlStatusPictureItemWidth = (ZlStatusPictureViewWidth - 2 * ZlStatusPictureViewInnerMargin) / 3

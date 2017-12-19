@@ -50,6 +50,8 @@
 		A49768381FA9C20C000003F2 /* ZhylfWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49768371FA9C20C000003F2 /* ZhylfWeiboUITests.swift */; };
 		A4AA26051FE8A9420005EC2B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA26041FE8A9420005EC2B /* UIImage+Extensions.swift */; };
 		A4AA26071FE8BB6D0005EC2B /* ZlStatusToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA26061FE8BB6D0005EC2B /* ZlStatusToolBar.swift */; };
+		A4AA26091FE8E1FB0005EC2B /* ZlStutasPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA26081FE8E1FB0005EC2B /* ZlStutasPictureView.swift */; };
+		A4AA260B1FE8E8350005EC2B /* ZlStatusPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA260A1FE8E8350005EC2B /* ZlStatusPicture.swift */; };
 		A4B2997E1FE7C064001A79DF /* UIImageView+WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */; };
 		A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */; };
 		A4BFF3B71FDA7FDD0028C10E /* ZlOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */; };
@@ -146,6 +148,8 @@
 		A49768391FA9C20C000003F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4AA26041FE8A9420005EC2B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		A4AA26061FE8BB6D0005EC2B /* ZlStatusToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusToolBar.swift; sourceTree = "<group>"; };
+		A4AA26081FE8E1FB0005EC2B /* ZlStutasPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStutasPictureView.swift; sourceTree = "<group>"; };
+		A4AA260A1FE8E8350005EC2B /* ZlStatusPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusPicture.swift; sourceTree = "<group>"; };
 		A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+WebImage.swift"; sourceTree = "<group>"; };
 		A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlCommon.swift; sourceTree = "<group>"; };
 		A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlOAuthViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 			children = (
 				A467825A1FBEAC750014B877 /* ZlStatus.swift */,
 				A45064211FE3C3AE00C3470D /* ZlUser.swift */,
+				A4AA260A1FE8E8350005EC2B /* ZlStatusPicture.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				A450641D1FE3B52700C3470D /* ZlStatusCell.swift */,
+				A4AA26081FE8E1FB0005EC2B /* ZlStutasPictureView.swift */,
 				A4AA26061FE8BB6D0005EC2B /* ZlStatusToolBar.swift */,
 				A450641F1FE3B56000C3470D /* ZlStatusNormalCell.xib */,
 			);
@@ -794,6 +800,7 @@
 				A472106E1FE1139E0095092F /* ZlWelcomeView.swift in Sources */,
 				A467825B1FBEAC750014B877 /* ZlStatus.swift in Sources */,
 				A46782591FBE795A0014B877 /* ZlNetworkManager+Extension.swift in Sources */,
+				A4AA26091FE8E1FB0005EC2B /* ZlStutasPictureView.swift in Sources */,
 				A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */,
 				A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */,
 				A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */,
@@ -803,6 +810,7 @@
 				A44117F11FB54E010023B26F /* UIColor+CZAddition.m in Sources */,
 				A44118001FB57F810023B26F /* UIBarButtonItem+Extension.swift in Sources */,
 				A44117F81FB54E1C0023B26F /* UILabel+CZAddition.m in Sources */,
+				A4AA260B1FE8E8350005EC2B /* ZlStatusPicture.swift in Sources */,
 				A4B2997E1FE7C064001A79DF /* UIImageView+WebImage.swift in Sources */,
 				A45064241FE3CAD500C3470D /* ZlStatusViewModel.swift in Sources */,
 				A44117F71FB54E160023B26F /* NSString+CZPath.m in Sources */,

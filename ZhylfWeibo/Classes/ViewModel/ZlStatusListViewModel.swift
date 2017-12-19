@@ -62,6 +62,7 @@ class ZlStatusListViewModel {
             var array = [ZlStatusViewModel]()
             //2.遍历服务器返回的字典类型 字典转模型
             for dict in list {
+               // print(dict["pic_urls"])
                 //a)创建微博类型 - 如果创建模型失败 继续后续的遍历
                 guard  let model = ZlStatus.yy_model(with: dict) else {
                     continue

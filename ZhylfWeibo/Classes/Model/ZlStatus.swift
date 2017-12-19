@@ -25,14 +25,25 @@ class ZlStatus: NSObject {
     @objc var attitudes_count: Int64 = 0
     
     ///用户
-   @objc var user :ZlUser?
+    @objc var user: ZlUser?
+    
+    /// 微博配置模型数组
+    @objc  var pic_urls: [ZlStatusPicture]?
+    
     
     
     //重写 description 计算行属性
     override var description: String {
         return yy_modelDescription()
+       
     }
-
+    
+    ///类函数，告诉YY_Model 如果遇到数组类型的属性，数组中存放的对象是什么类
+    ///运行时 YY_Model字典转模型，发现数组属性 尝试调用类方法modelContainerPropertyGenericClass，实例化数组中的对象
+    ///NSArray中保存对象的类型是'id'类型 OC中的泛型是Swift退出后为了兼容添加的，在运行时的角度，并不知道数组中存放的什么类型的对象
+    @objc class func modelContainerPropertyGenericClass() -> [String:AnyClass] {
+        return ["pic_urls":ZlStatusPicture.self]
+    }
     
     
 }

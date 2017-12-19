@@ -42,6 +42,10 @@ class ZlStatusViewModel: CustomStringConvertible {
     /// 表态数
     @objc var attitudesStr: String?
     
+    /// 配图试图大小
+    var pictureViewSize = CGSize()
+    
+    
     
     /// 构造函数
     ///
@@ -73,14 +77,27 @@ class ZlStatusViewModel: CustomStringConvertible {
         }
         ///设置底部计数字符串
         //测试计算大于10000
-//        model.comments_count = Int64(Int(arc4random_uniform(100000)))
+        //model.comments_count = Int64(Int(arc4random_uniform(100000)))
         retweetStr = countString(count: Int(model.reposts_count), defaultStr: "转发")
         commentsStr = countString(count: Int(model.comments_count), defaultStr: "评论")
         attitudesStr = countString(count: Int(model.attitudes_count), defaultStr: "赞")
+        
+        ///计算配图大小
+        pictureViewSize = calaPictureViewSize(count: (status.pic_urls?.count)!)
     }
     
     var description: String {
         return status.description
+    }
+    
+    /// 计算指定数量的图片对应的配图试图的大小
+    ///
+    /// - Parameter count: 配图数量
+    /// - Returns: 配图试图的大小
+    private func calaPictureViewSize(count: Int?) -> CGSize {
+        //计算配图试图的宽度
+        
+        return CGSize(width: 100, height: 300)
     }
     
     /// 给定一个数字，返回对于的描述结果
@@ -104,5 +121,7 @@ class ZlStatusViewModel: CustomStringConvertible {
         
         return String(format: "%.02f 万", Double(count) / 10000)
     }
+    
+    
     
 }

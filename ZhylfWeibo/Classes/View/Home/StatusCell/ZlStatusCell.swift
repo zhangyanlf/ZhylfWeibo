@@ -23,9 +23,10 @@ class ZlStatusCell: UITableViewCell {
             memberIconView.image = viewModel?.memberIcon
             //用户图像
             iconView.zl_setupImage(urlString: viewModel?.status.user?.profile_image_url as! String, placeholderImage: UIImage(named: "avatar_default_big"),isAvatar: true)
-            
             ///底部工具栏
             toolBar.viewModel = viewModel
+            ///测试修改配置试图的高度
+            pictureView.pictureViewHeight.constant = viewModel?.pictureViewSize.height ?? 0
         }
     }
     
@@ -50,7 +51,11 @@ class ZlStatusCell: UITableViewCell {
     /// 正文
     @IBOutlet weak var statusLabel: UILabel!
     
+    /// 底部bar
     @IBOutlet weak var toolBar: ZlStatusToolBar!
+     /// 配图试图
+     @IBOutlet weak var pictureView: ZlStutasPictureView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

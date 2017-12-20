@@ -88,9 +88,9 @@ class ZlStatusListViewModel {
                 self.pullupErrorTimes += 1
                 completion(isSuccess, false)
             } else {
-                self.cacheSingleImage(list: array)
-                //4.完成回调  真正收数据的回调
-                completion(isSuccess, true)
+                self.cacheSingleImage(list: array, finished: completion)
+                //4.完成回调  真正收数据的回调(完成单张缓存后回调)
+//                completion(isSuccess, true)
             }
            
         }
@@ -100,8 +100,10 @@ class ZlStatusListViewModel {
     
     /// 缓存本次下载数据中的单张图片
     ///
+    /// - 应该缓存完单张图像  并且修改过配图的大小之后  再回调 才能保证表格等比例显示单张图片！
+    ///
     /// - Parameter list: 单条微博的试图模型
-    private func cacheSingleImage (list: [ZlStatusViewModel]) {
+    private func cacheSingleImage (list: [ZlStatusViewModel],finished: @escaping (_ isSuccess: Bool, _ hasMorePullUp: Bool)->()) {
         
         //调度组
         let group = DispatchGroup()
@@ -152,6 +154,9 @@ class ZlStatusListViewModel {
         //C> 监听调度组情况
         group.notify(queue: DispatchQueue.main) {
             print("图片缓存完成\(length/1024)K")
+            
+            //执行闭包回调
+            finished(true, true)
         }
     }
 }

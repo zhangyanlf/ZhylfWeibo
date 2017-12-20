@@ -146,7 +146,7 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrO-yw-4qj" userLabel="配图试图" customClass="ZlStutasPictureView" customModule="ZhylfWeibo" customModuleProvider="target">
                         <rect key="frame" x="12" y="125" width="351" height="220"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="0.2207566352739726" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="220" id="SUu-BR-74a"/>
                         </constraints>

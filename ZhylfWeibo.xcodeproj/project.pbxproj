@@ -53,6 +53,7 @@
 		A4AA26091FE8E1FB0005EC2B /* ZlStutasPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA26081FE8E1FB0005EC2B /* ZlStutasPictureView.swift */; };
 		A4AA260B1FE8E8350005EC2B /* ZlStatusPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA260A1FE8E8350005EC2B /* ZlStatusPicture.swift */; };
 		A4B2997E1FE7C064001A79DF /* UIImageView+WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */; };
+		A4B86F151FEA088100D54EB3 /* ZlStatusRetwitterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4B86F141FEA088100D54EB3 /* ZlStatusRetwitterCell.xib */; };
 		A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */; };
 		A4BFF3B71FDA7FDD0028C10E /* ZlOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */; };
 		A4D7A3161FBBF10100166CAB /* zhangyanlf.json in Resources */ = {isa = PBXBuildFile; fileRef = A4D7A3151FBBF0E800166CAB /* zhangyanlf.json */; };
@@ -151,6 +152,7 @@
 		A4AA26081FE8E1FB0005EC2B /* ZlStutasPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStutasPictureView.swift; sourceTree = "<group>"; };
 		A4AA260A1FE8E8350005EC2B /* ZlStatusPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusPicture.swift; sourceTree = "<group>"; };
 		A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+WebImage.swift"; sourceTree = "<group>"; };
+		A4B86F141FEA088100D54EB3 /* ZlStatusRetwitterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZlStatusRetwitterCell.xib; sourceTree = "<group>"; };
 		A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlCommon.swift; sourceTree = "<group>"; };
 		A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlOAuthViewController.swift; sourceTree = "<group>"; };
 		A4D7A3151FBBF0E800166CAB /* zhangyanlf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zhangyanlf.json; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				A4AA26081FE8E1FB0005EC2B /* ZlStutasPictureView.swift */,
 				A4AA26061FE8BB6D0005EC2B /* ZlStatusToolBar.swift */,
 				A450641F1FE3B56000C3470D /* ZlStatusNormalCell.xib */,
+				A4B86F141FEA088100D54EB3 /* ZlStatusRetwitterCell.xib */,
 			);
 			path = StatusCell;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				A4EE1A291FE2789900CC0B00 /* ZlNewFeatureView.xib in Resources */,
 				A4D7A3161FBBF10100166CAB /* zhangyanlf.json in Resources */,
 				A47210721FE1201E0095092F /* ZlWelcomeView.xib in Resources */,
+				A4B86F151FEA088100D54EB3 /* ZlStatusRetwitterCell.xib in Resources */,
 				A497681F1FA9C20C000003F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

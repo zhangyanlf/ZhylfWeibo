@@ -187,7 +187,7 @@ extension ZlMainViewController {
     
     private func setupTimer(){
         
-        timer = Timer.scheduledTimer(timeInterval: 1200.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 120000.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     @objc private func updateTimer (){

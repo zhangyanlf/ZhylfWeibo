@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="406" id="Un5-Dg-xcf" customClass="ZlStatusCell" customModule="ZhylfWeibo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="405" id="Un5-Dg-xcf" customClass="ZlStatusCell" customModule="ZhylfWeibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="405"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Un5-Dg-xcf" id="QOk-nI-yXH">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="405.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="404.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSs-80-oLb" userLabel="顶部分割试图">
@@ -63,8 +63,18 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wz-X1-uC7" userLabel="被转发微博试图背景按钮">
+                        <rect key="frame" x="0.0" y="96" width="375" height="273.5"/>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEM-Cf-NTh" userLabel="被转发微博正文">
+                        <rect key="frame" x="12" y="108" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPH-zI-9aC" userLabel="底部工具栏" customClass="ZlStatusToolBar" customModule="ZhylfWeibo" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="370.5" width="375" height="35"/>
+                        <rect key="frame" x="0.0" y="369.5" width="375" height="35"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deE-ci-Q5c">
                                 <rect key="frame" x="0.0" y="0.0" width="125" height="35"/>
@@ -135,8 +145,8 @@
                         </connections>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrO-yw-4qj" userLabel="配图试图" customClass="ZlStutasPictureView" customModule="ZhylfWeibo" customModuleProvider="target">
-                        <rect key="frame" x="12" y="84" width="351" height="220"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="12" y="125" width="351" height="220"/>
+                        <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="220" id="SUu-BR-74a"/>
                         </constraints>
@@ -147,28 +157,35 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="xrO-yw-4qj" secondAttribute="trailing" constant="12" id="30u-uV-XA3"/>
+                    <constraint firstItem="kPH-zI-9aC" firstAttribute="top" secondItem="5wz-X1-uC7" secondAttribute="bottom" id="4Ga-rI-eks"/>
                     <constraint firstItem="3da-6k-poc" firstAttribute="bottom" secondItem="lIS-lH-6NA" secondAttribute="bottom" id="4yL-SQ-Mbs"/>
                     <constraint firstItem="lIS-lH-6NA" firstAttribute="top" secondItem="aSs-80-oLb" secondAttribute="bottom" constant="12" id="79t-k8-h2f"/>
+                    <constraint firstItem="tEM-Cf-NTh" firstAttribute="top" secondItem="5wz-X1-uC7" secondAttribute="top" constant="12" id="Faa-nG-TOc"/>
                     <constraint firstItem="vxr-zi-37h" firstAttribute="leading" secondItem="BUc-Gy-aTf" secondAttribute="trailing" constant="4" id="Fux-Aw-QFn"/>
                     <constraint firstItem="xrO-yw-4qj" firstAttribute="leading" secondItem="Bdd-qM-dI0" secondAttribute="leading" id="GUX-da-Y1c"/>
                     <constraint firstItem="kPH-zI-9aC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xrO-yw-4qj" secondAttribute="bottom" constant="12" id="IjO-Ge-CNv"/>
+                    <constraint firstAttribute="trailing" secondItem="5wz-X1-uC7" secondAttribute="trailing" id="J0w-rd-6nC"/>
                     <constraint firstItem="aSs-80-oLb" firstAttribute="top" secondItem="QOk-nI-yXH" secondAttribute="top" id="LV2-lp-XqL"/>
                     <constraint firstItem="Bdd-qM-dI0" firstAttribute="leading" secondItem="lIS-lH-6NA" secondAttribute="leading" id="N4u-2e-R3K"/>
+                    <constraint firstItem="xrO-yw-4qj" firstAttribute="top" secondItem="tEM-Cf-NTh" secondAttribute="bottom" id="O3C-iK-djc"/>
+                    <constraint firstItem="5wz-X1-uC7" firstAttribute="leading" secondItem="QOk-nI-yXH" secondAttribute="leading" id="Ok9-F9-cxk"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Bdd-qM-dI0" secondAttribute="trailing" constant="11" id="P7W-Ye-o1R"/>
                     <constraint firstItem="uiY-MR-Ig9" firstAttribute="centerY" secondItem="lIS-lH-6NA" secondAttribute="bottom" constant="-4" id="R28-wW-caR"/>
                     <constraint firstItem="BUc-Gy-aTf" firstAttribute="leading" secondItem="lIS-lH-6NA" secondAttribute="trailing" constant="12" id="TNb-oI-13O"/>
                     <constraint firstItem="Qgr-Wu-GJB" firstAttribute="leading" secondItem="3da-6k-poc" secondAttribute="trailing" constant="8" id="Ydj-bh-Rqq"/>
                     <constraint firstItem="uiY-MR-Ig9" firstAttribute="centerX" secondItem="lIS-lH-6NA" secondAttribute="trailing" constant="-4" id="aAg-b8-Pjv"/>
+                    <constraint firstItem="tEM-Cf-NTh" firstAttribute="leading" secondItem="5wz-X1-uC7" secondAttribute="leading" constant="12" id="aIM-NM-gyo"/>
                     <constraint firstAttribute="bottom" secondItem="kPH-zI-9aC" secondAttribute="bottom" id="aLZ-B8-pm3"/>
                     <constraint firstItem="Bdd-qM-dI0" firstAttribute="top" secondItem="lIS-lH-6NA" secondAttribute="bottom" constant="12" id="da7-o7-dNj"/>
                     <constraint firstItem="aSs-80-oLb" firstAttribute="leading" secondItem="QOk-nI-yXH" secondAttribute="leading" id="dc7-Sd-FIu"/>
+                    <constraint firstItem="5wz-X1-uC7" firstAttribute="top" secondItem="Bdd-qM-dI0" secondAttribute="bottom" constant="12" id="jvJ-ed-CuX"/>
                     <constraint firstAttribute="trailing" secondItem="kPH-zI-9aC" secondAttribute="trailing" id="lRF-RY-Bx7"/>
                     <constraint firstAttribute="trailing" secondItem="aSs-80-oLb" secondAttribute="trailing" id="lTP-sh-BRS"/>
                     <constraint firstItem="Qgr-Wu-GJB" firstAttribute="centerY" secondItem="3da-6k-poc" secondAttribute="centerY" id="mPp-GU-inE"/>
                     <constraint firstItem="BUc-Gy-aTf" firstAttribute="top" secondItem="lIS-lH-6NA" secondAttribute="top" constant="4" id="nzP-gI-UdL"/>
-                    <constraint firstItem="xrO-yw-4qj" firstAttribute="top" secondItem="Bdd-qM-dI0" secondAttribute="bottom" id="qfo-C8-o3M"/>
                     <constraint firstItem="vxr-zi-37h" firstAttribute="centerY" secondItem="BUc-Gy-aTf" secondAttribute="centerY" id="tkM-Ef-yRJ"/>
                     <constraint firstItem="lIS-lH-6NA" firstAttribute="leading" secondItem="QOk-nI-yXH" secondAttribute="leading" constant="12" id="ty3-17-zmt"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tEM-Cf-NTh" secondAttribute="trailing" constant="12" id="vrm-oO-ILE"/>
                     <constraint firstItem="3da-6k-poc" firstAttribute="leading" secondItem="BUc-Gy-aTf" secondAttribute="leading" id="wHF-F9-LqD"/>
                     <constraint firstItem="kPH-zI-9aC" firstAttribute="leading" secondItem="QOk-nI-yXH" secondAttribute="leading" id="zsM-jN-cyj"/>
                 </constraints>
@@ -184,7 +201,7 @@
                 <outlet property="toolBar" destination="kPH-zI-9aC" id="MIu-L4-Zrx"/>
                 <outlet property="vipIconView" destination="vxr-zi-37h" id="oUK-zt-Ie7"/>
             </connections>
-            <point key="canvasLocation" x="-899.5" y="110"/>
+            <point key="canvasLocation" x="-899.5" y="109.5"/>
         </tableViewCell>
     </objects>
     <resources>

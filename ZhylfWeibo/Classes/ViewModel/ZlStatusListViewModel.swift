@@ -87,13 +87,33 @@ class ZlStatusListViewModel {
                 self.pullupErrorTimes += 1
                 completion(isSuccess, false)
             } else {
-                //4.完成回调
+                self.cacheSingleImage(list: array)
+                //4.完成回调  真正收数据的回调
                 completion(isSuccess, true)
             }
-            
            
         }
         
+    }
+    
+    
+    /// 缓存本次下载数据中的单张图片
+    ///
+    /// - Parameter list: 单条微博的试图模型
+    private func cacheSingleImage (list: [ZlStatusViewModel]) {
+        //遍历数组  查找数据有单张图片的进行缓存
+        for vm in list {
+            //1>判断图片数量
+            if vm.pic_Urls?.count != 1 {
+                continue
+            }
+            //2> 代码执行至此有且只有一张图片 获取 图像模型
+            guard let pic = vm.pic_Urls![0].thumbnail_pic,
+                let url = URL(string: pic as String) else {
+                    continue
+            }
+            print("要缓存的 URL 图片是\(url)")
+        }
     }
 }
 

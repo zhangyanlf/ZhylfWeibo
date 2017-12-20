@@ -27,8 +27,23 @@ class ZlStatusCell: UITableViewCell {
             toolBar.viewModel = viewModel
             ///测试修改配置试图的高度
             pictureView.pictureViewHeight.constant = viewModel?.pictureViewSize.height ?? 0
+            
+        
+            //FIXME: 4张图片处理
+            
+             let count = viewModel?.status.pic_urls?.count
+             if (count! > 4) {
+             //修改数量 -> 将末尾的数据全部删除
+             var pic_Urls = viewModel!.status.pic_urls!
+             pic_Urls.removeSubrange((pic_Urls.startIndex + 4)..<pic_Urls.endIndex)
+             pictureView.urls = pic_Urls
+             } else {
+             pictureView.urls = viewModel?.status.pic_urls
+             }
+             
             ///设置配图是的 URL 数据
             pictureView.urls = viewModel?.status.pic_urls
+
         }
     }
     

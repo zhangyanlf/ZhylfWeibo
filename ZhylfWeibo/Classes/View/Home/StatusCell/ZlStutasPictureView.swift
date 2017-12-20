@@ -23,6 +23,11 @@ class ZlStutasPictureView: UIView {
             for url in urls ?? []{
                 //获得索引的imageView
                 let iv = subviews[index] as! UIImageView
+                //FIXME: 4张图片处理
+                if index == 1 && urls?.count == 4 {
+                    index += 1
+                }
+
                 //设置头像
                 iv.zl_setupImage(urlString: url.thumbnail_pic! as String, placeholderImage: nil)
                 //显示图像

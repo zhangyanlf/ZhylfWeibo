@@ -142,6 +142,9 @@ class ZlStatusListViewModel {
                     let data = UIImagePNGRepresentation(image) {
                     //NSData 是 length 属性
                     length += data.count
+                    
+                    //图片缓存成功  更新配图试图大小
+                    vm.updateSingleImageSize(image: image)
                 }
                 
                 print("缓存的图像是\(String(describing: image))长度\(length)")

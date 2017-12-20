@@ -103,6 +103,20 @@ class ZlStatusViewModel: CustomStringConvertible {
         return status.description
     }
     
+    
+    /// 使用单个图像跟新配图试图的大小
+    ///
+    /// - Parameter image: 网络缓存的单张图片
+    func updateSingleImageSize(image: UIImage) {
+        var size = image.size
+        
+        //尺寸要增加顶部的12个点 便于布局
+        size.height += ZlStatusPictureViewOutterMargin
+        
+        pictureViewSize = size
+        
+    }
+    
     /// 计算指定数量的图片对应的配图试图的大小
     ///
     /// - Parameter count: 配图数量

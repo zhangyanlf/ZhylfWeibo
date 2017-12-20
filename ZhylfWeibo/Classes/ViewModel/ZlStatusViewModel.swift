@@ -52,6 +52,9 @@ class ZlStatusViewModel: CustomStringConvertible {
         //如果都没有  返回nil
         return status.retweeted_status?.pic_urls ?? status.pic_urls
     }
+    /// 被转发文字
+    var retweetedText: NSString?
+
     
     /// 构造函数
     ///
@@ -90,6 +93,10 @@ class ZlStatusViewModel: CustomStringConvertible {
         
         ///计算配图大小 有原创的就计算原创的  有转发的就计算转发的
         pictureViewSize = calaPictureViewSize(count: (pic_Urls?.count)!)
+        ///设置被转发微博的文字
+        retweetedText = "@" + ((status.retweeted_status?.user?.screen_name ?? "")! as String) + ":" + (status.retweeted_status?.text ?? "") as NSString
+        
+
     }
     
     var description: String {

@@ -43,6 +43,9 @@ class ZlStatusCell: UITableViewCell {
              
             ///设置配图是的 URL 数据 (包含了被转发和原创)
             pictureView.urls = viewModel?.pic_Urls
+            ///设置微博转发正文文字
+            retweetedLabel?.text = viewModel?.retweetedText as String?
+
 
         }
     }
@@ -72,7 +75,9 @@ class ZlStatusCell: UITableViewCell {
     @IBOutlet weak var toolBar: ZlStatusToolBar!
      /// 配图试图
      @IBOutlet weak var pictureView: ZlStutasPictureView!
-    
+    /// 被转发微正文 - 原创微博没有此控件 一定要用 ？
+    @IBOutlet weak var retweetedLabel: UILabel?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -67,7 +67,7 @@
                         <rect key="frame" x="0.0" y="96" width="375" height="273.5"/>
                         <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEM-Cf-NTh" userLabel="被转发微博正文">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEM-Cf-NTh" userLabel="被转发微博正文">
                         <rect key="frame" x="12" y="108" width="35.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,7 +146,7 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrO-yw-4qj" userLabel="配图试图" customClass="ZlStutasPictureView" customModule="ZhylfWeibo" customModuleProvider="target">
                         <rect key="frame" x="12" y="125" width="351" height="220"/>
-                        <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="220" id="SUu-BR-74a"/>
                         </constraints>
@@ -195,6 +195,7 @@
                 <outlet property="memberIconView" destination="uiY-MR-Ig9" id="tFJ-DU-ZPh"/>
                 <outlet property="nameLabel" destination="BUc-Gy-aTf" id="TBW-md-rvQ"/>
                 <outlet property="pictureView" destination="xrO-yw-4qj" id="MV4-RQ-PJc"/>
+                <outlet property="retweetedLabel" destination="tEM-Cf-NTh" id="X7V-ib-lIt"/>
                 <outlet property="sourceLabel" destination="Qgr-Wu-GJB" id="b68-dV-BZS"/>
                 <outlet property="statusLabel" destination="Bdd-qM-dI0" id="RtW-WR-3oJ"/>
                 <outlet property="timeLabel" destination="3da-6k-poc" id="g7N-hW-DNZ"/>

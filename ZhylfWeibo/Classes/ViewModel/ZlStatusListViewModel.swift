@@ -103,6 +103,11 @@ class ZlStatusListViewModel {
     /// - Parameter list: 单条微博的试图模型
     private func cacheSingleImage (list: [ZlStatusViewModel]) {
         
+        //调度组
+        let group = DispatchGroup()
+        
+        
+        /// 记录数据长度
         var length = 0
         
         
@@ -117,7 +122,10 @@ class ZlStatusListViewModel {
                 let url = URL(string: pic as String) else {
                     continue
             }
-            print("要缓存的 URL 图片是\(url)")
+//            print("要缓存的 URL 图片是\(url)")
+            
+            //A> 入组
+            group.enter()
             
             //3> 下载图像
             //1>downloadImage 是 SDWebImage 的核心方法
@@ -134,9 +142,16 @@ class ZlStatusListViewModel {
                     length += data.count
                 }
                 
-                
                 print("缓存的图像是\(String(describing: image))长度\(length)")
+                
+                //B> 出组 闭包的最后一句
+                group.leave()
             })
+        }
+        
+        //C> 监听调度组情况
+        group.notify(queue: DispatchQueue.main) {
+            print("图片缓存完成\(length/1024)K")
         }
     }
 }

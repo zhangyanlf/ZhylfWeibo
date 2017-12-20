@@ -9,7 +9,10 @@
 import UIKit
 import Alamofire
 //定义全局常量  尽量使用 private 修饰，否则到处都能使用
-private let cellId = "cellId"
+///原创微博可重用cellId
+private let originalCellId = "originalCellId"
+/// 转发微博可重用CellId
+private let retweetedCellId = "retweetedCellId"
 class ZlHomeViewController: ZlBaseViewController {
     //列表试图模型
     private lazy var listViewModel = ZlStatusListViewModel()
@@ -59,12 +62,14 @@ extension ZlHomeViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //0 取出试图模型 根据试图模型判断可重用 Cell
+        let viewModel = listViewModel.statusList[indexPath.row]
+        let cellId = (viewModel.status.retweeted_status != nil) ? retweetedCellId : originalCellId
 //        1.取cell
+        //FIXME: 修改ID
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ZlStatusCell
         
         //2.设置cell
-        let viewModel = listViewModel.statusList[indexPath.row]
-        
         cell.viewModel = viewModel
         
         //3.返回cell
@@ -91,7 +96,8 @@ extension ZlHomeViewController {
         navItem.leftBarButtonItem = UIBarButtonItem(title: "好友", fontSize: 16, target: self, action: #selector(showFrinds))
         //注册原型cell
         //tableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
-        tableView?.register(UINib(nibName: "ZlStatusNormalCell", bundle: nil), forCellReuseIdentifier: cellId)
+        tableView?.register(UINib(nibName: "ZlStatusNormalCell", bundle: nil), forCellReuseIdentifier: originalCellId)
+        tableView?.register(UINib(nibName: "ZlStatusRetwitterCell", bundle: nil), forCellReuseIdentifier: retweetedCellId)
         
         //设置行高
         tableView?.rowHeight = UITableViewAutomaticDimension

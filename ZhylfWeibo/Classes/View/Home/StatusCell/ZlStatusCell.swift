@@ -41,8 +41,8 @@ class ZlStatusCell: UITableViewCell {
              pictureView.urls = viewModel?.status.pic_urls
              }
              
-            ///设置配图是的 URL 数据
-            pictureView.urls = viewModel?.status.pic_urls
+            ///设置配图是的 URL 数据 (包含了被转发和原创)
+            pictureView.urls = viewModel?.pic_Urls
 
         }
     }

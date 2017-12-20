@@ -45,7 +45,13 @@ class ZlStatusViewModel: CustomStringConvertible {
     /// 配图试图大小
     var pictureViewSize = CGSize()
     
-    
+    /// 如果是被转发的  原创的一定没有图
+    var pic_Urls: [ZlStatusPicture]? {
+        //如果有被转发微博 返回被转发试图配图
+        //如果没有被转发微博 返回原创微博试图配图
+        //如果都没有  返回nil
+        return status.retweeted_status?.pic_urls ?? status.pic_urls
+    }
     
     /// 构造函数
     ///
@@ -82,8 +88,8 @@ class ZlStatusViewModel: CustomStringConvertible {
         commentsStr = countString(count: Int(model.comments_count), defaultStr: "评论")
         attitudesStr = countString(count: Int(model.attitudes_count), defaultStr: "赞")
         
-        ///计算配图大小
-        pictureViewSize = calaPictureViewSize(count: (status.pic_urls?.count)!)
+        ///计算配图大小 有原创的就计算原创的  有转发的就计算转发的
+        pictureViewSize = calaPictureViewSize(count: (pic_Urls?.count)!)
     }
     
     var description: String {

@@ -9,6 +9,7 @@
 import UIKit
 import YYModel
 
+/// 微博数据模型
 class ZlStatus: NSObject {
 
     //int 类型在64位机器是 64位 在32位机器是 32位
@@ -26,6 +27,9 @@ class ZlStatus: NSObject {
     
     ///用户
     @objc var user: ZlUser?
+    
+    /// 被转发的原创
+    @objc var retweeted_status: ZlStatus?
     
     /// 微博配置模型数组
     @objc  var pic_urls: [ZlStatusPicture]?

@@ -9,6 +9,46 @@
 import UIKit
 
 class ZlStutasPictureView: UIView {
+    var viewModel: ZlStatusViewModel? {
+        didSet {
+            calcViewSize()
+        }
+    }
+    
+    /// 根据试图模型的配图试图大小 调整显示内容
+    private func calcViewSize() {
+        //处理宽度
+        //1> 单张图片 根据配图试图的大小修改sunviews[0]的大小
+        if viewModel?.pic_Urls?.count == 1 {
+            let viewSize = viewModel?.pictureViewSize ?? CGSize()
+            
+            // a) 获取第0个图片
+            let v = subviews[0]
+            v.frame = CGRect(x: 0,
+                             y: ZlStatusPictureViewOutterMargin,
+                             width: viewSize.width,
+                             height: viewSize.height - ZlStatusPictureViewOutterMargin)
+            
+        } else {
+            //2> 多图或无图 恢复sunviews[0]的大小的 保证9宫格试图布局
+            let v = subviews[0]
+            v.frame = CGRect(x: 0,
+                             y: ZlStatusPictureViewOutterMargin,
+                             width: ZlStatusPictureItemWidth,
+                             height: ZlStatusPictureItemWidth)
+            
+        }
+        
+        
+        
+        
+        
+        //修改高度约束
+        pictureViewHeight.constant = viewModel?.pictureViewSize.height ?? 0
+        
+    }
+    
+    
     /// 配图试图的数组
     var urls: [ZlStatusPicture]? {
         didSet {

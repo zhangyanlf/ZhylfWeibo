@@ -25,8 +25,11 @@ class ZlStatusCell: UITableViewCell {
             iconView.zl_setupImage(urlString: viewModel?.status.user?.profile_image_url as! String, placeholderImage: UIImage(named: "avatar_default_big"),isAvatar: true)
             ///底部工具栏
             toolBar.viewModel = viewModel
+            
+            //配图试图试图模型
+            pictureView.viewModel = viewModel
             ///测试修改配置试图的高度
-            pictureView.pictureViewHeight.constant = viewModel?.pictureViewSize.height ?? 0
+           // pictureView.pictureViewHeight.constant = viewModel?.pictureViewSize.height ?? 0
             
         
             //FIXME: 4张图片处理

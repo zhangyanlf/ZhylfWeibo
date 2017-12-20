@@ -8,6 +8,7 @@
 
 import Foundation
 import HandyJSON
+import SDWebImage
 //数据列表试图模型
 /*
  父类的选择
@@ -101,6 +102,10 @@ class ZlStatusListViewModel {
     ///
     /// - Parameter list: 单条微博的试图模型
     private func cacheSingleImage (list: [ZlStatusViewModel]) {
+        
+        var length = 0
+        
+        
         //遍历数组  查找数据有单张图片的进行缓存
         for vm in list {
             //1>判断图片数量
@@ -113,6 +118,25 @@ class ZlStatusListViewModel {
                     continue
             }
             print("要缓存的 URL 图片是\(url)")
+            
+            //3> 下载图像
+            //1>downloadImage 是 SDWebImage 的核心方法
+            //2>图片下载完成后 会自动保存在沙盒中 文件路径是 url 的 md5
+            //3>如果沙盒中已经存在缓存的对象 后续使用 SD 通过 URL 加载图像 都会加载本地沙盒的图像
+            //4>不会发起网络请求 同时 毁掉方法 同样会调用
+            //5> 方法还是同样的方法 回调还是同样的回调  只不过内部不会再次发起网络请求
+            //***** 注意：如果累计的缓存的图片累计较大  要找后台要接口 处理！
+            SDWebImageDownloader.shared().downloadImage(with: url, options: [], progress: nil, completed: { (image, _, _, _) in
+                //将图片转换为二进制图片
+                if let image = image,
+                    let data = UIImagePNGRepresentation(image) {
+                    //NSData 是 length 属性
+                    length += data.count
+                }
+                
+                
+                print("缓存的图像是\(String(describing: image))长度\(length)")
+            })
         }
     }
 }

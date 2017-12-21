@@ -114,7 +114,6 @@ class ZlStatusViewModel: CustomStringConvertible {
         size.height += ZlStatusPictureViewOutterMargin
         
         pictureViewSize = size
-        
     }
     
     /// 计算指定数量的图片对应的配图试图的大小

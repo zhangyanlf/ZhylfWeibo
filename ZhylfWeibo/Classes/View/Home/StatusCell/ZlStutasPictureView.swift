@@ -12,6 +12,9 @@ class ZlStutasPictureView: UIView {
     var viewModel: ZlStatusViewModel? {
         didSet {
             calcViewSize()
+            
+            //设置urls
+            urls = viewModel?.pic_Urls
         }
     }
     
@@ -50,7 +53,7 @@ class ZlStutasPictureView: UIView {
     
     
     /// 配图试图的数组
-    var urls: [ZlStatusPicture]? {
+   private var urls: [ZlStatusPicture]? {
         didSet {
            //1.隐藏所有的imageView
             for v in subviews {

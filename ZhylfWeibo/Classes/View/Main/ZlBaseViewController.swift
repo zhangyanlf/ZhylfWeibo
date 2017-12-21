@@ -62,7 +62,6 @@ class ZlBaseViewController: UIViewController {
     @objc func loadData() {
         //如果子类不实现任何方法 默认关闭刷新
         refreshControl?.endRefreshing()
-        
     }
 }
 

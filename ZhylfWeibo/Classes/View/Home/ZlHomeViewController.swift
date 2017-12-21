@@ -65,7 +65,8 @@ extension ZlHomeViewController {
         //0 取出试图模型 根据试图模型判断可重用 Cell
         let viewModel = listViewModel.statusList[indexPath.row]
         let cellId = (viewModel.status.retweeted_status != nil) ? retweetedCellId : originalCellId
-//        1.取cell
+//        1.取cell - 本身会调用代理方法（若果有）
+        //如果没有  找到Cell 按照自动布局的规则 从上向下计算 找到向下的约束 从而计算高度
         //FIXME: 修改ID
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ZlStatusCell
         

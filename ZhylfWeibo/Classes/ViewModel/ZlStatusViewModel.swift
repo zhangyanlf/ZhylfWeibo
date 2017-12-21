@@ -55,6 +55,8 @@ class ZlStatusViewModel: CustomStringConvertible {
     /// 被转发文字
     var retweetedText: NSString?
 
+    /// 行高
+    var rowHeight: CGFloat = 0
     
     /// 构造函数
     ///
@@ -96,11 +98,67 @@ class ZlStatusViewModel: CustomStringConvertible {
         ///设置被转发微博的文字
         retweetedText = "@" + ((status.retweeted_status?.user?.screen_name ?? "")! as String) + ":" + (status.retweeted_status?.text ?? "") as NSString
         
-
+        ///计算行高
+        updateRowHeight()
+        //原创微博：顶部分割试图（12）+ 间距(12) + 图像高度(34) + 间距(12) + 正文高度(需要计算) + 配图试图高度(计算) + 间距（12）+ 底部试图间距（35）
+        //转发微博：顶部分割试图（12）+ 间距(12) + 图像高度(34) + 间距(12) + 正文高度(需要计算) + 配图试图高度(计算) + 间距（12）+ 间距（12）+ 转发微博文本高度(需要计算) + + 配图试图高度(计算) + 间距（12）+ 底部试图间距（35）
+        let margin: CGFloat = 12
+        let iconHeight: CGFloat = 34
+        let toolBarHeight: CGFloat = 35
+        
+        var height: CGFloat = 0
+        
+        let viewSize = CGSize(width: UIScreen.cz_screenWidth() - 2 * margin, height: CGFloat(MAXFLOAT))
+        let originalFont = UIFont.systemFont(ofSize: 15)
+        let retweetedFont = UIFont.systemFont(ofSize: 14)
+        
+        
+        //1>计算顶部位置
+        height = 2 * margin + iconHeight + margin
+        //2>正文高度
+        /**计算多行文本
+         1>预期尺寸 宽度固定  高度尽量大
+         2>选项换行文件同意使用usesLineFragmentOrigin
+         3>指定字体字典
+         */
+        if let text = status.text {
+          height += (text as NSString).boundingRect(with: viewSize,
+                                            options: [.usesLineFragmentOrigin],
+                                            attributes: [NSAttributedStringKey.font : originalFont],
+                                            context: nil).height
+        }
+        //3>判断是否转发微博
+        if status.retweeted_status != nil {
+            height += 2 * margin
+            
+            //转发微博文字高度  -- 一定要用 retweetedText 拼接 @用户名：微博文字
+            if let text = retweetedText {
+           height += (text as NSString).boundingRect(with: viewSize,
+                                                       options: [.usesLineFragmentOrigin],
+                                                       attributes: [NSAttributedStringKey.font : retweetedFont],
+                                                       context: nil).height
+            }
+        }
+        
+        //4>配图试图
+        height += pictureViewSize.height
+        height += margin
+        
+        //底部工具栏
+        height += toolBarHeight
+        
+        //使用属性记录
+        rowHeight = height
+        
     }
     
     var description: String {
         return status.description
+    }
+    
+    /// 根据当前的试图模型内容计算行高
+    func updateRowHeight() {
+        
     }
     
     

@@ -1,16 +1,14 @@
 //
 //  UIImage+Extensions.swift
-//  Weibo
+//  ZhylfWeibo
 //
-//  Created by 恒信永利 on 2017/11/3.
-//  Copyright © 2017年 zhangzb. All rights reserved.
-//
+//  Created by 张彦林 on 2017/12/19.
+//  Copyright © 2017年 zhangyanlf. All rights reserved.
 
 import UIKit
 
 
 extension UIImage{
-    
     
     /// 创建图片，圆角
     ///
@@ -61,9 +59,5 @@ extension UIImage{
         return result
         
     }
-    
-    
-    
-    
     
 }

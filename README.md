@@ -84,16 +84,16 @@
         
     }
  ```
-#首页cell显示小结：
+# 首页cell显示小结：
 
-##cell显示
+## cell显示
  ![image](https://github.com/zhangyanlf/ZhylfWeibo/blob/master/ZhylfWeibo/Classes/zhangyanlf/cell.png)
 
-##被转发Cell：
+## 被转发Cell：
  ![image](https://github.com/zhangyanlf/ZhylfWeibo/blob/master/ZhylfWeibo/Classes/zhangyanlf/被转发Cell.png)
  
 ## 单张图片等比例显示：
- ![image](https://github.com/zhangyanlf/ZhylfWeibo/blob/master/ZhylfWeibo/Classes/zhangyanlf/单图等比例显示.png)
+  ![image](https://github.com/zhangyanlf/ZhylfWeibo/blob/master/ZhylfWeibo/Classes/zhangyanlf/单图等比例显示.png)
  
 ##关于表格试图性能优化：
 
@@ -103,7 +103,7 @@
  - cell中控件的数量越少越好
  - 要测量 不要猜测
  
- ###在Cell存在头像或者图片需要使用圆角功能是，尽量少用layer.cornerRadiusla来设置图片的圆角，这样会大量占用CPU影响tableView的性能，尽可能去使用路径裁切功能设置图片的圆角，代码如下:
+ ### 在Cell存在头像或者图片需要使用圆角功能是，尽量少用layer.cornerRadiusla来设置图片的圆角，这样会大量占用CPU影响tableView的性能，尽可能去使用路径裁切功能设置图片的圆角，代码如下:
  
  ```
  extension UIImage{

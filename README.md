@@ -95,7 +95,7 @@
 ## 单张图片等比例显示：
   ![image](https://github.com/zhangyanlf/ZhylfWeibo/blob/master/ZhylfWeibo/Classes/zhangyanlf/单图等比例显示.png)
  
-##关于表格试图性能优化：
+## 关于表格试图性能优化：
 
  - 尽量少计算， 所有需要的素材提前计算好
  - 控件不要设置圆角半径  图片渲染的属性都要注意

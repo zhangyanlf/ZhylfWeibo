@@ -97,11 +97,13 @@
  
 ## 关于表格试图性能优化：
 
+ - 缓存行高
  - 尽量少计算， 所有需要的素材提前计算好
  - 控件不要设置圆角半径  图片渲染的属性都要注意
  - 不要动态创建组件  所有需要的控件 都要提前创建好 在现实的时候 根据数据显示/隐藏
  - cell中控件的数量越少越好
  - 要测量 不要猜测
+  ![image](https://github.com/zhangyanlf/ZhylfWeibo/blob/master/ZhylfWeibo/Classes/zhangyanlf/性能优化.png)
  
  ### 在Cell存在头像或者图片需要使用圆角功能是，尽量少用layer.cornerRadiusla来设置图片的圆角，这样会大量占用CPU影响tableView的性能，尽可能去使用路径裁切功能设置图片的圆角，代码如下:
  

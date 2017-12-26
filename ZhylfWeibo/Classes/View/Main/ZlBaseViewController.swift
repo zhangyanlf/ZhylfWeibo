@@ -120,15 +120,16 @@ extension ZlBaseViewController {
         //设置数据源&代理 -> 目的： 子类直接实现数据源方法
         tableView?.delegate = self
         tableView?.dataSource = self
-        
+        //tableView?.backgroundColor = UIColor.red
         //这是内容缩进
         //TODO:bottom 在iOS11 以下的兼容
-        if UIScreen.cz_screenHeight() != 812.0 {
-            tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height - 20,
+        let topHeight = UIScreen.cz_screenHeight() != 812.0 ? navigationBar.bounds.height - 20 : navigationBar.bounds.height - 44
+    
+    
+            tableView?.contentInset = UIEdgeInsets(top: topHeight,
                                                    left: 0,
                                                    bottom: /*tabBarController?.tabBar.bounds.height ??*/ 0,
                                                    right: 0)
-        }
     
     
         //设置指示器  强行解包 -> 拿到必有的contentInset

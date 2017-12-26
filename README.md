@@ -104,6 +104,9 @@
  - cell中控件的数量越少越好
  - 要测量 不要猜测
   ![image](https://github.com/zhangyanlf/ZhylfWeibo/blob/master/ZhylfWeibo/Classes/zhangyanlf/性能优化.png)
+  
+## 缓存行高步骤
+ ![image](https://github.com/zhangyanlf/ZhylfWeibo/blob/master/ZhylfWeibo/Classes/zhangyanlf/缓存行高.png)
  
  ### 在Cell存在头像或者图片需要使用圆角功能是，尽量少用layer.cornerRadiusla来设置图片的圆角，这样会大量占用CPU影响tableView的性能，尽可能去使用路径裁切功能设置图片的圆角，代码如下:
  

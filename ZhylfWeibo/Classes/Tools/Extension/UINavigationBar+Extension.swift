@@ -17,11 +17,12 @@ class ZLNavigationBar: UINavigationBar {
             if stringFromClass.contains("BarBackground") {
                 subview.frame = self.bounds
             } else if stringFromClass.contains("UINavigationBarContentView") {
-                subview.frame = CGRect(x: 0.0, y: 20.0, width: subview.frame.size.width, height: 44.0)
+                subview.frame = CGRect(x: 0.0, y: NavBarTopHeight, width: Double(subview.frame.size.width), height: 44.0)
             }
         }
 
     }
+    
 }
 
 

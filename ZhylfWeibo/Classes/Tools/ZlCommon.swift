@@ -33,3 +33,9 @@ let ZlStatusPictureViewInnerMargin = CGFloat(3)
 let ZlStatusPictureViewWidth = UIScreen.cz_screenWidth() - 2 * ZlStatusPictureViewOutterMargin
 ///每个item默认的高度
 let ZlStatusPictureItemWidth = (ZlStatusPictureViewWidth - 2 * ZlStatusPictureViewInnerMargin) / 3
+
+///适配NavBar 高度
+let SafeAreaTopHeight = (UIScreen.cz_screenHeight() == 812.0 ? 88 : 64)
+let NavBarTopHeight = (UIScreen.cz_screenHeight() == 812.0 ? 40.0 : 20.0)
+
+

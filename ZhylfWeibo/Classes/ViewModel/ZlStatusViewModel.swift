@@ -100,6 +100,14 @@ class ZlStatusViewModel: CustomStringConvertible {
         
         ///计算行高
         updateRowHeight()
+    }
+    
+    var description: String {
+        return status.description
+    }
+    
+    /// 根据当前的试图模型内容计算行高
+    func updateRowHeight() {
         //原创微博：顶部分割试图（12）+ 间距(12) + 图像高度(34) + 间距(12) + 正文高度(需要计算) + 配图试图高度(计算) + 间距（12）+ 底部试图间距（35）
         //转发微博：顶部分割试图（12）+ 间距(12) + 图像高度(34) + 间距(12) + 正文高度(需要计算) + 配图试图高度(计算) + 间距（12）+ 间距（12）+ 转发微博文本高度(需要计算) + + 配图试图高度(计算) + 间距（12）+ 底部试图间距（35）
         let margin: CGFloat = 12
@@ -122,10 +130,10 @@ class ZlStatusViewModel: CustomStringConvertible {
          3>指定字体字典
          */
         if let text = status.text {
-          height += (text as NSString).boundingRect(with: viewSize,
-                                            options: [.usesLineFragmentOrigin],
-                                            attributes: [NSAttributedStringKey.font : originalFont],
-                                            context: nil).height
+            height += (text as NSString).boundingRect(with: viewSize,
+                                                      options: [.usesLineFragmentOrigin],
+                                                      attributes: [NSAttributedStringKey.font : originalFont],
+                                                      context: nil).height
         }
         //3>判断是否转发微博
         if status.retweeted_status != nil {
@@ -133,10 +141,10 @@ class ZlStatusViewModel: CustomStringConvertible {
             
             //转发微博文字高度  -- 一定要用 retweetedText 拼接 @用户名：微博文字
             if let text = retweetedText {
-           height += (text as NSString).boundingRect(with: viewSize,
-                                                       options: [.usesLineFragmentOrigin],
-                                                       attributes: [NSAttributedStringKey.font : retweetedFont],
-                                                       context: nil).height
+                height += (text as NSString).boundingRect(with: viewSize,
+                                                          options: [.usesLineFragmentOrigin],
+                                                          attributes: [NSAttributedStringKey.font : retweetedFont],
+                                                          context: nil).height
             }
         }
         
@@ -149,16 +157,6 @@ class ZlStatusViewModel: CustomStringConvertible {
         
         //使用属性记录
         rowHeight = height
-        
-    }
-    
-    var description: String {
-        return status.description
-    }
-    
-    /// 根据当前的试图模型内容计算行高
-    func updateRowHeight() {
-        
     }
     
     
@@ -170,8 +168,11 @@ class ZlStatusViewModel: CustomStringConvertible {
         
         //尺寸要增加顶部的12个点 便于布局
         size.height += ZlStatusPictureViewOutterMargin
-        
+        ///从新设置配图试图大小
         pictureViewSize = size
+        
+        //更新行高
+        updateRowHeight()
     }
     
     /// 计算指定数量的图片对应的配图试图的大小

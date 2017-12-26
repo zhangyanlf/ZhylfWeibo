@@ -20,7 +20,7 @@ class ZlHomeViewController: ZlBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     ///加载数据
     override func loadData() {
@@ -77,6 +77,19 @@ extension ZlHomeViewController {
         return cell
     }
     
+    // 父类必须实现代理方法  子类才能够重写 Swift3.0 如此 2.0 不需要
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        //1.根据indexPath 获取试图模型
+        let vm = listViewModel.statusList[indexPath.row]
+        
+        //2. 返回计算好的行高
+         print(vm.rowHeight)
+        return vm.rowHeight
+       
+        
+    }
+    
 }
 
 
@@ -101,9 +114,9 @@ extension ZlHomeViewController {
         tableView?.register(UINib(nibName: "ZlStatusRetwitterCell", bundle: nil), forCellReuseIdentifier: retweetedCellId)
         
         //设置行高
-        tableView?.rowHeight = UITableViewAutomaticDimension
+        //缓存行高之后 去掉自动设置行高
+        //tableView?.rowHeight = UITableViewAutomaticDimension
         tableView?.estimatedRowHeight = 300
-        
         //取消分割线
         tableView?.separatorStyle = .none
         
@@ -113,13 +126,12 @@ extension ZlHomeViewController {
     /// 设置导航栏标题
     private func setupNavtitle() {
         
-        //let titleName = ZlNetworkManager.shared.userAccount.screen_name
+        let titleName = ZlNetworkManager.shared.userAccount.screen_name
         print(ZlNetworkManager.shared.userAccount)
-        let button = ZlTitleButton(title: "测试按钮")
+        let button = ZlTitleButton(title: titleName)
        
-        print("第一次加载\(button.frame)")
-        navItem.titleView = button
         button.sizeToFit()
+        navItem.titleView = button
         button.addTarget(self, action: #selector(clickTitleButton), for: .touchUpInside)
     }
     

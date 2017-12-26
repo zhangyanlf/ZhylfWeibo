@@ -29,7 +29,7 @@ class ZlBaseViewController: UIViewController {
     
     
     /// 自定义导航
-    lazy var navigationBar = ZLNavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.cz_screenWidth(), height: 64))
+    lazy var navigationBar = ZLNavigationBar(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.cz_screenWidth()), height: SafeAreaTopHeight))
     ///自定义导航条目  - 设置导航栏内容，同意使用navItem
     lazy var navItem = UINavigationItem()
     
@@ -123,13 +123,17 @@ extension ZlBaseViewController {
         
         //这是内容缩进
         //TODO:bottom 在iOS11 以下的兼容
-        tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height - 20,
-                                               left: 0,
-                                               bottom: /*tabBarController?.tabBar.bounds.height ??*/ 0,
-                                               right: 0)
+        if UIScreen.cz_screenHeight() != 812.0 {
+            tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height - 20,
+                                                   left: 0,
+                                                   bottom: /*tabBarController?.tabBar.bounds.height ??*/ 0,
+                                                   right: 0)
+        }
+    
     
         //设置指示器  强行解包 -> 拿到必有的contentInset
         tableView?.scrollIndicatorInsets = tableView!.contentInset
+    
         //设置刷新控件
         //1> 实例化控件
         refreshControl = UIRefreshControl()
@@ -158,6 +162,8 @@ extension ZlBaseViewController {
     //3.设置导航栏按钮
     navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
     navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
+    
+
     
     }
     
@@ -191,6 +197,10 @@ extension ZlBaseViewController: UITableViewDataSource,UITableViewDelegate {
         //只是保证没有语法错误
         return UITableViewCell()
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 10
+    }
+    
     ///在显示最后一行的时候做上拉刷新
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //1.判断IndexPath是否为最后一行(indexPath.section(最大)的indexPath.row(最后一行))

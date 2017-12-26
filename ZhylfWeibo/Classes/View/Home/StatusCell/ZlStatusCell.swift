@@ -83,13 +83,17 @@ class ZlStatusCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        ///离屏渲染  -- 异步加载
+        self.layer.drawsAsynchronously = true
+        ///栅格化 -- 异步绘制之后会生成一张独立的图像 cell在屏幕上滚动的时候 实际上是滚动这张图片
+        ///Cell 优化 尽量减少图层的数量 -- 这样就相当于一层
+        ///停止滚动后 可以接受监听
+        self.layer.shouldRasterize = true
+        
+        ///使用栅格化 必须制定分辨率
+        self.layer.rasterizationScale = UIScreen.main.scale
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
 
 }

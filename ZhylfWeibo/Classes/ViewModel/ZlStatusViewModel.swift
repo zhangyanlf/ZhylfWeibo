@@ -162,9 +162,29 @@ class ZlStatusViewModel: CustomStringConvertible {
     
     /// 使用单个图像跟新配图试图的大小
     ///
+    /// 新浪针对单张图片 都是缩率图  但是偶尔会有一张特别大的图 7000 * 9000多
+    /// 支持长微博 但是有时候有特别长的 长到宽度只有1个点
     /// - Parameter image: 网络缓存的单张图片
     func updateSingleImageSize(image: UIImage) {
         var size = image.size
+        ///过宽图像处理
+        let maxWidth: CGFloat = 300
+        let minWidth: CGFloat = 40
+        //过宽图像处理
+        if size.width > maxWidth {
+            //设置最大宽度
+            size.width = maxWidth
+            //等比例调整宽度
+            size.height = size.width * image.size.height / image.size.width
+        }
+        ///过窄图片处理
+        if size.width < minWidth {
+            //设置最大宽度
+            size.width = minWidth
+            //等比例调整宽度  要特殊处理高度
+            size.height = size.width * image.size.height / image.size.width / 4
+        }
+        
         
         //尺寸要增加顶部的12个点 便于布局
         size.height += ZlStatusPictureViewOutterMargin

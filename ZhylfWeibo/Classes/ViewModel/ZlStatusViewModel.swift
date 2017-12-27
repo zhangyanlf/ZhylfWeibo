@@ -185,7 +185,6 @@ class ZlStatusViewModel: CustomStringConvertible {
             size.height = size.width * image.size.height / image.size.width / 4
         }
         
-        
         //尺寸要增加顶部的12个点 便于布局
         size.height += ZlStatusPictureViewOutterMargin
         ///从新设置配图试图大小

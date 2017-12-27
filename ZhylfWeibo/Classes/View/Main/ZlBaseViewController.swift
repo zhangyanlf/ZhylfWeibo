@@ -23,7 +23,7 @@ class ZlBaseViewController: UIViewController {
     /// 表格试图 - 如果用户没有登录 就不创建
     var tableView: UITableView?
     /// 刷新控件
-    var refreshControl: UIRefreshControl?
+    var refreshControl: ZlRefreshControl?
     /// 访客试图信息字典
     var visitorInfoDictionary: [String: String]?
     
@@ -137,7 +137,7 @@ extension ZlBaseViewController {
     
         //设置刷新控件
         //1> 实例化控件
-        refreshControl = UIRefreshControl()
+        refreshControl = ZlRefreshControl()
         
         //2.添加到表格试图
         tableView?.addSubview(refreshControl!)
@@ -185,7 +185,7 @@ extension ZlBaseViewController {
     }
     
 }
-//MARK: - UITableViewDataSource,UITableViewDelegate
+//s
 
 extension ZlBaseViewController: UITableViewDataSource,UITableViewDelegate {
     

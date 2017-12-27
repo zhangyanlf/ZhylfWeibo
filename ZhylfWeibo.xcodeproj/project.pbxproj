@@ -21,6 +21,7 @@
 		A4327D571FAACC81006533AD /* ZlDescoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D561FAACC81006533AD /* ZlDescoverViewController.swift */; };
 		A4327D591FAACC91006533AD /* ZlMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D581FAACC91006533AD /* ZlMessageViewController.swift */; };
 		A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4327D5A1FAACCA0006533AD /* ZlProfileViewController.swift */; };
+		A436B8F21FF34256004AAF2D /* ZlRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436B8F11FF34256004AAF2D /* ZlRefreshControl.swift */; };
 		A44117F01FB54DE40023B26F /* UIButton+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117E51FB549150023B26F /* UIButton+CZAddition.m */; };
 		A44117F11FB54E010023B26F /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117E71FB549150023B26F /* UIColor+CZAddition.m */; };
 		A44117F21FB54E080023B26F /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117D91FB549150023B26F /* NSArray+Log.m */; };
@@ -102,6 +103,7 @@
 		A4327D561FAACC81006533AD /* ZlDescoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlDescoverViewController.swift; sourceTree = "<group>"; };
 		A4327D581FAACC91006533AD /* ZlMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlMessageViewController.swift; sourceTree = "<group>"; };
 		A4327D5A1FAACCA0006533AD /* ZlProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlProfileViewController.swift; sourceTree = "<group>"; };
+		A436B8F11FF34256004AAF2D /* ZlRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlRefreshControl.swift; sourceTree = "<group>"; };
 		A44117D71FB549150023B26F /* CZAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
 		A44117D81FB549150023B26F /* NSArray+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		A44117D91FB549150023B26F /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		A412E53D1FB4429F00650D46 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A436B8EC1FF341EE004AAF2D /* ZlRefreshControl */,
 				A421CA431FBD6562006F1F64 /* Network */,
 				A44117D61FB549150023B26F /* Additions */,
 				A412E5591FB44CDC00650D46 /* Extension */,
@@ -351,6 +354,14 @@
 				A4327D5A1FAACCA0006533AD /* ZlProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		A436B8EC1FF341EE004AAF2D /* ZlRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				A436B8F11FF34256004AAF2D /* ZlRefreshControl.swift */,
+			);
+			path = ZlRefreshControl;
 			sourceTree = "<group>";
 		};
 		A44117D61FB549150023B26F /* Additions */ = {
@@ -808,6 +819,7 @@
 				A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */,
 				A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */,
 				A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */,
+				A436B8F21FF34256004AAF2D /* ZlRefreshControl.swift in Sources */,
 				A45064221FE3C3AE00C3470D /* ZlUser.swift in Sources */,
 				A4327D4F1FAACAFD006533AD /* ZlMainViewController.swift in Sources */,
 				A4327D511FAACB55006533AD /* ZlNavigationController.swift in Sources */,

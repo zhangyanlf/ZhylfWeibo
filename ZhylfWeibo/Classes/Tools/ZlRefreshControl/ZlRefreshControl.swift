@@ -103,7 +103,14 @@ class ZlRefreshControl: UIControl {
                 print("准备开始刷新")
                 
                 //刷新结束之后将状态改为normal 才能继续响应刷新
-                refreshView.refreshState = .WillRefresh
+                //refreshView.refreshState = .WillRefresh
+                //让整个刷新试图能够显示出来
+                //解决办法： 修改表格的constentInset
+                //var inset = sv.contentInset
+                //inset.top += ZlRefreshOffset
+
+                //sv.contentInset = inset
+                beginRefreshing()
             }
         }
         
@@ -116,21 +123,50 @@ class ZlRefreshControl: UIControl {
     
     /// 开始刷新
     func beginRefreshing (){
+        //判断父试图
+        guard let sv = scrollView else {
+            return
+        }
+        //判断是否正在刷新
+        if refreshView.refreshState == .WillRefresh {
+            return
+        }
+        //设置刷新试图的状态
+        refreshView.refreshState = .WillRefresh
         
+        //调整表格的间距
+        var inset = sv.contentInset
+        inset.top += ZlRefreshOffset
+        
+        sv.contentInset = inset
     }
     
     /// 结束刷新
-    func endRefreshing () {
+    func beginRefreshing () {
+        //-----恢复状态
+        //判断父试图
+        guard let sv = scrollView else {
+            return
+        }
         
+        //恢复刷新表格的状态
+         refreshView.refreshState = .Normal
+        //恢复刷新表格的contentInset
+        var inset = sv.contentInset
+        inset.top -= ZlRefreshOffset
+        
+        sv.contentInset = inset
+        
+       
     }
 
 }
 
 extension ZlRefreshControl {
     private func setupUI () {
-        backgroundColor = UIColor.orange
+        backgroundColor = superview?.backgroundColor
         //设置超出边界不显示
-        clipsToBounds = true
+        //clipsToBounds = true
         //添加刷新试图 - 从xib架子啊出来 默认就是 xib 中指定的宽高
         addSubview(refreshView)
         

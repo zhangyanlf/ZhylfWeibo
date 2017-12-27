@@ -60,8 +60,10 @@ class ZlBaseViewController: UIViewController {
     }
     ///加载数据 - 具体的实现由子类负责
     @objc func loadData() {
+        print("开始刷新")
+        
         //如果子类不实现任何方法 默认关闭刷新
-        refreshControl?.endRefreshing()
+        self.refreshControl?.endRefreshing()
     }
 }
 

@@ -25,18 +25,21 @@ class ZlHomeViewController: ZlBaseViewController {
     ///加载数据
     override func loadData() {
         //print("准备刷新，最后一条\(String(describing: self.listViewModel.statusList.last?.text))")
-        
-        listViewModel.loadStatus(pullup: self.isPullup) { (isSucess,shouldRefresh) in
-            print("加载表格结束")
-            
-            //结束刷新
-            self.refreshControl?.endRefreshing()
-            //恢复上拉刷新标记
-            self.isPullup = false
-            //刷新表格
-            if shouldRefresh {
-                 self.tableView?.reloadData()
+        refreshControl?.beginRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.listViewModel.loadStatus(pullup: self.isPullup) { (isSucess,shouldRefresh) in
+                print("加载表格结束")
+                
+                //结束刷新
+                self.refreshControl?.endRefreshing()
+                //恢复上拉刷新标记
+                self.isPullup = false
+                //刷新表格
+                if shouldRefresh {
+                    self.tableView?.reloadData()
+                }
             }
+        
            
         }
         

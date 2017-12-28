@@ -7,8 +7,8 @@
 //
 
 import UIKit
-/// 刷新状态切换的临界点
-private let ZlRefreshOffset: CGFloat = 60
+///// 刷新状态切换的临界点
+//private let ZlRefreshOffset: CGFloat = 60
 
 /// 刷新状态
 ///
@@ -102,15 +102,10 @@ class ZlRefreshControl: UIControl {
             if refreshView.refreshState == .Pulling {
                 print("准备开始刷新")
                 
-                //刷新结束之后将状态改为normal 才能继续响应刷新
-                //refreshView.refreshState = .WillRefresh
-                //让整个刷新试图能够显示出来
-                //解决办法： 修改表格的constentInset
-                //var inset = sv.contentInset
-                //inset.top += ZlRefreshOffset
-
-                //sv.contentInset = inset
                 beginRefreshing()
+                
+                /// 发送刷新事件
+                sendActions(for: .valueChanged)
             }
         }
         
@@ -123,14 +118,15 @@ class ZlRefreshControl: UIControl {
     
     /// 开始刷新
     func beginRefreshing (){
-        //判断父试图
-        guard let sv = scrollView else {
-            return
-        }
         //判断是否正在刷新
         if refreshView.refreshState == .WillRefresh {
             return
         }
+        //判断父试图
+        guard let sv = scrollView else {
+            return
+        }
+        
         //设置刷新试图的状态
         refreshView.refreshState = .WillRefresh
         
@@ -142,8 +138,11 @@ class ZlRefreshControl: UIControl {
     }
     
     /// 结束刷新
-    func beginRefreshing () {
-        //-----恢复状态
+    func endRefreshing () {
+        //判断是否正在刷新
+        if refreshView.refreshState != .WillRefresh {
+            return
+        }
         //判断父试图
         guard let sv = scrollView else {
             return
@@ -156,6 +155,9 @@ class ZlRefreshControl: UIControl {
         inset.top -= ZlRefreshOffset
         
         sv.contentInset = inset
+        
+        //会重复发送
+        //sendActions(for: .valueChanged)
         
        
     }

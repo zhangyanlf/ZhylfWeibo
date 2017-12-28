@@ -83,6 +83,7 @@ class ZlStatusCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        /*
         ///离屏渲染  -- 异步加载
         self.layer.drawsAsynchronously = true
         ///栅格化 -- 异步绘制之后会生成一张独立的图像 cell在屏幕上滚动的时候 实际上是滚动这张图片
@@ -92,6 +93,7 @@ class ZlStatusCell: UITableViewCell {
         
         ///使用栅格化 必须制定分辨率
         self.layer.rasterizationScale = UIScreen.main.scale
+         */
     }
 
     

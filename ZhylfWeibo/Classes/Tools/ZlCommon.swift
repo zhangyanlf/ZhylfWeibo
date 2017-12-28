@@ -38,4 +38,7 @@ let ZlStatusPictureItemWidth = (ZlStatusPictureViewWidth - 2 * ZlStatusPictureVi
 let SafeAreaTopHeight = (UIScreen.cz_screenHeight() == 812.0 ? 88 : 64)
 let NavBarTopHeight = (UIScreen.cz_screenHeight() == 812.0 ? 40.0 : 20.0)
 
+/// 刷新状态切换的临界点
+let ZlRefreshOffset: CGFloat = (UIScreen.cz_screenHeight() == 812.0 ? 84.0 : 60.0)
+
 

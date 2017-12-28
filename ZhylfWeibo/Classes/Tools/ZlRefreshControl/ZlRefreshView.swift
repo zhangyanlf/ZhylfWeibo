@@ -46,6 +46,8 @@ class ZlRefreshView: UIView {
             }
         }
     }
+    /// 父试图高度 -- 为了刷新控件不需要关心具体的刷新试图是谁！
+    var parentViewHeight: CGFloat = 0
     
     /// 提示图标
     @IBOutlet weak var pullRefreshImageView: UIImageView?

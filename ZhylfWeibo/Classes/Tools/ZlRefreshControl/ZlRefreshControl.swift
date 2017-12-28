@@ -88,6 +88,9 @@ class ZlRefreshControl: UIControl {
                             width: sv.bounds.width,
                             height: height)
         
+        //------传递父试图高度--------
+        refreshView.parentViewHeight = height
+        
         //判断临界点  - 只需要判断一次
         if sv.isDragging {
             if height > ZlRefreshOffset && (refreshView.refreshState == .Normal) {
@@ -135,6 +138,9 @@ class ZlRefreshControl: UIControl {
         inset.top += ZlRefreshOffset
         
         sv.contentInset = inset
+        
+        //设置刷新试图的父试图高度
+        refreshView.parentViewHeight = ZlRefreshOffset
     }
     
     /// 结束刷新

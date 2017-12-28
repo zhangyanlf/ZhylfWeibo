@@ -62,7 +62,7 @@ class ZlRefreshControl: UIControl {
     // : 所有下拉刷新都是监听 contentOffset
     override func removeFromSuperview() {
         //superview 还存在
-        superview?.removeObserver(self, forKeyPath: "contentOffset")
+        
         
         super.removeFromSuperview()
         //superview 不存在

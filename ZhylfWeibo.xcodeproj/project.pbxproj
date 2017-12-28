@@ -55,6 +55,9 @@
 		A4AA26071FE8BB6D0005EC2B /* ZlStatusToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA26061FE8BB6D0005EC2B /* ZlStatusToolBar.swift */; };
 		A4AA26091FE8E1FB0005EC2B /* ZlStutasPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA26081FE8E1FB0005EC2B /* ZlStutasPictureView.swift */; };
 		A4AA260B1FE8E8350005EC2B /* ZlStatusPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA260A1FE8E8350005EC2B /* ZlStatusPicture.swift */; };
+		A4AD62361FF4D41800D34F3D /* ZlHumanRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AD62351FF4D41800D34F3D /* ZlHumanRefreshView.xib */; };
+		A4AD62381FF4DAD100D34F3D /* ZlMeituanRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AD62371FF4DAD100D34F3D /* ZlMeituanRefreshView.xib */; };
+		A4AD623A1FF4DD3100D34F3D /* ZlMeituanRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD62391FF4DD3100D34F3D /* ZlMeituanRefreshView.swift */; };
 		A4B2997E1FE7C064001A79DF /* UIImageView+WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */; };
 		A4B86F151FEA088100D54EB3 /* ZlStatusRetwitterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4B86F141FEA088100D54EB3 /* ZlStatusRetwitterCell.xib */; };
 		A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */; };
@@ -157,6 +160,9 @@
 		A4AA26061FE8BB6D0005EC2B /* ZlStatusToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusToolBar.swift; sourceTree = "<group>"; };
 		A4AA26081FE8E1FB0005EC2B /* ZlStutasPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStutasPictureView.swift; sourceTree = "<group>"; };
 		A4AA260A1FE8E8350005EC2B /* ZlStatusPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlStatusPicture.swift; sourceTree = "<group>"; };
+		A4AD62351FF4D41800D34F3D /* ZlHumanRefreshView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlHumanRefreshView.xib; sourceTree = "<group>"; };
+		A4AD62371FF4DAD100D34F3D /* ZlMeituanRefreshView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlMeituanRefreshView.xib; sourceTree = "<group>"; };
+		A4AD62391FF4DD3100D34F3D /* ZlMeituanRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlMeituanRefreshView.swift; sourceTree = "<group>"; };
 		A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+WebImage.swift"; sourceTree = "<group>"; };
 		A4B86F141FEA088100D54EB3 /* ZlStatusRetwitterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZlStatusRetwitterCell.xib; sourceTree = "<group>"; };
 		A4BFF3B31FDA7AC40028C10E /* ZlCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlCommon.swift; sourceTree = "<group>"; };
@@ -364,8 +370,11 @@
 			isa = PBXGroup;
 			children = (
 				A436B8F11FF34256004AAF2D /* ZlRefreshControl.swift */,
+				A4AD62351FF4D41800D34F3D /* ZlHumanRefreshView.xib */,
 				A436B8F31FF37238004AAF2D /* ZlRefreshView.xib */,
 				A436B8F51FF373ED004AAF2D /* ZlRefreshView.swift */,
+				A4AD62371FF4DAD100D34F3D /* ZlMeituanRefreshView.xib */,
+				A4AD62391FF4DD3100D34F3D /* ZlMeituanRefreshView.swift */,
 			);
 			path = ZlRefreshControl;
 			sourceTree = "<group>";
@@ -638,6 +647,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AD62361FF4D41800D34F3D /* ZlHumanRefreshView.xib in Resources */,
+				A4AD62381FF4DAD100D34F3D /* ZlMeituanRefreshView.xib in Resources */,
 				A45064201FE3B56000C3470D /* ZlStatusNormalCell.xib in Resources */,
 				A436B8F41FF37238004AAF2D /* ZlRefreshView.xib in Resources */,
 				A4EE1A291FE2789900CC0B00 /* ZlNewFeatureView.xib in Resources */,
@@ -847,6 +858,7 @@
 				A44117F21FB54E080023B26F /* NSArray+Log.m in Sources */,
 				A4BFF3B71FDA7FDD0028C10E /* ZlOAuthViewController.swift in Sources */,
 				A44117F91FB54E1E0023B26F /* UIScreen+CZAddition.m in Sources */,
+				A4AD623A1FF4DD3100D34F3D /* ZlMeituanRefreshView.swift in Sources */,
 				A44117F31FB54E0A0023B26F /* NSAttributedString+CZAdditon.m in Sources */,
 				A4327D531FAACB8B006533AD /* ZlBaseViewController.swift in Sources */,
 				A44117FB1FB54E240023B26F /* UIViewController+CZAddition.m in Sources */,

@@ -22,43 +22,43 @@ class ZlRefreshView: UIView {
             switch refreshState {
             case .Normal:
                 //恢复状态
-                pullRefreshImageView.isHidden = false
-                indicator.stopAnimating()
+                pullRefreshImageView?.isHidden = false
+                indicator?.stopAnimating()
                 
-                refreshLabel.text = "继续使劲拉..."
+                refreshLabel?.text = "继续使劲拉..."
                 
                 UIView.animate(withDuration: 0.25, animations: {
-                    self.pullRefreshImageView.transform = CGAffineTransform.identity
+                    self.pullRefreshImageView?.transform = CGAffineTransform.identity
                 })
             case .Pulling:
-                refreshLabel.text = "放手刷新..."
+                refreshLabel?.text = "放手刷新..."
                 UIView.animate(withDuration: 0.25, animations: {
-                    self.pullRefreshImageView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI - 0.001))
+                    self.pullRefreshImageView?.transform = CGAffineTransform(rotationAngle: .pi - 0.001)
                 })
                 
             case .WillRefresh:
-                refreshLabel.text = "正在刷新中..."
+                refreshLabel?.text = "正在刷新中..."
                 
                 //隐藏提示图标
-                pullRefreshImageView.isHidden = true
+                pullRefreshImageView?.isHidden = true
                 //显示菊花
-                indicator.startAnimating()
+                indicator?.startAnimating()
             }
         }
     }
     
     /// 提示图标
-    @IBOutlet weak var pullRefreshImageView: UIImageView!
+    @IBOutlet weak var pullRefreshImageView: UIImageView?
     
     /// 提示标签
-    @IBOutlet weak var refreshLabel: UILabel!
+    @IBOutlet weak var refreshLabel: UILabel?
     
     /// 指示器
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView?
     
     class func refreshView() -> ZlRefreshView {
         
-        let nib = UINib(nibName: "ZlRefreshView", bundle: nil)
+        let nib = UINib(nibName: "ZlMeituanRefreshView", bundle: nil)
         
         return nib.instantiate(withOwner: nil, options: nil)[0] as! ZlRefreshView
     }

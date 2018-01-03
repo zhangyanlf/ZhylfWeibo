@@ -16,7 +16,7 @@ class ZlTitleButton: UIButton {
         if title == nil {
             setTitle("首页", for: .normal)
         } else {
-            setTitle(title! + " ", for: .normal)
+            setTitle(title! + "   ", for: .normal)
             //设置图像
             setImage(UIImage(named: "navigationbar_arrow_down"), for: .normal)
             //setImage(UIImage(named: "navigationbar_arrow_up"), for: .highlighted)
@@ -44,8 +44,13 @@ class ZlTitleButton: UIButton {
                 return
         }
         //label的x向左移动image宽度 image的x向右移动label宽度
-        titleLabel.frame = titleLabel.frame.offsetBy(dx: -imageView.bounds.width, dy: 0)
-        imageView.frame = imageView.frame.offsetBy(dx: titleLabel.bounds.width, dy: 0)
+        //titleLabel.frame = titleLabel.frame.offsetBy(dx: -imageView.bounds.width, dy: 0)
+        //imageView.frame = imageView.frame.offsetBy(dx: titleLabel.bounds.width, dy: 0)
+        
+        //label的x向左移动image宽度 image的x向右移动label宽度
+        self.titleEdgeInsets = UIEdgeInsetsMake(0, -imageView.bounds.width, 0, 0)
+        self.imageEdgeInsets = UIEdgeInsetsMake(0, titleLabel.bounds.width, 0, 0)
+        
     
     }
     

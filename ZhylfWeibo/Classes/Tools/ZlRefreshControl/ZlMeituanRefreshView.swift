@@ -61,7 +61,7 @@ class ZlMeituanRefreshView: ZlRefreshView {
         //0> 设置动画
         let kImage1 = #imageLiteral(resourceName: "icon_small_kangaroo_loading_1")
         let kImage2 = #imageLiteral(resourceName: "icon_small_kangaroo_loading_2")
-        buildingIconView.image = UIImage.animatedImage(with: [kImage1,kImage2], duration: 0.5)
+        kangarooIconView.image = UIImage.animatedImage(with: [kImage1,kImage2], duration: 0.5)
         //1>设置锚点
         kangarooIconView.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
         //2>设置 center

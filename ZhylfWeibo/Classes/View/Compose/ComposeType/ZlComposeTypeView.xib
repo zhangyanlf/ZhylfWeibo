@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZlComposeTypeView" customModule="ZhylfWeibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejC-Ku-KVt">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1Gm-Ma-5cx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="compose_slogan" translatesAutoresizingMaskIntoConstraints="NO" id="4z5-dC-BQE">
+                                <rect key="frame" x="83" y="100" width="154" height="48"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDA-f9-slu">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDY-nS-3Qb">
+                                        <rect key="frame" x="147.5" y="9" width="25" height="25"/>
+                                        <state key="normal" image="tabbar_compose_background_icon_close"/>
+                                        <connections>
+                                            <action selector="closeButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="cLZ-LE-jLG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SDY-nS-3Qb" firstAttribute="centerX" secondItem="YDA-f9-slu" secondAttribute="centerX" id="90l-E2-8iz"/>
+                                    <constraint firstAttribute="height" constant="44" id="sK6-Ei-AGd"/>
+                                    <constraint firstItem="SDY-nS-3Qb" firstAttribute="centerY" secondItem="YDA-f9-slu" secondAttribute="centerY" id="x3O-ZE-jIA"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOY-Gf-TSz">
+                                <rect key="frame" x="0.0" y="156" width="320" height="224"/>
+                                <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="rL2-mO-MeE"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YDA-f9-slu" firstAttribute="top" secondItem="JOY-Gf-TSz" secondAttribute="bottom" constant="56" id="HpP-Bi-Azx"/>
+                            <constraint firstItem="4z5-dC-BQE" firstAttribute="centerX" secondItem="1Gm-Ma-5cx" secondAttribute="centerX" id="NNP-ZX-eVa"/>
+                            <constraint firstItem="YDA-f9-slu" firstAttribute="leading" secondItem="1Gm-Ma-5cx" secondAttribute="leading" id="XNh-kP-hFG"/>
+                            <constraint firstItem="4z5-dC-BQE" firstAttribute="top" secondItem="1Gm-Ma-5cx" secondAttribute="top" constant="100" id="ZC6-CN-9q0"/>
+                            <constraint firstAttribute="trailing" secondItem="YDA-f9-slu" secondAttribute="trailing" id="ekX-pD-F6M"/>
+                            <constraint firstAttribute="bottom" secondItem="YDA-f9-slu" secondAttribute="bottom" id="jA8-Pe-yZ1"/>
+                            <constraint firstItem="JOY-Gf-TSz" firstAttribute="leading" secondItem="1Gm-Ma-5cx" secondAttribute="leading" id="q7O-Wp-Kw0"/>
+                            <constraint firstAttribute="trailing" secondItem="JOY-Gf-TSz" secondAttribute="trailing" id="xs0-dr-8TV"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="extraLight"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ejC-Ku-KVt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NiN-YI-2kE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ejC-Ku-KVt" secondAttribute="bottom" id="bW0-ug-Bjq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ejC-Ku-KVt" secondAttribute="trailing" id="dHR-BL-hJc"/>
+                <constraint firstItem="ejC-Ku-KVt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-20" id="hBe-Ib-fBz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-111" y="77"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="compose_slogan" width="154" height="48"/>
+        <image name="tabbar_compose_background_icon_close" width="25" height="25"/>
+    </resources>
+</document>

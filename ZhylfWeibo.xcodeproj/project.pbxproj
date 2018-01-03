@@ -24,6 +24,8 @@
 		A436B8F21FF34256004AAF2D /* ZlRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436B8F11FF34256004AAF2D /* ZlRefreshControl.swift */; };
 		A436B8F41FF37238004AAF2D /* ZlRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A436B8F31FF37238004AAF2D /* ZlRefreshView.xib */; };
 		A436B8F61FF373ED004AAF2D /* ZlRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A436B8F51FF373ED004AAF2D /* ZlRefreshView.swift */; };
+		A43E11851FF5F0D500C7DDAE /* ZlComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43E11841FF5F0D500C7DDAE /* ZlComposeTypeView.swift */; };
+		A43E11871FF6111400C7DDAE /* ZlComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43E11861FF6111400C7DDAE /* ZlComposeTypeView.xib */; };
 		A44117F01FB54DE40023B26F /* UIButton+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117E51FB549150023B26F /* UIButton+CZAddition.m */; };
 		A44117F11FB54E010023B26F /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117E71FB549150023B26F /* UIColor+CZAddition.m */; };
 		A44117F21FB54E080023B26F /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = A44117D91FB549150023B26F /* NSArray+Log.m */; };
@@ -66,6 +68,8 @@
 		A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */; };
 		A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */; };
 		A4EE1A291FE2789900CC0B00 /* ZlNewFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4EE1A281FE2789900CC0B00 /* ZlNewFeatureView.xib */; };
+		A4FB960F1FFB33EF008C5398 /* ZlComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FB960E1FFB33EF008C5398 /* ZlComposeTypeButton.swift */; };
+		A4FB96111FFB33FF008C5398 /* ZlComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4FB96101FFB33FF008C5398 /* ZlComposeTypeButton.xib */; };
 		C1B676D4667E886E521CD9EC /* Pods_ZhylfWeiboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2081E3CC39FDF59ACA168D /* Pods_ZhylfWeiboTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +115,8 @@
 		A436B8F11FF34256004AAF2D /* ZlRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlRefreshControl.swift; sourceTree = "<group>"; };
 		A436B8F31FF37238004AAF2D /* ZlRefreshView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlRefreshView.xib; sourceTree = "<group>"; };
 		A436B8F51FF373ED004AAF2D /* ZlRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlRefreshView.swift; sourceTree = "<group>"; };
+		A43E11841FF5F0D500C7DDAE /* ZlComposeTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlComposeTypeView.swift; sourceTree = "<group>"; };
+		A43E11861FF6111400C7DDAE /* ZlComposeTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlComposeTypeView.xib; sourceTree = "<group>"; };
 		A44117D71FB549150023B26F /* CZAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
 		A44117D81FB549150023B26F /* NSArray+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		A44117D91FB549150023B26F /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 		A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlVisitorView.swift; sourceTree = "<group>"; };
 		A4EE1A281FE2789900CC0B00 /* ZlNewFeatureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlNewFeatureView.xib; sourceTree = "<group>"; };
+		A4FB960E1FFB33EF008C5398 /* ZlComposeTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlComposeTypeButton.swift; sourceTree = "<group>"; };
+		A4FB96101FFB33FF008C5398 /* ZlComposeTypeButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlComposeTypeButton.xib; sourceTree = "<group>"; };
 		CF380A072841B12C45DCAEA6 /* Pods-ZhylfWeiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhylfWeiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhylfWeiboUITests/Pods-ZhylfWeiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB2081E3CC39FDF59ACA168D /* Pods_ZhylfWeiboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhylfWeiboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC6678007D0A22E7FF6D001 /* Pods-ZhylfWeiboTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhylfWeiboTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhylfWeiboTests/Pods-ZhylfWeiboTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -310,6 +318,7 @@
 		A4327D471FAAC9F8006533AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A43E11821FF5F05F00C7DDAE /* Compose */,
 				A4327D4A1FAAC9F8006533AD /* Main */,
 				A4327D491FAAC9F8006533AD /* Home */,
 				A4327D481FAAC9F8006533AD /* Descover */,
@@ -377,6 +386,25 @@
 				A4AD62391FF4DD3100D34F3D /* ZlMeituanRefreshView.swift */,
 			);
 			path = ZlRefreshControl;
+			sourceTree = "<group>";
+		};
+		A43E11821FF5F05F00C7DDAE /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				A43E11831FF5F05F00C7DDAE /* ComposeType */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		A43E11831FF5F05F00C7DDAE /* ComposeType */ = {
+			isa = PBXGroup;
+			children = (
+				A43E11841FF5F0D500C7DDAE /* ZlComposeTypeView.swift */,
+				A43E11861FF6111400C7DDAE /* ZlComposeTypeView.xib */,
+				A4FB960E1FFB33EF008C5398 /* ZlComposeTypeButton.swift */,
+				A4FB96101FFB33FF008C5398 /* ZlComposeTypeButton.xib */,
+			);
+			path = ComposeType;
 			sourceTree = "<group>";
 		};
 		A44117D61FB549150023B26F /* Additions */ = {
@@ -648,10 +676,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AD62361FF4D41800D34F3D /* ZlHumanRefreshView.xib in Resources */,
+				A43E11871FF6111400C7DDAE /* ZlComposeTypeView.xib in Resources */,
 				A4AD62381FF4DAD100D34F3D /* ZlMeituanRefreshView.xib in Resources */,
 				A45064201FE3B56000C3470D /* ZlStatusNormalCell.xib in Resources */,
 				A436B8F41FF37238004AAF2D /* ZlRefreshView.xib in Resources */,
 				A4EE1A291FE2789900CC0B00 /* ZlNewFeatureView.xib in Resources */,
+				A4FB96111FFB33FF008C5398 /* ZlComposeTypeButton.xib in Resources */,
 				A4D7A3161FBBF10100166CAB /* zhangyanlf.json in Resources */,
 				A47210721FE1201E0095092F /* ZlWelcomeView.xib in Resources */,
 				A4B86F151FEA088100D54EB3 /* ZlStatusRetwitterCell.xib in Resources */,
@@ -858,11 +888,13 @@
 				A44117F21FB54E080023B26F /* NSArray+Log.m in Sources */,
 				A4BFF3B71FDA7FDD0028C10E /* ZlOAuthViewController.swift in Sources */,
 				A44117F91FB54E1E0023B26F /* UIScreen+CZAddition.m in Sources */,
+				A43E11851FF5F0D500C7DDAE /* ZlComposeTypeView.swift in Sources */,
 				A4AD623A1FF4DD3100D34F3D /* ZlMeituanRefreshView.swift in Sources */,
 				A44117F31FB54E0A0023B26F /* NSAttributedString+CZAdditon.m in Sources */,
 				A4327D531FAACB8B006533AD /* ZlBaseViewController.swift in Sources */,
 				A44117FB1FB54E240023B26F /* UIViewController+CZAddition.m in Sources */,
 				A4327D551FAACC63006533AD /* ZlHomeViewController.swift in Sources */,
+				A4FB960F1FFB33EF008C5398 /* ZlComposeTypeButton.swift in Sources */,
 				A44117FA1FB54E210023B26F /* UIView+CZAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

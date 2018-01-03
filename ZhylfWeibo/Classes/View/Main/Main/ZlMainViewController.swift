@@ -72,17 +72,16 @@ class ZlMainViewController: UITabBarController {
     
     
     /// 中间按钮
-    //FIXME: 没有实现
-    //private 保证方法私有 仅在当前对象被访问
-    //@objc 允许这个函数 在 运行时 通过OC的消息机制被调用
+
    @objc private func composeButtonClick() {
         print("我是中间按钮")
-        //测试方向旋转
-        let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.cz_random()
-        let nav = UINavigationController(rootViewController: vc)
+        // FIXME: 1> 判断是否登录
     
-        present(nav, animated: true, completion: nil)
+        //2> 实例化试图
+        let v = ZlComposeTypeView.composeTypeView()
+        v.frame = self.view.bounds
+        //3> 显示试图
+        v.show()
     }
     
     

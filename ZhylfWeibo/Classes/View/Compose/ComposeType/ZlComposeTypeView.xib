@@ -73,6 +73,9 @@
                 <constraint firstItem="ejC-Ku-KVt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-20" id="hBe-Ib-fBz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="scrollView" destination="JOY-Gf-TSz" id="bKG-15-zfM"/>
+            </connections>
             <point key="canvasLocation" x="-111" y="77"/>
         </view>
     </objects>

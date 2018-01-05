@@ -14,28 +14,36 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZlComposeTypeButton" customModule="ZhylfWeibo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="tabbar_compose_idea" translatesAutoresizingMaskIntoConstraints="NO" id="TNT-Ei-eZf">
-                    <rect key="frame" x="15" y="4" width="71" height="71"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="发布" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqq-xt-xyr">
-                    <rect key="frame" x="33" y="79" width="35" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqq-xt-xyr">
+                    <rect key="frame" x="36" y="83" width="29" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_compose_idea" translatesAutoresizingMaskIntoConstraints="NO" id="iOR-Ji-FIf">
+                    <rect key="frame" x="14.5" y="0.0" width="71" height="71"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="71" id="dVi-T9-prp"/>
+                        <constraint firstAttribute="height" constant="71" id="jnI-AX-vkp"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iOR-Ji-FIf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aZh-zX-Fck"/>
+                <constraint firstItem="Cqq-xt-xyr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cCj-gy-4re"/>
+                <constraint firstItem="iOR-Ji-FIf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fll-Jh-UBc"/>
+                <constraint firstItem="Cqq-xt-xyr" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="skE-pc-1Fl"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="composeButtonImageView" destination="TNT-Ei-eZf" id="LMJ-CU-4Ku"/>
+                <outlet property="composeButtonImageView" destination="iOR-Ji-FIf" id="Pjz-9g-KBo"/>
                 <outlet property="composeButtonLabel" destination="Cqq-xt-xyr" id="jki-KD-oKc"/>
             </connections>
-            <point key="canvasLocation" x="-11" y="-197"/>
+            <point key="canvasLocation" x="-121" y="-183"/>
         </view>
     </objects>
     <resources>

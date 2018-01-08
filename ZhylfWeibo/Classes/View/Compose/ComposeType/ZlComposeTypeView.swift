@@ -60,6 +60,11 @@ class ZlComposeTypeView: UIView {
         print("点我了")
     }
     
+    /// 点击更多按钮
+   @objc private func clickMore() {
+        print("点击更多")
+    }
+    
 }
 
 
@@ -116,6 +121,15 @@ private extension ZlComposeTypeView {
             //2.将btn添加到试图
             v.addSubview(btn)
             
+            //3.添加监听方法
+            if let actionName = dict["actionName"] {
+                
+                btn.addTarget(self, action: Selector(actionName), for: .touchUpInside)
+            }
+            
+            
+           }
+            
             //遍历试图的自试图  布局按钮
             // 准备常量
             let btnSize = CGSize(width: 100, height: 100)
@@ -131,8 +145,7 @@ private extension ZlComposeTypeView {
                 let x = CGFloat(col + 1) * margin + CGFloat(col) * btnSize.width
                 
                 btn.frame = CGRect(x: x, y: y, width: btnSize.width, height: btnSize.height)
-            }
-            
+           
         }
         
     }

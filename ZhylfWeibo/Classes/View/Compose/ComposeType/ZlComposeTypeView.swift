@@ -13,6 +13,11 @@ class ZlComposeTypeView: UIView {
     ///滚动试图
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var backButton: UIButton!
+    ///返回按钮的YConstraint
+    @IBOutlet weak var backButtonConstraint: NSLayoutConstraint!
+    ///关闭按钮按钮的YConstraint
+    @IBOutlet weak var closeButtonConstraint: NSLayoutConstraint!
     /// 按钮数据数组
     private let buttonsInfo = [["imageName": "tabbar_compose_idea", "title": "文字", "clsName": "ZlComposeViewController"],
                                ["imageName": "tabbar_compose_photo", "title": "照片/视频"],
@@ -56,6 +61,25 @@ class ZlComposeTypeView: UIView {
         removeFromSuperview()
     }
     
+    
+    /// 返回第一页
+    @IBAction func backButton(_ sender: Any) {
+        //滚动试图滚动到第一页
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        
+        closeButtonConstraint.constant = 0
+        backButtonConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.layoutIfNeeded()
+            self.backButton.alpha = 0
+        }) { (_) in
+            self.backButton.isHidden = true
+            self.backButton.alpha = 1
+        }
+       
+    }
+    
    @objc private func clickItem() {
         print("点我了")
     }
@@ -63,6 +87,20 @@ class ZlComposeTypeView: UIView {
     /// 点击更多按钮
    @objc private func clickMore() {
         print("点击更多")
+        //1.滚动scrollView 第二页
+    
+        scrollView.setContentOffset(CGPoint(x: scrollView.bounds.width, y: 0), animated: true)
+        //2.处理底部按钮
+        backButton.isHidden = false
+    
+        let margin = scrollView.bounds.width / 6
+        closeButtonConstraint.constant += margin
+        backButtonConstraint.constant -= margin
+    
+        UIView.animate(withDuration: 0.25) {
+            self.layoutIfNeeded()
+        }
+    
     }
     
 }

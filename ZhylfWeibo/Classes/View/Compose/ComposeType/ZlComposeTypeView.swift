@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import pop
 /// 撰写微博类型试图
 class ZlComposeTypeView: UIView {
     ///滚动试图
@@ -49,7 +49,9 @@ class ZlComposeTypeView: UIView {
             return
         }
         //2> 添加试图
-        vc.view.addSubview(self)       
+        vc.view.addSubview(self)
+        //3> 添加动画
+        showCarrentView()
         
     }
     
@@ -105,8 +107,51 @@ class ZlComposeTypeView: UIView {
     
 }
 
+// MARK: - 动画方法扩展
+private extension ZlComposeTypeView {
+    private func showCarrentView() {
+        //1.创建动画
+        let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        anim.fromValue = 0
+        anim.toValue = 1
+        anim.duration = 0.25
+        
+        //2> 添加到试图
+        pop_add(anim, forKey: nil)
+        //3> 添加按钮动画
+        showButtons()
+    }
+    
+    private func showButtons(){
+        
+        //1.获取ScrollView的第0个试图
+        let v = scrollView.subviews[0]
+        //2.遍历v的所有按钮
+        for (i,btn) in v.subviews.enumerated() {
+            
+            //1.创建动画
+            let anim:POPSpringAnimation = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
+            //2.动画属性
+            anim.fromValue = btn.center.y + 400
+            anim.toValue = btn.center.y
+            
+            //弹力系数 取值范围 0-20 数值越大 弹性越大 默认值为4
+            anim.springBounciness = 8
+            //弹力速度 取值范围 0-20 数值越大 速度越快 默认值12
+            anim.springSpeed = 8
+            
+            //设置动画启动时间
+            anim.beginTime = CACurrentMediaTime() + CFTimeInterval(i) * 0.025
+            
+            //3.添加动画
+            btn.pop_add(anim, forKey: nil)
+            
+        }
+        
+    }
+}
 
-///private 让 extension 中所有的方法都是私有
+//MARK: - private 让 extension 中所有的方法都是私有
 private extension ZlComposeTypeView {
     func setupUI() {
         //强行更新布局

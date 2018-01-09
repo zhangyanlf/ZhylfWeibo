@@ -30,6 +30,9 @@ class ZlComposeTypeView: UIView {
                                ["imageName": "tabbar_compose_music", "title": "音乐"],
                                ["imageName": "tabbar_compose_shooting", "title": "拍摄"]
     ]
+    ///完成回调
+    private var completionBlock: ((_ clsName: String?)->())?
+    //MARK: - 实例化方法
     class func composeTypeView() ->ZlComposeTypeView {
         
         let nib = UINib(nibName: "ZlComposeTypeView", bundle: nil)
@@ -43,7 +46,10 @@ class ZlComposeTypeView: UIView {
     }
     
     /// 显示当前试图
-    func show() {
+    //当前方法不能执行  通常使用属性记录
+    func show(completion: @escaping (_ clsName: String?)->()) {
+        ///记录闭包
+        completionBlock = completion
         //1> 将当前视图添加到 根试图控制器的 view
        guard let vc = UIApplication.shared.keyWindow?.rootViewController else {
             return
@@ -85,8 +91,43 @@ class ZlComposeTypeView: UIView {
     }
     
     
-    @objc private func clickMe(btn: ZlComposeTypeButton){
-        print("clickMe\(btn)")
+    /// MARK: - 按钮点击监听方法
+    @objc private func clickMe(button: ZlComposeTypeButton){
+        print("clickMe\(button)")
+        
+        //1.判断当前显示的试图
+        let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+        let v = scrollView.subviews[page]
+        //2.遍历按钮
+        //选中的按钮放大 未选中的按钮缩小
+        for (i,btn) in v.subviews.enumerated() {
+            //1> 放大 缩放动画
+            let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
+            //XY在系统中 使用 CGPoint 提示如果需要转换 id 需要用 ‘NSValue’包装
+            let scale = (button == btn) ? 2 : 0.2
+    
+            anim.toValue = NSValue(cgPoint: CGPoint(x: scale, y: scale))
+            anim.duration = 0.5
+            
+            btn.pop_add(anim, forKey: nil)
+            
+            //2>渐变动画 ->动画组
+            let alphaAnim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+            alphaAnim.toValue = 0.2
+            alphaAnim.duration = 0.5
+            btn.pop_add(alphaAnim, forKey: nil)
+            
+            //监听最后一个按钮的监听方法
+            if i == 0 {
+                alphaAnim.completionBlock = {_,_ in
+                    //完成回调
+                    print("完成回调展示控制器")
+                    self.completionBlock?(button.clsName)
+                }
+            }
+            
+        }
+        
     }
     
     /// 点击更多按钮

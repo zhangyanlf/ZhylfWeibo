@@ -81,7 +81,24 @@ class ZlMainViewController: UITabBarController {
         let v = ZlComposeTypeView.composeTypeView()
         v.frame = self.view.bounds
         //3> 显示试图
-        v.show()
+        v.show { [weak v](clsName) in
+            print(clsName as Any)
+            
+            //展现撰写微博控制器
+            guard let clsName = clsName,
+                let cls = NSClassFromString(Bundle.main.namespace + "." + clsName) as? UIViewController.Type else {
+                    v?.removeFromSuperview()
+                return
+            }
+            
+            let vc = cls.init()
+            let nav = UINavigationController(rootViewController: vc)
+            
+            self.present(nav, animated: true, completion: {
+                v?.removeFromSuperview()
+            })
+            
+        }
     }
     
     

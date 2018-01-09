@@ -16,7 +16,11 @@ class ZlComposeViewController: UIViewController {
         
         view.backgroundColor = UIColor.cz_random()
 
-        // Do any additional setup after loading the view.
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", target: self, action: #selector(clickBack))
+    }
+    
+    @objc func clickBack() {
+        dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,14 +29,5 @@ class ZlComposeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

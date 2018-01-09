@@ -60,7 +60,9 @@ class ZlComposeTypeView: UIView {
    
     /// 关闭试图
     @IBAction func closeButton(_ sender: UIButton) {
-        removeFromSuperview()
+        hidenButtons()
+        //removeFromSuperview()
+        
     }
     
     
@@ -109,6 +111,59 @@ class ZlComposeTypeView: UIView {
 
 // MARK: - 动画方法扩展
 private extension ZlComposeTypeView {
+    ///MARK: - 消除动画
+    private func hidenButtons() {
+        //根据 contentOffset 判断当前显示的子试图
+        let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+        let v = scrollView.subviews[page]
+        
+        //2.遍历v中的所有按钮
+        for (i,btn) in v.subviews.enumerated().reversed() {//reversed 反向
+            //1.设置动画
+            let anim: POPSpringAnimation = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
+            //2.设置动画属性
+            anim.fromValue = btn.center.y
+            anim.toValue = btn.center.y + 400
+            
+            //设置时间
+            anim.beginTime = CACurrentMediaTime() + CFTimeInterval(v.subviews.count - i) * 0.025
+            
+            //3.添加动画
+            btn.pop_add(anim, forKey: nil)
+            //监听第 0 个按钮动画 是最后一个执行的
+            if i == 0 {
+                anim.completionBlock = {_,_ in
+                    self.hideCarrentView()
+                }
+            }
+            
+        }
+        
+        //隐藏当前视图 - 开始时间
+       
+        
+    }
+    
+    /// 隐藏当前视图
+    private func hideCarrentView(){
+        //1> 创建动画
+        let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        
+        anim.fromValue = 1
+        anim.toValue = 0
+        anim.duration = 0.25
+        
+        //2>添加动画
+        pop_add(anim, forKey: nil)
+        //3> 添加监听完成方法
+        anim.completionBlock = {_,_ in
+            self.removeFromSuperview()
+        }
+        
+    }
+    
+    ///MARK: - 显示部分的动画
+    //动画显示当前视图
     private func showCarrentView() {
         //1.创建动画
         let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
@@ -123,7 +178,6 @@ private extension ZlComposeTypeView {
     }
     
     private func showButtons(){
-        
         //1.获取ScrollView的第0个试图
         let v = scrollView.subviews[0]
         //2.遍历v的所有按钮

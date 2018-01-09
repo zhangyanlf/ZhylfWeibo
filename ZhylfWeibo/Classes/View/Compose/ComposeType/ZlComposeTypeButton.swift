@@ -13,6 +13,9 @@ class ZlComposeTypeButton: UIControl {
     @IBOutlet weak var composeButtonImageView: UIImageView!
     /// 按钮文字
     @IBOutlet weak var composeButtonLabel: UILabel!
+    ///点击按钮要展现控制器的类名
+    var clsName: String?
+    
     
     /// 使用图像名称/标题创建按钮 按钮布局从XIB加载
     class func composeTypeButton(imageName: String, title: String) -> ZlComposeTypeButton {

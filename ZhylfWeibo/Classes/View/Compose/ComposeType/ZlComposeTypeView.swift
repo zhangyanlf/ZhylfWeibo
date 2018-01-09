@@ -84,8 +84,9 @@ class ZlComposeTypeView: UIView {
        
     }
     
-   @objc private func clickItem() {
-        print("点我了")
+    
+    @objc private func clickMe(btn: ZlComposeTypeButton){
+        print("clickMe\(btn)")
     }
     
     /// 点击更多按钮
@@ -106,6 +107,8 @@ class ZlComposeTypeView: UIView {
         }
     
     }
+    
+    
     
 }
 
@@ -262,7 +265,12 @@ private extension ZlComposeTypeView {
             if let actionName = dict["actionName"] {
                 
                 btn.addTarget(self, action: Selector(actionName), for: .touchUpInside)
+            } else {
+                ///FIXME: -
+                btn.addTarget(self, action: #selector(clickMe), for: .touchUpInside)
             }
+            //4.要展现的类名
+            btn.clsName = dict["clsName"]
             
             
            }

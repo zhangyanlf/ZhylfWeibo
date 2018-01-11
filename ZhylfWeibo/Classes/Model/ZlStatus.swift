@@ -18,6 +18,15 @@ class ZlStatus: NSObject {
     //微博信息内容
    @objc var text: String?
     
+    //创建时间
+    @objc  var created_at:String?
+    /// 微博来源
+    @objc  var source: NSString? {
+        didSet {
+            source = "来自 " + ((source! as String).zl_href()?.text ?? "") as NSString
+        }
+    }
+   
     /// 转发数
     @objc var reposts_count: Int64 = 0
     /// 评论数
@@ -33,6 +42,8 @@ class ZlStatus: NSObject {
     
     /// 微博配置模型数组
     @objc  var pic_urls: [ZlStatusPicture]?
+    
+   
     
     
     

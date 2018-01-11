@@ -66,6 +66,7 @@
 		A4BFF3B71FDA7FDD0028C10E /* ZlOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */; };
 		A4D7A3161FBBF10100166CAB /* zhangyanlf.json in Resources */ = {isa = PBXBuildFile; fileRef = A4D7A3151FBBF0E800166CAB /* zhangyanlf.json */; };
 		A4DC044B1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */; };
+		A4DFF2C5200747E500F40FA7 /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFF2C4200747E500F40FA7 /* NSString+Extension.swift */; };
 		A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */; };
 		A4ED69F92004A45C004DEB28 /* ZlComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED69F82004A45C004DEB28 /* ZlComposeViewController.swift */; };
 		A4EE1A291FE2789900CC0B00 /* ZlNewFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4EE1A281FE2789900CC0B00 /* ZlNewFeatureView.xib */; };
@@ -176,6 +177,7 @@
 		A4BFF3B61FDA7FDD0028C10E /* ZlOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlOAuthViewController.swift; sourceTree = "<group>"; };
 		A4D7A3151FBBF0E800166CAB /* zhangyanlf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zhangyanlf.json; sourceTree = "<group>"; };
 		A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
+		A4DFF2C4200747E500F40FA7 /* NSString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
 		A4ECE59E1FBAC26200AE087B /* ZlVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlVisitorView.swift; sourceTree = "<group>"; };
 		A4ED69F82004A45C004DEB28 /* ZlComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZlComposeViewController.swift; sourceTree = "<group>"; };
 		A4EE1A281FE2789900CC0B00 /* ZlNewFeatureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZlNewFeatureView.xib; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				A4DC044A1FB5A5D1001C3C2B /* UINavigationBar+Extension.swift */,
 				A4B2997D1FE7C064001A79DF /* UIImageView+WebImage.swift */,
 				A4AA26041FE8A9420005EC2B /* UIImage+Extensions.swift */,
+				A4DFF2C4200747E500F40FA7 /* NSString+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -871,6 +874,7 @@
 				A4BFF3B41FDA7AC40028C10E /* ZlCommon.swift in Sources */,
 				A4327D5B1FAACCA0006533AD /* ZlProfileViewController.swift in Sources */,
 				A4ECE59F1FBAC26200AE087B /* ZlVisitorView.swift in Sources */,
+				A4DFF2C5200747E500F40FA7 /* NSString+Extension.swift in Sources */,
 				A436B8F21FF34256004AAF2D /* ZlRefreshControl.swift in Sources */,
 				A45064221FE3C3AE00C3470D /* ZlUser.swift in Sources */,
 				A4327D4F1FAACAFD006533AD /* ZlMainViewController.swift in Sources */,

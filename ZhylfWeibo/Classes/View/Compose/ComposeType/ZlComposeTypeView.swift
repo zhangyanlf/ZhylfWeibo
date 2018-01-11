@@ -104,8 +104,8 @@ class ZlComposeTypeView: UIView {
             //1> 放大 缩放动画
             let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
             //XY在系统中 使用 CGPoint 提示如果需要转换 id 需要用 ‘NSValue’包装
-            let scale = (button == btn) ? 2 : 0.2
-    
+            let scale = (button == btn) ? 1.4 : 0.8
+  
             anim.toValue = NSValue(cgPoint: CGPoint(x: scale, y: scale))
             anim.duration = 0.5
             

@@ -37,6 +37,9 @@ class ZlStatusViewModel: CustomStringConvertible {
     /// 转发文字 有的话显示数字 没有的话显示转发
     var retweetStr: String?
     
+    /// 微博来源字符转
+    var sourceStr: NSString?
+    
     /// 评论数
     @objc var commentsStr: String?
     /// 表态数
@@ -97,6 +100,8 @@ class ZlStatusViewModel: CustomStringConvertible {
         pictureViewSize = calaPictureViewSize(count: (pic_Urls?.count)!)
         ///设置被转发微博的文字
         retweetedText = "@" + ((status.retweeted_status?.user?.screen_name ?? "")! as String) + ":" + (status.retweeted_status?.text ?? "") as NSString
+        //设置来源字符串
+        sourceStr = "来自" + ((model.source as String?)?.zl_href()?.text ?? "") as NSString
         
         ///计算行高
         updateRowHeight()

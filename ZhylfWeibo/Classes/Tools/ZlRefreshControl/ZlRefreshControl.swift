@@ -88,10 +88,13 @@ class ZlRefreshControl: UIControl {
                             width: sv.bounds.width,
                             height: height)
         
-        //------传递父试图高度--------
-        refreshView.parentViewHeight = height
-        
+        //------传递父试图高度---- 如果正在记载中不传递
+        //代码放到最合适的位置
+        if refreshView.refreshState == .WillRefresh {
+            refreshView.parentViewHeight = height
+        }
         //判断临界点  - 只需要判断一次
+        
         if sv.isDragging {
             if height > ZlRefreshOffset && (refreshView.refreshState == .Normal) {
                 print("放手刷新")
